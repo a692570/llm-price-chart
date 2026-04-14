@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM Flagship API Pricing (Jan 2025 — Apr 2026)</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0a; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 32px; }
+  h1 { font-size: 22px; font-weight: 600; margin-bottom: 4px; }
+  .subtitle { font-size: 13px; color: #888; margin-bottom: 28px; }
+  .chart-container { background: #111; border: 1px solid #222; border-radius: 12px; padding: 24px; margin-bottom: 24px; position: relative; height: 520px; }
+  .legend-section { background: #111; border: 1px solid #222; border-radius: 12px; padding: 20px 24px; }
+  .legend-section h2 { font-size: 14px; font-weight: 500; margin-bottom: 12px; color: #aaa; }
+  .legend-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+  .legend-item { font-size: 12px; color: #999; line-height: 1.6; }
+  .legend-item strong { color: #ccc; font-weight: 500; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+  .dot.dashed { border-radius: 0; width: 16px; height: 3px; }
+  .takeaway { margin-top: 24px; background: #111; border: 1px solid #222; border-radius: 12px; padding: 20px 24px; }
+  .takeaway h2 { font-size: 14px; font-weight: 500; margin-bottom: 12px; color: #aaa; }
+  .takeaway ul { list-style: none; padding: 0; }
+  .takeaway li { font-size: 13px; color: #bbb; line-height: 1.7; padding-left: 16px; position: relative; margin-bottom: 6px; }
+  .takeaway li::before { content: "→"; position: absolute; left: 0; color: #666; }
+</style>
+</head>
+<body>
+
+<h1>LLM Flagship Output Price per 1M Tokens</h1>
+<p class="subtitle">Jan 2025 — Apr 2026 &middot; Log scale &middot; Each line tracks each provider's top-tier model at that time</p>
+
+<div class="chart-container">
+  <canvas id="chart"></canvas>
+</div>
+
+<div class="legend-section">
+  <h2>Model Timeline (what each line tracks)</h2>
+  <div class="legend-grid">
+    <div class="legend-item"><span class="dot" style="background:#1D9E75"></span><strong>OpenAI:</strong> GPT-4o ($15) &rarr; price cut ($10) &rarr; GPT-4.1 ($8) &rarr; GPT-5 ($10) &rarr; GPT-5.4 ($15)</div>
+    <div class="legend-item"><span class="dot" style="background:#D85A30"></span><strong>Anthropic:</strong> Opus 3.5 ($75) &rarr; Opus 4 ($75) &rarr; Sonnet 4 ($15) &rarr; Opus 4.6 ($25)</div>
+    <div class="legend-item"><span class="dot" style="background:#7F77DD"></span><strong>DeepSeek:</strong> R1 ($2.19) &rarr; V3-0324 ($0.88) &rarr; V3.1 ($1.10) &rarr; V3.2 ($0.38)</div>
+    <div class="legend-item"><span class="dot" style="background:#378ADD"></span><strong>Google:</strong> Gemini 2.0 Flash ($0.40) &rarr; 2.5 Pro ($10) &rarr; 3.1 Pro ($12)</div>
+    <div class="legend-item"><span class="dot" style="background:#BA7517"></span><strong>Qwen:</strong> Qwen-Max ($6.40) &rarr; Qwen-Plus ($1.20) &rarr; Qwen3-Max ($6.40) &rarr; Qwen3.5-Plus ($0.69)</div>
+    <div class="legend-item"><span class="dot dashed" style="background:#E84393"></span><strong>MiniMax:</strong> MiniMax-01 ($1.10, Jan 25) &rarr; M1 ($1.76) &rarr; M2 ($1.00) &rarr; M2.7 ($1.20)</div>
+    <div class="legend-item"><span class="dot dashed" style="background:#00B894"></span><strong>GLM/Zhipu:</strong> GLM-4.5 ($2.20, Jul 25) &rarr; GLM-5 ($3.20) &rarr; GLM-5.1 ($4.40)</div>
+  </div>
+</div>
+
+<div class="takeaway">
+  <h2>Key Takeaways</h2>
+  <ul>
+    <li>GLM is the <strong>only line going up</strong>. $2.20 &rarr; $4.40 in 9 months. The price hike you noticed is real.</li>
+    <li>OpenAI bounced back up. GPT-4.1 hit $8, then GPT-5 went to $10, GPT-5.4 to $15. The floor didn't hold.</li>
+    <li>DeepSeek is the only line consistently falling. $2.19 &rarr; $0.38. Still subsidizing. Unclear if sustainable.</li>
+    <li>The Anthropic cliff (Aug 2025): Opus at $75 &rarr; Sonnet 4 at $15. Biggest single price move in the chart.</li>
+    <li>MiniMax stays cheap but stable. Hovering around $1-1.76. Not racing to the bottom, not climbing.</li>
+    <li>Qwen is volatile. Swings between $0.69 and $6.40 depending on which model tier is "flagship" that month.</li>
+  </ul>
+</div>
+
+<script>
+const ctx = document.getElementById('chart').getContext('2d');
+
+const months = ['Jan 25','Feb 25','Mar 25','Apr 25','May 25','Jun 25','Jul 25','Aug 25','Sep 25','Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26','Apr 26'];
+
+const chartData = {
+  labels: months,
+  datasets: [
+    {
+      label: 'OpenAI (GPT-4o → 5.4)',
+      data: [15,15,10,10,10,10,10,10,10,10,10,8,8,10,15,15],
+      borderColor: '#1D9E75', backgroundColor: 'rgba(29,158,117,0.05)',
+      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
+      pointBackgroundColor: '#1D9E75',
+    },
+    {
+      label: 'Anthropic (Opus → 4.6)',
+      data: [75,75,75,75,75,75,75,15,15,15,15,25,25,25,25,25],
+      borderColor: '#D85A30', backgroundColor: 'rgba(216,90,48,0.05)',
+      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
+      pointBackgroundColor: '#D85A30',
+    },
+    {
+      label: 'DeepSeek (R1 → V3.2)',
+      data: [2.19,2.19,0.88,0.88,0.88,0.88,0.88,1.10,1.10,1.10,1.10,0.38,0.38,0.38,0.38,0.38],
+      borderColor: '#7F77DD', backgroundColor: 'rgba(127,119,221,0.05)',
+      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
+      pointBackgroundColor: '#7F77DD',
+    },
+    {
+      label: 'Google (Gemini → 3.1 Pro)',
+      data: [0.40,0.40,0.40,0.40,10,10,10,10,10,10,10,10,12,12,12,12],
+      borderColor: '#378ADD', backgroundColor: 'rgba(55,138,221,0.05)',
+      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
+      pointBackgroundColor: '#378ADD',
+    },
+    {
+      label: 'Qwen (Max → 3.5-Plus)',
+      data: [6.40,6.40,6.40,6.40,6.40,1.20,1.20,1.20,1.20,1.20,6.40,6.40,6.40,0.69,0.69,0.69],
+      borderColor: '#BA7517', backgroundColor: 'rgba(186,117,23,0.05)',
+      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
+      pointBackgroundColor: '#BA7517',
+    },
+    {
+      label: 'MiniMax (01 → M2.7)',
+      data: [1.10,1.10,1.10,1.10,1.10,1.76,1.76,1.76,1.76,1.00,1.00,1.00,1.00,1.20,1.20,1.20],
+      borderColor: '#E84393', backgroundColor: 'rgba(232,67,147,0.05)',
+      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2,
+      borderDash: [6,4], pointBackgroundColor: '#E84393',
+    },
+    {
+      label: 'GLM/Zhipu (4.5 → 5.1)',
+      data: [null,null,null,null,null,null,2.20,2.20,2.20,2.20,2.20,2.20,2.20,3.20,3.20,4.40],
+      borderColor: '#00B894', backgroundColor: 'rgba(0,184,148,0.05)',
+      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2,
+      borderDash: [6,4], pointBackgroundColor: '#00B894', spanGaps: false,
+    }
+  ]
+};
+
+new Chart(ctx, {
+  type: 'line',
+  data: chartData,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: {
+        position: 'top',
+        labels: {
+          color: '#aaa',
+          font: { size: 12 },
+          padding: 16,
+          usePointStyle: true,
+          pointStyle: 'circle',
+        }
+      },
+      tooltip: {
+        backgroundColor: '#1a1a1a',
+        titleColor: '#fff',
+        bodyColor: '#ccc',
+        borderColor: '#333',
+        borderWidth: 1,
+        padding: 12,
+        callbacks: {
+          label: function(c) {
+            if (c.parsed.y === null) return c.dataset.label + ': not launched yet';
+            return c.dataset.label + ': $' + c.parsed.y.toFixed(2) + ' /MTok output';
+          }
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { color: '#1a1a1a' },
+        ticks: { color: '#777', font: { size: 11 } },
+        border: { color: '#333' }
+      },
+      y: {
+        type: 'logarithmic',
+        grid: { color: '#1a1a1a' },
+        ticks: {
+          color: '#777',
+          font: { size: 11 },
+          callback: function(v) {
+            const allowed = [0.1,0.2,0.3,0.5,1,2,5,10,20,50,100];
+            if (allowed.includes(v)) return '$' + v;
+            return '';
+          }
+        },
+        border: { display: false },
+        title: {
+          display: true,
+          text: 'Output price $/1M tokens (log scale)',
+          color: '#777',
+          font: { size: 12 }
+        }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>
