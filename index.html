@@ -31,7 +31,7 @@
 <body>
 
 <h1>LLM Flagship Output Price per 1M Tokens</h1>
-<p class="subtitle">Jan 2025 — Apr 2026 &middot; Log scale &middot; Each line tracks each provider's top-tier model at that time</p>
+<p class="subtitle">Jan 2025 — Jun 2026 &middot; Log scale &middot; Each line tracks each provider's top-tier model at that time</p>
 
 <div class="chart-container">
   <canvas id="chart"></canvas>
@@ -41,81 +41,81 @@
 <div class="legend-section">
   <h2>Model Timeline (what each line tracks)</h2>
   <div class="legend-grid">
-    <div class="legend-item"><span class="dot" style="background:#1D9E75"></span><strong>OpenAI:</strong> GPT-4o ($15) &rarr; price cut ($10) &rarr; GPT-4.1 ($8) &rarr; GPT-5 ($10) &rarr; GPT-5.4 ($15)</div>
-    <div class="legend-item"><span class="dot" style="background:#D85A30"></span><strong>Anthropic:</strong> Opus 3.5 ($75) &rarr; Opus 4 ($75) &rarr; Sonnet 4 ($15) &rarr; Opus 4.6 ($25)</div>
-    <div class="legend-item"><span class="dot" style="background:#7F77DD"></span><strong>DeepSeek:</strong> R1 ($2.19) &rarr; V3-0324 ($0.88) &rarr; V3.1 ($1.10) &rarr; V3.2 ($0.38)</div>
+    <div class="legend-item"><span class="dot" style="background:#1D9E75"></span><strong>OpenAI:</strong> GPT-4o ($15) &rarr; price cut ($10) &rarr; GPT-4.1 ($8) &rarr; GPT-5 ($10) &rarr; GPT-5.4 ($15) &rarr; GPT-5.5 ($30)</div>
+    <div class="legend-item"><span class="dot" style="background:#D85A30"></span><strong>Anthropic:</strong> Opus 3.5 ($75) &rarr; Opus 4 ($75) &rarr; Sonnet 4 ($15) &rarr; Opus 4.6 ($25) &rarr; Opus 4.8 ($25)</div>
+    <div class="legend-item"><span class="dot" style="background:#7F77DD"></span><strong>DeepSeek:</strong> R1 ($2.19) &rarr; V3-0324 ($0.88) &rarr; V3.1 ($1.10) &rarr; V3.2 ($0.38) &rarr; V4 Pro ($0.87)</div>
     <div class="legend-item"><span class="dot" style="background:#378ADD"></span><strong>Google:</strong> Gemini 2.0 Flash ($0.40) &rarr; 2.5 Pro ($10) &rarr; 3.1 Pro ($12)</div>
     <div class="legend-item"><span class="dot" style="background:#BA7517"></span><strong>Qwen:</strong> Qwen-Max ($6.40) &rarr; Qwen-Plus ($1.20) &rarr; Qwen3-Max ($6.40) &rarr; Qwen3.5-Plus ($0.69)</div>
-    <div class="legend-item"><span class="dot dashed" style="background:#E84393"></span><strong>MiniMax:</strong> MiniMax-01 ($1.10, Jan 25) &rarr; M1 ($1.76) &rarr; M2 ($1.00) &rarr; M2.7 ($1.20)</div>
-    <div class="legend-item"><span class="dot dashed" style="background:#00B894"></span><strong>GLM/Zhipu:</strong> GLM-4.5 ($2.20, Jul 25) &rarr; GLM-5 ($3.20) &rarr; GLM-5.1 ($4.40)</div>
+    <div class="legend-item"><span class="dot dashed" style="background:#E84393"></span><strong>MiniMax:</strong> MiniMax-01 ($1.10, Jan 25) &rarr; M1 ($1.76) &rarr; M2 ($1.00) &rarr; M2.7 ($1.20) &rarr; M3 ($1.20)</div>
+    <div class="legend-item"><span class="dot dashed" style="background:#00B894"></span><strong>GLM/Zhipu:</strong> GLM-4.5 ($2.20, Jul 25) &rarr; GLM-5 ($3.20) &rarr; GLM-5.1 ($4.40) &rarr; GLM-5.2 ($4.40)</div>
   </div>
 </div>
 
 <div class="takeaway">
   <h2>Key Takeaways</h2>
   <ul>
-    <li>GLM is the <strong>only line going up</strong>. $2.20 &rarr; $4.40 in 9 months. The price hike is real.</li>
-    <li>OpenAI bounced back up. GPT-4.1 hit $8, then GPT-5 went to $10, GPT-5.4 to $15. The floor didn't hold.</li>
-    <li>DeepSeek is the only line consistently falling. $2.19 &rarr; $0.38. Still subsidizing. Unclear if sustainable.</li>
-    <li>The Anthropic cliff (Aug 2025): Opus at $75 &rarr; Sonnet 4 at $15. Biggest single price move in the chart.</li>
-    <li>MiniMax stays cheap but stable. Hovering around $1-1.76. Not racing to the bottom, not climbing.</li>
-    <li>Qwen is volatile. Swings between $0.69 and $6.40 depending on which model tier is "flagship" that month.</li>
+    <li>OpenAI doubled its flagship price. GPT-5.4 was $15, GPT-5.5 launched at $30 in Apr 2026. The biggest single jump in the chart.</li>
+    <li>GLM is still the only line trending up long-term. $2.20 &rarr; $4.40 in 11 months. GLM-5.2 held the price.</li>
+    <li>DeepSeek's new flagship costs MORE than the old one. V3.2 was $0.38, V4 Pro is $0.87. The 75% cut was off V4 Pro's own launch price, not V3.2.</li>
+    <li>Anthropic held at $25 through three Opus upgrades (4.6 &rarr; 4.7 &rarr; 4.8) in 2 months. Stability after the Aug 2025 cliff.</li>
+    <li>MiniMax is the most stable line in the chart. M2.7 &rarr; M3, same $1.20. Cheapest frontier-class model available.</li>
+    <li>Qwen bounces again. $0.69 &rarr; $2.40. Most volatile line, swinging 3.5x in a single month.</li>
   </ul>
 </div>
 
 <script>
 const ctx = document.getElementById('chart').getContext('2d');
 
-const months = ['Jan 25','Feb 25','Mar 25','Apr 25','May 25','Jun 25','Jul 25','Aug 25','Sep 25','Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26','Apr 26'];
+const months = ['Jan 25','Feb 25','Mar 25','Apr 25','May 25','Jun 25','Jul 25','Aug 25','Sep 25','Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26','Apr 26','May 26','Jun 26'];
 
 const chartData = {
   labels: months,
   datasets: [
     {
-      label: 'OpenAI (GPT-4o → 5.4)',
-      data: [15,15,10,10,10,10,10,10,10,10,10,8,8,10,15,15],
+      label: 'OpenAI (GPT-4o → 5.5)',
+      data: [15,15,10,10,10,10,10,10,10,10,10,8,8,10,15,15,30,30],
       borderColor: '#1D9E75', backgroundColor: 'rgba(29,158,117,0.06)',
       fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
       pointBackgroundColor: '#1D9E75',
     },
     {
-      label: 'Anthropic (Opus → 4.6)',
-      data: [75,75,75,75,75,75,75,15,15,15,15,25,25,25,25,25],
+      label: 'Anthropic (Opus → 4.8)',
+      data: [75,75,75,75,75,75,75,15,15,15,15,25,25,25,25,25,25,25],
       borderColor: '#D85A30', backgroundColor: 'rgba(216,90,48,0.06)',
       fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
       pointBackgroundColor: '#D85A30',
     },
     {
-      label: 'DeepSeek (R1 → V3.2)',
-      data: [2.19,2.19,0.88,0.88,0.88,0.88,0.88,1.10,1.10,1.10,1.10,0.38,0.38,0.38,0.38,0.38],
+      label: 'DeepSeek (R1 → V4 Pro)',
+      data: [2.19,2.19,0.88,0.88,0.88,0.88,0.88,1.10,1.10,1.10,1.10,0.38,0.38,0.38,0.38,0.38,0.87,0.87],
       borderColor: '#7F77DD', backgroundColor: 'rgba(127,119,221,0.06)',
       fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
       pointBackgroundColor: '#7F77DD',
     },
     {
       label: 'Google (Gemini → 3.1 Pro)',
-      data: [0.40,0.40,0.40,0.40,10,10,10,10,10,10,10,10,12,12,12,12],
+      data: [0.40,0.40,0.40,0.40,10,10,10,10,10,10,10,10,12,12,12,12,12,12],
       borderColor: '#378ADD', backgroundColor: 'rgba(55,138,221,0.06)',
       fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
       pointBackgroundColor: '#378ADD',
     },
     {
       label: 'Qwen (Max → 3.5-Plus)',
-      data: [6.40,6.40,6.40,6.40,6.40,1.20,1.20,1.20,1.20,1.20,6.40,6.40,6.40,0.69,0.69,0.69],
+      data: [6.40,6.40,6.40,6.40,6.40,1.20,1.20,1.20,1.20,1.20,6.40,6.40,6.40,0.69,0.69,0.69,2.40,2.40],
       borderColor: '#BA7517', backgroundColor: 'rgba(186,117,23,0.06)',
       fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
       pointBackgroundColor: '#BA7517',
     },
     {
-      label: 'MiniMax (01 → M2.7)',
-      data: [1.10,1.10,1.10,1.10,1.10,1.76,1.76,1.76,1.76,1.00,1.00,1.00,1.00,1.20,1.20,1.20],
+      label: 'MiniMax (01 → M3)',
+      data: [1.10,1.10,1.10,1.10,1.10,1.76,1.76,1.76,1.76,1.00,1.00,1.00,1.00,1.20,1.20,1.20,1.20,1.20],
       borderColor: '#E84393', backgroundColor: 'rgba(232,67,147,0.06)',
       fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2,
       borderDash: [6,4], pointBackgroundColor: '#E84393',
     },
     {
-      label: 'GLM/Zhipu (4.5 → 5.1)',
-      data: [null,null,null,null,null,null,2.20,2.20,2.20,2.20,2.20,2.20,2.20,3.20,3.20,4.40],
+      label: 'GLM/Zhipu (4.5 → 5.2)',
+      data: [null,null,null,null,null,null,2.20,2.20,2.20,2.20,2.20,2.20,2.20,3.20,3.20,4.40,4.40,4.40],
       borderColor: '#00B894', backgroundColor: 'rgba(0,184,148,0.06)',
       fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2,
       borderDash: [6,4], pointBackgroundColor: '#00B894', spanGaps: false,
