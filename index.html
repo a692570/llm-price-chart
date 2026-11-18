@@ -6,32 +6,46 @@
 <title>LLM API Pricing Chart</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
+  @font-face {
+    font-family: 'Geist Mono';
+    src: url('fonts/GeistMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Geist Mono';
+    src: url('fonts/GeistMono-SemiBold.ttf') format('truetype');
+    font-weight: 500 700;
+    font-style: normal;
+  }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #FAFAF8; color: #1a1a1a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 32px; }
-  h1 { font-size: 22px; font-weight: 600; margin-bottom: 4px; color: #111; }
-  .subtitle { font-size: 13px; color: #888; margin-bottom: 28px; }
-  .chart-container { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 24px 24px 48px 24px; position: relative; height: 560px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-  .watermark { position: absolute; bottom: 12px; right: 20px; font-size: 12px; color: #bbb; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  body { background: #FAFAF8; color: #1a1a1a; font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace; padding: 32px; max-width: 1180px; margin: 0 auto; }
+  h1 { font-size: 20px; font-weight: 600; margin-bottom: 4px; color: #111; letter-spacing: -0.01em; }
+  .subtitle { font-size: 12px; color: #888; margin-bottom: 28px; line-height: 1.7; }
+  .chart-container { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 24px 24px 48px 24px; position: relative; height: 620px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .watermark { position: absolute; bottom: 12px; right: 20px; font-size: 11px; color: #bbb; }
   .watermark a { color: #999; text-decoration: none; }
   .watermark a:hover { color: #1D9E75; }
   .legend-section { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 20px 24px; margin-top: 24px; }
-  .legend-section h2 { font-size: 14px; font-weight: 500; margin-bottom: 12px; color: #888; }
+  .legend-section h2 { font-size: 13px; font-weight: 600; margin-bottom: 12px; color: #888; }
   .legend-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
-  .legend-item { font-size: 12px; color: #666; line-height: 1.6; }
-  .legend-item strong { color: #333; font-weight: 500; }
+  .legend-item { font-size: 11.5px; color: #666; line-height: 1.7; }
+  .legend-item strong { color: #333; font-weight: 600; }
   .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
   .dot.dashed { border-radius: 0; width: 16px; height: 3px; }
   .takeaway { margin-top: 24px; background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 20px 24px; }
-  .takeaway h2 { font-size: 14px; font-weight: 500; margin-bottom: 12px; color: #888; }
+  .takeaway h2 { font-size: 13px; font-weight: 600; margin-bottom: 12px; color: #888; }
   .takeaway ul { list-style: none; padding: 0; }
-  .takeaway li { font-size: 13px; color: #555; line-height: 1.7; padding-left: 16px; position: relative; margin-bottom: 6px; }
+  .takeaway li { font-size: 12px; color: #555; line-height: 1.7; padding-left: 16px; position: relative; margin-bottom: 8px; }
   .takeaway li::before { content: "→"; position: absolute; left: 0; color: #bbb; }
+  .takeaway li strong { color: #333; font-weight: 600; }
+  .notes { margin-top: 16px; font-size: 10.5px; color: #999; line-height: 1.8; padding: 0 4px; }
 </style>
 </head>
 <body>
 
 <h1>LLM Flagship Output Price per 1M Tokens</h1>
-<p class="subtitle">Jan 2025 — Jun 2026 &middot; Log scale &middot; Each line tracks each provider's top-tier model at that time</p>
+<p class="subtitle">Jan 2025 — Nov 2026 &middot; Log scale &middot; Each line tracks each provider's most capable API-accessible model at that time<br>Prices verified 18 Nov 2026 against provider pricing pages (sources below)</p>
 
 <div class="chart-container">
   <canvas id="chart"></canvas>
@@ -41,84 +55,123 @@
 <div class="legend-section">
   <h2>Model Timeline (what each line tracks)</h2>
   <div class="legend-grid">
-    <div class="legend-item"><span class="dot" style="background:#1D9E75"></span><strong>OpenAI:</strong> GPT-4o ($15) &rarr; price cut ($10) &rarr; GPT-4.1 ($8) &rarr; GPT-5 ($10) &rarr; GPT-5.4 ($15) &rarr; GPT-5.5 ($30)</div>
-    <div class="legend-item"><span class="dot" style="background:#D85A30"></span><strong>Anthropic:</strong> Opus 3.5 ($75) &rarr; Opus 4 ($75) &rarr; Sonnet 4 ($15) &rarr; Opus 4.6 ($25) &rarr; Opus 4.8 ($25)</div>
-    <div class="legend-item"><span class="dot" style="background:#7F77DD"></span><strong>DeepSeek:</strong> R1 ($2.19) &rarr; V3-0324 ($0.88) &rarr; V3.1 ($1.10) &rarr; V3.2 ($0.38) &rarr; V4 Pro ($0.87)</div>
-    <div class="legend-item"><span class="dot" style="background:#378ADD"></span><strong>Google:</strong> Gemini 2.0 Flash ($0.40) &rarr; 2.5 Pro ($10) &rarr; 3.1 Pro ($12)</div>
-    <div class="legend-item"><span class="dot" style="background:#BA7517"></span><strong>Qwen:</strong> Qwen-Max ($6.40) &rarr; Qwen-Plus ($1.20) &rarr; Qwen3-Max ($6.40) &rarr; Qwen3.5-Plus ($0.69)</div>
-    <div class="legend-item"><span class="dot dashed" style="background:#E84393"></span><strong>MiniMax:</strong> MiniMax-01 ($1.10, Jan 25) &rarr; M1 ($1.76) &rarr; M2 ($1.00) &rarr; M2.7 ($1.20) &rarr; M3 ($1.20)</div>
-    <div class="legend-item"><span class="dot dashed" style="background:#00B894"></span><strong>GLM/Zhipu:</strong> GLM-4.5 ($2.20, Jul 25) &rarr; GLM-5 ($3.20) &rarr; GLM-5.1 ($4.40) &rarr; GLM-5.2 ($4.40)</div>
+    <div class="legend-item"><span class="dot" style="background:#1D9E75"></span><strong>OpenAI:</strong> GPT-4o ($15) &rarr; cut ($10) &rarr; GPT-4.1 ($8) &rarr; GPT-5 ($10) &rarr; GPT-5.4 ($15) &rarr; GPT-5.5 ($30) &rarr; GPT-5.6 Sol ($30) &rarr; GPT-6 Astra ($50) &rarr; GPT-6.2 Astra ($40)</div>
+    <div class="legend-item"><span class="dot" style="background:#D85A30"></span><strong>Anthropic:</strong> Opus 3.5/4 ($75) &rarr; Sonnet 4 ($15, Aug 25) &rarr; Opus 4.6&ndash;4.8 ($25) &rarr; Fable 5.1 ($50, Jun 26) &rarr; Fable 5.2 ($40, Nov 9) &mdash; tracks the Fable tier, Anthropic's most capable model since Jun 2026 (revised from Opus)</div>
+    <div class="legend-item"><span class="dot" style="background:#7F77DD"></span><strong>DeepSeek:</strong> R1 ($2.19) &rarr; V3-0324 ($0.88) &rarr; V3.1 ($1.10) &rarr; V3.2 ($0.38) &rarr; V4 Pro ($0.87) &rarr; $1.98 off-peak (Aug 16 restructure; peak hours 2&times; = $3.96)</div>
+    <div class="legend-item"><span class="dot" style="background:#378ADD"></span><strong>Google:</strong> Gemini 2.0 Flash ($0.40) &rarr; 2.5 Pro ($10) &rarr; 3.1 Pro ($12) &rarr; Gemini 4 Argon ($10 intro, Oct 13; steps to $20 Dec 1)</div>
+    <div class="legend-item"><span class="dot" style="background:#BA7517"></span><strong>Qwen:</strong> Qwen-Max ($6.40) &rarr; Qwen-Plus ($1.20) &rarr; Qwen3-Max ($6.40) &rarr; Qwen3.5-Plus ($0.69) &rarr; ($2.40) &rarr; Qwen3.7-Max ($3.75 promo) &rarr; Qwen3.8-Max ($6, Aug 3)</div>
+    <div class="legend-item"><span class="dot dashed" style="background:#E84393"></span><strong>MiniMax:</strong> MiniMax-01 ($1.10, Jan 25) &rarr; M1 ($1.76) &rarr; M2 ($1.00) &rarr; M2.7 / M3 ($1.20) &mdash; M2.5/2.7 retire Nov 18; M3.1-Flash ships Oct 19 at $0.60</div>
+    <div class="legend-item"><span class="dot dashed" style="background:#00B894"></span><strong>GLM/Zhipu:</strong> GLM-4.5 ($2.20, Jul 25) &rarr; GLM-5 ($3.20) &rarr; GLM-5.1 / 5.2 ($4.40) &rarr; GLM-5.3 ($4.40, Aug 26 &mdash; same output price as 5.2)</div>
+    <div class="legend-item"><span class="dot" style="background:#64748B"></span><strong>xAI:</strong> Grok 2 ($10) &rarr; Grok 3 ($15) &rarr; Grok 4 ($15) &rarr; Grok 4.2 ($6) &rarr; Grok 4.3 ($2.50, May 26) &rarr; Grok 4.5 (Jul 8) / 4.6 (Aug 12) / 4.7 (Sep 21) at $6</div>
+    <div class="legend-item"><span class="dot" style="background:#9333EA"></span><strong>Meta:</strong> Llama 4 Maverick ($0.85 host list, Apr 25) &rarr; Muse Wonder ($20, Meta Model API, Oct 12) &mdash; Meta's first first-party frontier API pricing</div>
+    <div class="legend-item"><span class="dot dashed" style="background:#CA8A04"></span><strong>Kimi/Moonshot:</strong> K2 ($2.20, Jul 25) &rarr; K3 ($15, Jul 16 26) &rarr; K3.1 Pro ($10, Oct 26) &mdash; K2 series closed to new users Oct 31</div>
+    <div class="legend-item"><span class="dot dashed" style="background:#DC2626"></span><strong>Mistral:</strong> Large 2 ($6) &rarr; Large 3 ($1.50, Dec 25) &rarr; Medium 3.5 ($7.50, Apr 26) &rarr; Large 4 preview ($4.18, Oct 6)</div>
+    <div class="legend-item"><span class="dot" style="background:#ccc"></span><strong>Not on the chart:</strong> OpenAI GPT-6 Luna ($0.50), GPT-5.6 Terra ($12), Sonnet 5.5 ($10), Gemini 3.x Flash ($3.75 promo) &mdash; mid-tier and promo tiers excluded</div>
   </div>
 </div>
 
 <div class="takeaway">
   <h2>Key Takeaways</h2>
   <ul>
-    <li>OpenAI doubled its flagship price. GPT-5.4 was $15, GPT-5.5 launched at $30 in Apr 2026. The biggest single jump in the chart.</li>
-    <li>GLM is still the only line trending up long-term. $2.20 &rarr; $4.40 in 11 months. GLM-5.2 held the price.</li>
-    <li>DeepSeek's new flagship costs MORE than the old one. V3.2 was $0.38, V4 Pro is $0.87. The 75% cut was off V4 Pro's own launch price, not V3.2.</li>
-    <li>Anthropic held at $25 through three Opus upgrades (4.6 &rarr; 4.7 &rarr; 4.8) in 2 months. Stability after the Aug 2025 cliff.</li>
-    <li>MiniMax is the most stable line in the chart. M2.7 &rarr; M3, same $1.20. Cheapest frontier-class model available.</li>
-    <li>Qwen bounces again. $0.69 &rarr; $2.40. Most volatile line, swinging 3.5x in a single month.</li>
+    <li><strong>OpenAI's flagship is the most expensive line ever charted.</strong> GPT-6 Astra hit $50 output in Sep 2026; GPT-6.2 Astra (Nov 17) cut it to $40 &mdash; OpenAI's first flagship price cut since 2024. The cheap tier collapsed in parallel: GPT-6 Luna is $0.10/$0.50, undercutting every Chinese flagship here.</li>
+    <li><strong>Anthropic re-baselined its top tier.</strong> Fable 5.1 (Jun 26) took the flagship from Opus's $25 to $50; Fable 5.2 (Nov 9) cut it 20% to $40. Opus 5.5 (Sep 22) delivered the first Opus cut in years: $25 &rarr; $20 output.</li>
+    <li><strong>The Chinese lines moved up, not down.</strong> DeepSeek V4 Pro jumped $0.87 &rarr; $1.98 off-peak (peak 2&times;) on Aug 16. GLM held $4.40 across two flagship generations. MiniMax remains the floor: $1.20 since February, unchanged through Nov.</li>
+    <li><strong>Kimi made the steepest single jump:</strong> K2 held $2.20 for a year, then K3 launched at $15 in Jul 26 (7x). The successor K3.1 Pro immediately undercut K3 by a third at $10.</li>
+    <li><strong>Meta rejoined the frontier in one day.</strong> Llama 4 Maverick sat at $0.85 (host list) for 18 months; Muse Wonder launched at $20 output on the Meta Model API (Oct 12) &mdash; a 23x jump, the chart's largest single move.</li>
+    <li><strong>Mistral whipsawed both directions:</strong> $6 &rarr; $1.50 (Dec 25, &minus;75%) &rarr; $7.50 (Apr 26) &rarr; $4.18 preview (Oct 26). The flagship got cheaper, then the next flagship repriced up.</li>
+    <li><strong>Google's flagship got cheaper for once.</strong> Gemini 4 Argon launched at $10 intro (Oct 13) vs 3.1 Pro's $12 &mdash; but the intro expires Dec 1 and doubles to $20.</li>
+    <li><strong>Four of the last six flagship launches cut the entry price.</strong> GPT-6.2 Astra (&minus;20%), Fable 5.2 (&minus;20%), K3.1 Pro (&minus;33%), Gemini 4 Argon (intro $10 vs $12). The two raises: DeepSeek (Aug restructure) and Meta (Muse Wonder).</li>
   </ul>
 </div>
+
+<p class="notes">
+Data notes: Output price per 1M tokens, standard tier, USD. DeepSeek plots off-peak rates (peak: Mon&ndash;Fri 01:00&ndash;04:00 & 06:00&ndash;10:00 UTC, 2&times;). Meta's pre-Oct-2026 values are representative host list rates (Together/DeepInfra &mdash; Meta ran no first-party API; Muse Wonder is the Meta Model API). xAI's 2025 rates (Grok 2 $10, Grok 3/4 $15) carried from xAI's published 2025 rate card. Kimi K2 rate is Moonshot's 0711 list; K2.5 interim pricing (early 2026) not separately tracked. Qwen3.7-Max shown at its 50% promo rate ($3.75; list $7.50). Sources verified 18 Nov 2026: developers.openai.com/api/docs/pricing &middot; platform.claude.com/docs/en/about-claude/pricing &middot; ai.google.dev/gemini-api/docs/pricing &middot; api-docs.deepseek.com/quick_start/pricing &middot; docs.x.ai/developers/pricing &middot; dev.meta.ai/docs/pricing-rate-limits &middot; platform.kimi.ai/docs/pricing/chat &middot; platform.minimax.io/docs/pricing/overview &middot; docs.z.ai/guides/overview/pricing &middot; alibabacloud.com Model Studio pricing &middot; mistral.ai/pricing/api.
+</p>
 
 <script>
 const ctx = document.getElementById('chart').getContext('2d');
 
-const months = ['Jan 25','Feb 25','Mar 25','Apr 25','May 25','Jun 25','Jul 25','Aug 25','Sep 25','Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26','Apr 26','May 26','Jun 26'];
+const months = ['Jan 25','Feb 25','Mar 25','Apr 25','May 25','Jun 25','Jul 25','Aug 25','Sep 25','Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26','Apr 26','May 26','Jun 26','Jul 26','Aug 26','Sep 26','Oct 26','Nov 26'];
 
 const chartData = {
   labels: months,
   datasets: [
     {
-      label: 'OpenAI (GPT-4o → 5.5)',
-      data: [15,15,10,10,10,10,10,10,10,10,10,8,8,10,15,15,30,30],
+      label: 'OpenAI (GPT-4o → 6.2 Astra)',
+      data: [15,15,10,10,10,10,10,10,10,10,10,8,8,10,15,30,30,30,30,30,50,50,40],
       borderColor: '#1D9E75', backgroundColor: 'rgba(29,158,117,0.06)',
-      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
+      fill: false, tension: 0.15, pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5,
       pointBackgroundColor: '#1D9E75',
     },
     {
-      label: 'Anthropic (Opus → 4.8)',
-      data: [75,75,75,75,75,75,75,15,15,15,15,25,25,25,25,25,25,25],
+      label: 'Anthropic (Opus → Fable 5.2)',
+      data: [75,75,75,75,75,75,75,15,15,15,15,25,25,25,25,25,25,50,50,50,50,50,40],
       borderColor: '#D85A30', backgroundColor: 'rgba(216,90,48,0.06)',
-      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
+      fill: false, tension: 0.15, pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5,
       pointBackgroundColor: '#D85A30',
     },
     {
       label: 'DeepSeek (R1 → V4 Pro)',
-      data: [2.19,2.19,0.88,0.88,0.88,0.88,0.88,1.10,1.10,1.10,1.10,0.38,0.38,0.38,0.38,0.38,0.87,0.87],
+      data: [2.19,2.19,0.88,0.88,0.88,0.88,0.88,1.10,1.10,1.10,1.10,0.38,0.38,0.38,0.38,0.38,0.87,0.87,0.87,1.98,1.98,1.98,1.98],
       borderColor: '#7F77DD', backgroundColor: 'rgba(127,119,221,0.06)',
-      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
+      fill: false, tension: 0.15, pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5,
       pointBackgroundColor: '#7F77DD',
     },
     {
-      label: 'Google (Gemini → 3.1 Pro)',
-      data: [0.40,0.40,0.40,0.40,10,10,10,10,10,10,10,10,12,12,12,12,12,12],
+      label: 'Google (Gemini → 4 Argon)',
+      data: [0.40,0.40,0.40,0.40,10,10,10,10,10,10,10,10,12,12,12,12,12,12,12,12,12,10,10],
       borderColor: '#378ADD', backgroundColor: 'rgba(55,138,221,0.06)',
-      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
+      fill: false, tension: 0.15, pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5,
       pointBackgroundColor: '#378ADD',
     },
     {
-      label: 'Qwen (Max → 3.5-Plus)',
-      data: [6.40,6.40,6.40,6.40,6.40,1.20,1.20,1.20,1.20,1.20,6.40,6.40,6.40,0.69,0.69,0.69,2.40,2.40],
+      label: 'Qwen (Max → 3.8-Max)',
+      data: [6.40,6.40,6.40,6.40,6.40,1.20,1.20,1.20,1.20,1.20,6.40,6.40,6.40,0.69,0.69,0.69,2.40,2.40,3.75,6.00,6.00,6.00,6.00],
       borderColor: '#BA7517', backgroundColor: 'rgba(186,117,23,0.06)',
-      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2.5,
+      fill: false, tension: 0.15, pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5,
       pointBackgroundColor: '#BA7517',
     },
     {
       label: 'MiniMax (01 → M3)',
-      data: [1.10,1.10,1.10,1.10,1.10,1.76,1.76,1.76,1.76,1.00,1.00,1.00,1.00,1.20,1.20,1.20,1.20,1.20],
+      data: [1.10,1.10,1.10,1.10,1.10,1.76,1.76,1.76,1.76,1.00,1.00,1.00,1.00,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20],
       borderColor: '#E84393', backgroundColor: 'rgba(232,67,147,0.06)',
-      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2,
+      fill: false, tension: 0.15, pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2,
       borderDash: [6,4], pointBackgroundColor: '#E84393',
     },
     {
-      label: 'GLM/Zhipu (4.5 → 5.2)',
-      data: [null,null,null,null,null,null,2.20,2.20,2.20,2.20,2.20,2.20,2.20,3.20,3.20,4.40,4.40,4.40],
+      label: 'GLM/Zhipu (4.5 → 5.3)',
+      data: [null,null,null,null,null,null,2.20,2.20,2.20,2.20,2.20,2.20,2.20,3.20,3.20,4.40,4.40,4.40,4.40,4.40,4.40,4.40,4.40],
       borderColor: '#00B894', backgroundColor: 'rgba(0,184,148,0.06)',
-      fill: false, tension: 0.15, pointRadius: 4, pointHoverRadius: 6, borderWidth: 2,
+      fill: false, tension: 0.15, pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2,
       borderDash: [6,4], pointBackgroundColor: '#00B894', spanGaps: false,
+    },
+    {
+      label: 'xAI (Grok 2 → 4.7)',
+      data: [10,15,15,15,15,15,15,15,15,15,15,15,15,15,6,6,2.50,2.50,6,6,6,6,6],
+      borderColor: '#64748B', backgroundColor: 'rgba(100,116,139,0.06)',
+      fill: false, tension: 0.15, pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5,
+      pointBackgroundColor: '#64748B',
+    },
+    {
+      label: 'Meta (Maverick → Muse Wonder)',
+      data: [null,null,null,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,20,20],
+      borderColor: '#9333EA', backgroundColor: 'rgba(147,51,234,0.06)',
+      fill: false, tension: 0.15, pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5,
+      pointBackgroundColor: '#9333EA', spanGaps: false,
+    },
+    {
+      label: 'Kimi/Moonshot (K2 → K3.1 Pro)',
+      data: [null,null,null,null,null,null,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,15,15,15,10,10],
+      borderColor: '#CA8A04', backgroundColor: 'rgba(202,138,4,0.06)',
+      fill: false, tension: 0.15, pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2,
+      borderDash: [6,4], pointBackgroundColor: '#CA8A04', spanGaps: false,
+    },
+    {
+      label: 'Mistral (Large 2 → Large 4)',
+      data: [6,6,6,6,6,6,6,6,6,6,6,1.50,1.50,1.50,1.50,7.50,7.50,7.50,7.50,7.50,7.50,4.18,4.18],
+      borderColor: '#DC2626', backgroundColor: 'rgba(220,38,38,0.06)',
+      fill: false, tension: 0.15, pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2,
+      borderDash: [6,4], pointBackgroundColor: '#DC2626', spanGaps: false,
     }
   ]
 };
@@ -135,8 +188,8 @@ new Chart(ctx, {
         position: 'top',
         labels: {
           color: '#555',
-          font: { size: 12 },
-          padding: 16,
+          font: { size: 10.5, family: "'Geist Mono', monospace" },
+          padding: 14,
           usePointStyle: true,
           pointStyle: 'circle',
         }
@@ -148,6 +201,8 @@ new Chart(ctx, {
         borderColor: '#ddd',
         borderWidth: 1,
         padding: 12,
+        titleFont: { family: "'Geist Mono', monospace" },
+        bodyFont: { family: "'Geist Mono', monospace" },
         callbacks: {
           label: function(c) {
             if (c.parsed.y === null) return c.dataset.label + ': not launched yet';
@@ -159,7 +214,7 @@ new Chart(ctx, {
     scales: {
       x: {
         grid: { color: '#f0f0f0' },
-        ticks: { color: '#888', font: { size: 11 } },
+        ticks: { color: '#888', font: { size: 10, family: "'Geist Mono', monospace" }, maxRotation: 45 },
         border: { color: '#ddd' }
       },
       y: {
@@ -167,7 +222,7 @@ new Chart(ctx, {
         grid: { color: '#f0f0f0' },
         ticks: {
           color: '#888',
-          font: { size: 11 },
+          font: { size: 10.5, family: "'Geist Mono', monospace" },
           callback: function(v) {
             const allowed = [0.1,0.2,0.3,0.5,1,2,5,10,20,50,100];
             if (allowed.includes(v)) return '$' + v;
@@ -179,7 +234,7 @@ new Chart(ctx, {
           display: true,
           text: 'Output price $/1M tokens (log scale)',
           color: '#888',
-          font: { size: 12 }
+          font: { size: 11, family: "'Geist Mono', monospace" }
         }
       }
     }
