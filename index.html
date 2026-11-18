@@ -102,7 +102,7 @@
   .mscale .s { position: absolute; transform: translateX(-50%); }
 
   /* ---------- footer ---------- */
-  .notes { margin-top: 56px; font-size: 11.5px; line-height: 1.85; color: var(--muted); max-width: 100ch; }
+  .notes { margin-top: 48px; font-size: 11.5px; line-height: 1.85; color: var(--muted); max-width: 100ch; }
   .notes h2 { color: var(--ink); margin-bottom: 8px; }
   .notes p + p { margin-top: 10px; }
   .credit { margin-top: 28px; font-size: 11px; color: var(--faint); }
@@ -163,14 +163,12 @@
 <header>
   <div class="eyebrow">Flagship output price &middot; USD per 1M tokens &middot; Jan 2025 to Nov 2026</div>
   <h1>LLM Flagship API Price Tracker</h1>
-  <p class="lede">Each line tracks one provider's most capable API model at the time. Prices checked against provider pricing pages on 18 Nov 2026.</p>
 
   <div class="stats" id="stats"></div>
 </header>
 
 <section>
   <h2>Where each line started and where it is now</h2>
-  <p class="sub">Each row runs from the provider's first charted price to its current one. Rows are ordered by current price. The axis is log scale, so equal distances mean equal multiples.</p>
   <div class="key">
     <span><i class="ring"></i> first charted price</span>
     <span><i class="disc"></i> Nov 2026 price</span>
@@ -182,22 +180,15 @@
 
 <section>
   <h2>Price history by provider</h2>
-  <p class="sub">Every panel uses the same log scale, so heights compare directly across providers. Terracotta steps are price increases, green steps are cuts. Hover a dot for the model and the change.</p>
   <div class="panels" id="panels"></div>
 </section>
 
 <section>
   <h2>The ten largest single repricings</h2>
-  <p class="sub" id="movesSub"></p>
   <div class="moves" id="moves"></div>
 </section>
 
-<div class="notes">
-  <h2>Data notes</h2>
-  <p>Output price per 1M tokens, standard tier, USD. A month's value is the price in effect that month. DeepSeek plots off-peak rates (peak is Mon to Fri 01:00 to 04:00 and 06:00 to 10:00 UTC, at 2x). Meta's values before Oct 2026 are representative host list rates (Together, DeepInfra) because Meta ran no first-party API; Muse Wonder is priced on the Meta Model API. xAI's 2025 rates (Grok 2 $10, Grok 3 and 4 $15) come from xAI's published 2025 rate card. Kimi K2 uses Moonshot's 0711 list rate; K2.5 interim pricing in early 2026 is not tracked. Qwen3.7-Max is shown at its 50% promo rate ($3.75; list $7.50). Gemini 4 Argon's $10 is an intro rate that steps to $20 on Dec 1. Anthropic's line follows the Fable tier from Jun 2026, when it became Anthropic's most capable model.</p>
-  <p>Not charted: GPT-6 Luna ($0.50), GPT-5.6 Terra ($12), Sonnet 5.5 ($10) and the Gemini 3.x Flash promo ($3.75), because mid-tier and promo models are excluded. GPT-5.6 Sol ($30) sits between GPT-5.5 and GPT-6 at an unchanged price.</p>
-  <p>Sources, verified 18 Nov 2026: developers.openai.com/api/docs/pricing &middot; platform.claude.com/docs/en/about-claude/pricing &middot; ai.google.dev/gemini-api/docs/pricing &middot; api-docs.deepseek.com/quick_start/pricing &middot; docs.x.ai/developers/pricing &middot; dev.meta.ai/docs/pricing-rate-limits &middot; platform.kimi.ai/docs/pricing/chat &middot; platform.minimax.io/docs/pricing/overview &middot; docs.z.ai/guides/overview/pricing &middot; alibabacloud.com Model Studio pricing &middot; mistral.ai/pricing/api.</p>
-</div>
+<div class="notes">Source: provider pricing pages, 18 Nov 2026</div>
 <div class="credit">Abhishek Sharma &middot; <a href="https://www.linkedin.com/in/absheksharma/" target="_blank" rel="noopener">linkedin.com/in/absheksharma</a></div>
 
 <div id="tip"></div>
@@ -215,33 +206,25 @@ const P = [
   { name: 'OpenAI', d: [15,15,10,10,10,10,10,10,10,10,10,8,8,10,15,30,30,30,30,30,50,50,40],
     m: {0:'GPT-4o',2:'GPT-4o price cut',11:'GPT-4.1',13:'GPT-5',14:'GPT-5.4',15:'GPT-5.5',20:'GPT-6 Astra',22:'GPT-6.2 Astra'} },
   { name: 'Anthropic', d: [75,75,75,75,75,75,75,15,15,15,15,25,25,25,25,25,25,50,50,50,50,50,40],
-    m: {0:'Opus 3.5/4',7:'Sonnet 4',11:'Opus 4.6 to 4.8',17:'Fable 5.1',22:'Fable 5.2'},
-    note: 'Follows the Fable tier since Jun 2026.' },
+    m: {0:'Opus 3.5/4',7:'Sonnet 4',11:'Opus 4.6 to 4.8',17:'Fable 5.1',22:'Fable 5.2'}, },
   { name: 'Google', d: [0.40,0.40,0.40,0.40,10,10,10,10,10,10,10,10,12,12,12,12,12,12,12,12,12,10,10],
-    m: {0:'Gemini 2.0 Flash',4:'Gemini 2.5 Pro',12:'Gemini 3.1 Pro',21:'Gemini 4 Argon'},
-    note: '$10 is an intro rate. It steps to $20 on Dec 1.' },
+    m: {0:'Gemini 2.0 Flash',4:'Gemini 2.5 Pro',12:'Gemini 3.1 Pro',21:'Gemini 4 Argon (intro price)'}, },
   { name: 'Meta', d: [N,N,N,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,20,20],
-    m: {3:'Llama 4 Maverick',21:'Muse Wonder'},
-    note: 'Before Oct 2026: host list rates, no first-party API.' },
+    m: {3:'Llama 4 Maverick (host list)',21:'Muse Wonder'}, },
   { name: 'Kimi / Moonshot', d: [N,N,N,N,N,N,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,15,15,15,10,10],
-    m: {6:'K2',18:'K3',21:'K3.1 Pro'},
-    note: 'K2 series closed to new users Oct 31.' },
+    m: {6:'K2',18:'K3',21:'K3.1 Pro'}, },
   { name: 'Qwen', d: [6.40,6.40,6.40,6.40,6.40,1.20,1.20,1.20,1.20,1.20,6.40,6.40,6.40,0.69,0.69,0.69,2.40,2.40,3.75,6.00,6.00,6.00,6.00],
-    m: {0:'Qwen-Max',5:'Qwen-Plus',10:'Qwen3-Max',13:'Qwen3.5-Plus',16:'unnamed release',18:'Qwen3.7-Max (promo)',19:'Qwen3.8-Max'},
-    note: 'Jul 2026 is a 50% promo rate (list $7.50).' },
+    m: {0:'Qwen-Max',5:'Qwen-Plus',10:'Qwen3-Max',13:'Qwen3.5-Plus',18:'Qwen3.7-Max (promo)',19:'Qwen3.8-Max'}, },
   { name: 'xAI', d: [10,15,15,15,15,15,15,15,15,15,15,15,15,15,6,6,2.50,2.50,6,6,6,6,6],
     m: {0:'Grok 2',1:'Grok 3',14:'Grok 4.2',16:'Grok 4.3',18:'Grok 4.5'} },
   { name: 'Mistral', d: [6,6,6,6,6,6,6,6,6,6,6,1.50,1.50,1.50,1.50,7.50,7.50,7.50,7.50,7.50,7.50,4.18,4.18],
     m: {0:'Large 2',11:'Large 3',15:'Medium 3.5',21:'Large 4 (preview)'} },
   { name: 'GLM / Zhipu', d: [N,N,N,N,N,N,2.20,2.20,2.20,2.20,2.20,2.20,2.20,3.20,3.20,4.40,4.40,4.40,4.40,4.40,4.40,4.40,4.40],
-    m: {6:'GLM-4.5',13:'GLM-5',15:'GLM-5.1 / 5.2'},
-    note: 'GLM-5.3 (Aug 2026) kept the $4.40 price.' },
+    m: {6:'GLM-4.5',13:'GLM-5',15:'GLM-5.1 / 5.2'}, },
   { name: 'DeepSeek', d: [2.19,2.19,0.88,0.88,0.88,0.88,0.88,1.10,1.10,1.10,1.10,0.38,0.38,0.38,0.38,0.38,0.87,0.87,0.87,1.98,1.98,1.98,1.98],
-    m: {0:'R1',2:'V3-0324',7:'V3.1',11:'V3.2',16:'V4 Pro',19:'V4 Pro, Aug restructure'},
-    note: 'Off-peak rate. Peak hours cost 2x ($3.96).' },
+    m: {0:'R1',2:'V3-0324',7:'V3.1',11:'V3.2',16:'V4 Pro',19:'V4 Pro (off-peak)'}, },
   { name: 'MiniMax', d: [1.10,1.10,1.10,1.10,1.10,1.76,1.76,1.76,1.76,1.00,1.00,1.00,1.00,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20],
-    m: {0:'MiniMax-01',5:'M1',9:'M2',13:'M2.7 / M3'},
-    note: '$1.20 unchanged since Feb 2026.' },
+    m: {0:'MiniMax-01',5:'M1',9:'M2',13:'M2.7 / M3'}, },
 ];
 
 /* ------------------------------------------------------------------
@@ -396,10 +379,8 @@ function evTip(e) {
       <h3>${p.name}</h3>
       <div class="models">${p.m[p.s]} &rarr; ${lastModel}</div>
       <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${p.name} flagship output price, ${fmtMoney(p.a)} to ${fmtMoney(p.b)}">${frame}${own}${risers}${startDot}${startLab}${dots}${end}</svg>
-      <div class="note">${p.note || ''}</div>
     </div>`;
   });
-  html += `<div class="panel how"><p><b>How to read a panel.</b> The black line is the provider's flagship price. Open circle is its first charted price. Each coloured dot is a repricing, labelled with the new price. The large number at the right edge is the Nov 2026 price.</p></div>`;
   const root = document.getElementById('panels');
   root.innerHTML = html;
   root.addEventListener('pointerover', ev => {
@@ -417,9 +398,6 @@ function evTip(e) {
   const top = [...events].sort((a, b) => Math.abs(Math.log(b.r)) - Math.abs(Math.log(a.r))).slice(0, 10);
   const span = 1.5; // log10 half-range: 0.03x to 32x
   const pos = r => Math.log10(r) / span * 50;
-  const ups = top.filter(e => e.r > 1).length;
-  document.getElementById('movesSub').textContent =
-    `Ranked by size of the move on a log scale, out of ${events.length} repricings. ${ups} of these ten were increases. Bars run left of centre for cuts and right of centre for increases.`;
   let html = '';
   top.forEach(e => {
     const up = e.r > 1, w = Math.abs(pos(e.r));
