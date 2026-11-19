@@ -1,0 +1,524 @@
+{
+ "provider": "Meta",
+ "tiers": [
+  {
+   "tier": "Llama 4 Maverick (Together host list price)",
+   "points": [
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250408012901id_/https://www.together.ai/pricing",
+     "note": "Host price: Together AI serverless list price (Meta had no paid first-party API in this period). Together pricing page lists 'Llama 4 Maverick $0.27 input / $0.85 output'. First listing in the 8 Apr 2025 capture; Llama 4 was released Apr 2025. Convention: price in effect at month end; mid-month changes are noted."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250507201943id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250606024514id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250705001349id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250805040816id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250906000147id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251001203946id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251103003614id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251204044953id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260101184249id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260210173839id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260305153409id_/https://www.together.ai/models/llama-4-maverick",
+     "note": "Together's pricing page of 2 Mar 2026 shows a garbled row ('Llama 4 Maverick $0.27 $0.00'); the model page of 5 Mar 2026 shows $0.27 / $0.85, used here. From Apr 2026 Together's pricing page no longer lists Maverick in the serverless table."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260410042946id_/https://www.together.ai/models/llama-4-maverick",
+     "note": ""
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260510184440id_/https://www.together.ai/models/llama-4-maverick",
+     "note": ""
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260616173618id_/https://www.together.ai/models/llama-4-maverick",
+     "note": ""
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260714223452id_/https://www.together.ai/models/llama-4-maverick",
+     "note": "Shown for continuity; Meta's first-party Muse models are separate tiers from Jul 2026."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260821112549id_/https://www.together.ai/models/llama-4-maverick",
+     "note": "Shown for continuity; Meta's first-party Muse models are separate tiers from Jul 2026."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901094448id_/https://www.together.ai/models/llama-4-maverick",
+     "note": "Shown for continuity; Meta's first-party Muse models are separate tiers from Jul 2026."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901094448id_/https://www.together.ai/models/llama-4-maverick",
+     "note": "Carried forward, bracketed by Together model-page snapshots of 1 Sep and 2 Nov 2026, both $0.85."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "Llama 4 Maverick 17B-128E Instruct FP8",
+     "output_usd_per_mtok": 0.85,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261102200904id_/https://www.together.ai/models/llama-4-maverick",
+     "note": "Shown for continuity; Meta's first-party Muse models are separate tiers from Jul 2026."
+    }
+   ]
+  },
+  {
+   "tier": "Llama 4 Scout (Together host list price)",
+   "points": [
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250408012901id_/https://www.together.ai/pricing",
+     "note": "Host price: Together AI serverless list price (Meta had no paid first-party API in this period). Together pricing page lists 'Llama 4 Scout $0.18 input / $0.59 output'."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250507201943id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250606024514id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250705001349id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250805040816id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250906000147id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251001203946id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251103003614id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251204044953id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260101184249id_/https://www.together.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260210143811id_/https://www.together.ai/models/llama-4-scout",
+     "note": "Together model-page snapshot 10 Feb 2026: Input $0.18 | Output $0.59 (the 10 Feb pricing-page capture only showed fine-tuning rows for Scout)."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260302180711id_/https://www.together.ai/pricing",
+     "note": "Pricing page 2 Mar 2026: 'Llama 4 Scout $0.18 $0.59'."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260410042946id_/https://www.together.ai/models/llama-4-scout",
+     "note": "The Together model-page capture for this month does not show a price. $0.59 is bracketed by the 2 Mar 2026 pricing page and the 16 Jun 2026 model page, both $0.59."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260510184440id_/https://www.together.ai/models/llama-4-scout",
+     "note": "The Together model-page capture for this month does not show a price. $0.59 is bracketed by the 2 Mar 2026 pricing page and the 16 Jun 2026 model page, both $0.59."
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260616173618id_/https://www.together.ai/models/llama-4-scout",
+     "note": ""
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260714223452id_/https://www.together.ai/models/llama-4-scout",
+     "note": "Shown for continuity; Meta's first-party Muse models are separate tiers from Jul 2026."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260821112549id_/https://www.together.ai/models/llama-4-scout",
+     "note": "Shown for continuity; Meta's first-party Muse models are separate tiers from Jul 2026."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901094448id_/https://www.together.ai/models/llama-4-scout",
+     "note": "Shown for continuity; Meta's first-party Muse models are separate tiers from Jul 2026."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901094448id_/https://www.together.ai/models/llama-4-scout",
+     "note": "Carried forward, bracketed by 1 Sep and 2 Nov 2026 model-page captures, both $0.59."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "Llama 4 Scout 17B-16E Instruct",
+     "output_usd_per_mtok": 0.59,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261102200904id_/https://www.together.ai/models/llama-4-scout",
+     "note": "Shown for continuity; Meta's first-party Muse models are separate tiers from Jul 2026."
+    }
+   ]
+  },
+  {
+   "tier": "Muse Spark (Meta first-party API)",
+   "points": [
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "Muse Spark 1.1 (muse-spark-1.1)",
+     "output_usd_per_mtok": 4.25,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://dev.meta.ai/resources/blog/build-with-muse-spark",
+     "note": "Official Meta developer blog (dated Jul 08 2026 on the page): 'Pay-as-you-go pricing starts at $1.25 input/$4.25 output per million tokens'. Meta's launch post https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/ is dated July 9 2026 (public preview of Meta Model API with Muse Spark 1.1, US developers). Corroborated by https://the-decoder.com/metas-muse-spark-1-1-api-pricing-squeezes-openai-and-anthropic-as-the-ai-price-war-heats-up/ (secondary). Meta's pricing page first appears in the Wayback Machine on 4 Aug 2026. Standard mode shown. Convention: price in effect at month end; mid-month changes are noted."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "Muse Spark (Meta Model API; 1.1 at launch)",
+     "output_usd_per_mtok": 4.25,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260804014526id_/https://dev.meta.ai/docs/pricing-rate-limits",
+     "note": "4 Aug 2026 capture shows a single price table ($1.25 in / $4.25 out); the page does not name the model, which is Muse Spark per the Jul 9 launch coverage."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "Muse Spark 1.3 / 1.2 / 1.1",
+     "output_usd_per_mtok": 4.25,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260918102524id_/https://dev.meta.ai/docs/pricing-rate-limits.md",
+     "note": "18 Sep 2026 capture (.md version): muse-spark-1.3, 1.2, 1.1 share Cached $0.15 / Input $1.25 / Output $4.25."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "Muse Spark 1.3 / 1.2 / 1.1",
+     "output_usd_per_mtok": 4.25,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261004025312id_/https://dev.meta.ai/docs/pricing-rate-limits",
+     "note": "4 Oct 2026 capture: standard pricing $4.25 output; Muse Wonder not yet present."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "Muse Spark 1.3 / 1.2 / 1.1",
+     "output_usd_per_mtok": 4.25,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
+     "note": "Live page 18 Nov 2026: Standard mode $4.25 output; Contributor mode variants $0.20 (not used)."
+    }
+   ]
+  },
+  {
+   "tier": "Muse Wonder (Meta first-party API)",
+   "points": [
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "Muse Wonder 1.0 (muse-wonder-1.0, preview)",
+     "output_usd_per_mtok": 20,
+     "launch_month": "Oct 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261014155040id_/https://dev.meta.ai/docs/pricing-rate-limits",
+     "note": "14 Oct 2026 capture: Standard mode $4 in / $20 out / $0.20 cached; the 4 Oct capture has no Wonder entry. Official launch post https://dev.meta.ai/resources/blog/build-with-muse-wonder (Oct 12 2026): 'launch Muse Wonder on Muse Code and Meta Model API at $4 input / $20 output per million tokens'; Meta newsroom https://about.fb.com/news/2026/10/introducing-muse-wonder-models/ dated October 12 2026. Docs call it a preview. Convention: price in effect at month end; mid-month changes are noted."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "Muse Wonder 1.0 (muse-wonder-1.0, preview)",
+     "output_usd_per_mtok": 20,
+     "launch_month": "Oct 2026",
+     "status": "VERIFIED",
+     "source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
+     "note": "Live page 18 Nov 2026: $20.00 output, Standard mode only."
+    }
+   ]
+  },
+  {
+   "tier": "Muse Ember (Meta first-party API)",
+   "points": [
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "Muse Ember 1.0 (muse-ember-1.0)",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Nov 2026",
+     "status": "VERIFIED",
+     "source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
+     "note": "Live page 18 Nov 2026: $0.10 in / $0.50 out up to 200K input tokens ($1.50 out above 200K, whole request). Official launch post https://dev.meta.ai/resources/blog/build-with-muse-ember ('$0.10 input / $0.50 output per million tokens for up to 200k input tokens, and $0.30 input / $1.50 output' above) is undated on the page. Launch is bracketed to Nov 8-9 2026: the 7 Nov capture (https://web.archive.org/web/20261107113134id_/https://dev.meta.ai/docs/pricing-rate-limits) has no Ember entry and the 9 Nov capture (https://web.archive.org/web/20261109182746id_/https://dev.meta.ai/docs/pricing-rate-limits) lists it; third-party https://www.productbuilder.net/models/muse-ember-1-0 says Nov 9. Convention: price in effect at month end; mid-month changes are noted."
+    }
+   ]
+  }
+ ],
+ "discrepancies": [
+  "Chart Maverick $0.85 Apr 25 to Sep 26: agrees as the Together host list price (verified by Together pricing and model pages Apr 2025 to Nov 2026). It is not a Meta price. Meta had no paid per-token API of its own until Jul 2026.",
+  "Chart switches straight from Maverick $0.85 (Sep 26) to Muse Wonder $20 (Oct 26). Meta's first-party Muse Spark API launched Jul 9 2026 at $4.25 output (confirmed on dev.meta.ai captures of 4 Aug, 18 Sep, 4 Oct 2026), so Jul-Sep 2026 has a first-party $4.25 tier the chart skips.",
+  "Chart Muse Wonder $20 in Oct 26: agrees (14 Oct capture and live page; launch Oct 12 2026, preview). Nov 26 chart value 20 also agrees.",
+  "Chart has no Muse Ember ($0.50, launched Nov 9 2026) or Scout tier."
+ ],
+ "gaps": [
+  "dev.meta.ai pricing page Wayback coverage starts 4 Aug 2026; the 2 Sep 2026 capture is a JS shell with no content (Sep is covered by the 18 Sep .md capture).",
+  "Muse Spark and Muse Wonder launch dates and prices come from Meta's own posts (Jul 9 and Oct 12 2026). The Muse Ember post is undated; its Nov 9 date is bracketed by Wayback captures (Ember absent Nov 7, present Nov 9) and a third-party page.",
+  "Meta's Llama API (first-party Llama 4 access) was announced as a limited free preview (https://ai.meta.com/blog/llamacon-llama-news/, Apr 2025) with no per-token price, so Meta has no first-party Maverick price for 2025-H1 2026. No other host (DeepInfra, Fireworks) was checked, so $0.85 is a single-host figure.",
+  "Scout Apr and May 2026 are UNVERIFIED (model-page captures show no price; bracketed at $0.59).",
+  "Together's pricing page dropped Maverick and Scout from the serverless table from Apr 2026; the model pages continue to list $0.27/$0.85 and $0.18/$0.59 through 2 Nov 2026. Maverick Oct 26 and Scout Oct 26 are carried between the 1 Sep and 2 Nov captures.",
+  "Months before Apr 2025 and the Meta tiers before their launch months are intentionally empty. Standard mode only; Contributor-mode discounts and Muse Ember long-context rates ignored."
+ ]
+}

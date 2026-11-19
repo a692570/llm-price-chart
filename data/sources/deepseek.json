@@ -1,0 +1,539 @@
+{
+ "provider": "DeepSeek",
+ "tiers": [
+  {
+   "tier": "Chat / Flash (deepseek-chat to V4-Flash to V4.1-Flash)",
+   "mapping": "deepseek-chat alias: V3 -> V3-0324 -> V3.1 non-thinking -> V3.2-Exp -> V3.2 -> V4-Flash -> V4.1-Flash. One continuous cheap tier.",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "DeepSeek-V3 (deepseek-chat)",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Dec 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250103234807/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Standard 00:30-16:30 UTC rate; discount 16:30-00:30 UTC was $0.55 output. Page also shows an intro promo of $0.28 output until 2025-02-08.",
+     "promo_output_usd_per_mtok": 0.28
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "DeepSeek-V3 (deepseek-chat)",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Dec 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250217192724/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Standard rate; off-peak (16:30-00:30 UTC) $0.55 after the intro promo ended."
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "DeepSeek-V3-0324 (deepseek-chat)",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Mar 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250401093024/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "V3-0324 released 2025-03-24 (change log https://api-docs.deepseek.com/updates). Standard rate; off-peak $0.55. Snapshot 2025-03-15 (https://web.archive.org/web/20250315174458/https://api-docs.deepseek.com/quick_start/pricing) shows the same $1.10."
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "DeepSeek-V3-0324 (deepseek-chat)",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Mar 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250401093024/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Standard rate; off-peak $0.55."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "DeepSeek-V3-0324 (deepseek-chat)",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Mar 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250501215717/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Standard rate; off-peak $0.55."
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "DeepSeek-V3-0324 (deepseek-chat)",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Mar 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250609162358/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Standard rate; off-peak $0.55."
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "DeepSeek-V3-0324 (deepseek-chat)",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Mar 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250705171533/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Standard rate; off-peak $0.55."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "DeepSeek-V3.1 non-thinking (deepseek-chat)",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250901020532/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "V3.1 released 2025-08-21. Sep 1 snapshot says the old list (standard $1.10, off-peak $0.55) stays in force until 2025-09-05 16:00 UTC."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "DeepSeek-V3.2-Exp (deepseek-chat)",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251004112357/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Month-end price. $1.68 flat from 2025-09-05 16:00 UTC (night discount cancelled, source https://web.archive.org/web/20250901020532/https://api-docs.deepseek.com/quick_start/pricing); cut to $0.42 on 2025-09-29 with V3.2-Exp (https://api-docs.deepseek.com/news/news250929)."
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "DeepSeek-V3.2-Exp (deepseek-chat)",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251004112357/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Flat rate, no off-peak discount."
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "DeepSeek-V3.2-Exp (deepseek-chat)",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251112001900/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Flat rate."
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "DeepSeek-V3.2 (deepseek-chat)",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251201114852/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "V3.2 released 2025-12-01. Flat rate."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "DeepSeek-V3.2 (deepseek-chat)",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260101121941/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Flat rate."
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "DeepSeek-V3.2 (deepseek-chat)",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260204135805/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Flat rate."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "DeepSeek-V3.2 (deepseek-chat)",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260301152905/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Flat rate. Apr 3 snapshot https://web.archive.org/web/20260403183613/https://api-docs.deepseek.com/quick_start/pricing still shows V3.2 at $0.42."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "DeepSeek-V4-Flash (deepseek-chat / deepseek-v4-flash)",
+     "output_usd_per_mtok": 0.28,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://api-docs.deepseek.com/img/v4-price-en.png",
+     "note": "Official launch-post price table (https://api-docs.deepseek.com/news/news260424): V4-Flash $0.28, V4-Pro $3.48 output. May 1 snapshot https://web.archive.org/web/20260501050639/https://api-docs.deepseek.com/quick_start/pricing agrees. V4 released 2026-04-24 (https://api-docs.deepseek.com/updates). deepseek-chat then pointed at V4-Flash non-thinking. Input cache-hit cut to 1/10 on 2026-04-26."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "DeepSeek-V4-Flash",
+     "output_usd_per_mtok": 0.28,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260501050639/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Flat rate."
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "DeepSeek-V4-Flash",
+     "output_usd_per_mtok": 0.28,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260612150656/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Flat rate."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "DeepSeek-V4-Flash (0731 update)",
+     "output_usd_per_mtok": 0.28,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260702051533/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Flat rate. V4-Flash-0731 release on 2026-07-31 kept the price (Aug 1 snapshot https://web.archive.org/web/20260801170952/https://api-docs.deepseek.com/quick_start/pricing)."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "DeepSeek-V4-Flash (0731)",
+     "output_usd_per_mtok": 1.32,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://api-docs.deepseek.com/img/v4_260813_price_en.png",
+     "note": "Month-end peak rate. Peak/off-peak pricing took effect 2026-08-16 16:00 UTC (announcement https://api-docs.deepseek.com/news/news260813): peak $1.32, off-peak $0.66; $0.28 flat before that date. Confirmed in snapshot https://web.archive.org/web/20260828184437/https://api-docs.deepseek.com/quick_start/pricing.",
+     "promo_output_usd_per_mtok": 0.66
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "DeepSeek-V4.1-Flash (deepseek-flash)",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260922212416/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "V4.1-Flash released 2026-09-10 with a price cut effective 04:00 UTC that day (https://api-docs.deepseek.com/news/news260910). Peak $1.20, off-peak $0.60; Sep 1-10 was $1.32 peak. Peak hours 01:00-04:00 and 06:00-10:00 UTC Mon-Fri.",
+     "promo_output_usd_per_mtok": 0.6
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "DeepSeek-V4.1-Flash-1017 (deepseek-flash)",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261016015301/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Peak $1.20, off-peak $0.60. 1017 update on 2026-10-17 kept pricing (https://api-docs.deepseek.com/updates).",
+     "promo_output_usd_per_mtok": 0.6
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "DeepSeek-V4.1-Flash-1017 (deepseek-flash)",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Live page fetched 2026-11-18. Peak $1.20, off-peak $0.60.",
+     "promo_output_usd_per_mtok": 0.6
+    }
+   ]
+  },
+  {
+   "tier": "Reasoner (R1 line)",
+   "mapping": "deepseek-reasoner alias: R1 -> R1-0528 -> V3.1/V3.2 thinking -> V4-Flash thinking. Priced above chat until Sep 2025, then equal to chat.",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "DeepSeek-R1 (deepseek-reasoner)",
+     "output_usd_per_mtok": 2.19,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://api-docs.deepseek.com/news/news250120",
+     "note": "R1 launched 2025-01-20 at $2.19 output (launch page). Jan 3 snapshot predates R1. Output includes chain-of-thought tokens. Off-peak discount later $0.55."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "DeepSeek-R1 (deepseek-reasoner)",
+     "output_usd_per_mtok": 2.19,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250217192724/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Standard rate."
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "DeepSeek-R1 (deepseek-reasoner)",
+     "output_usd_per_mtok": 2.19,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250315174458/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Standard rate; off-peak $0.55 (75% off)."
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "DeepSeek-R1 (deepseek-reasoner)",
+     "output_usd_per_mtok": 2.19,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250401093024/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Standard rate; off-peak $0.55."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "DeepSeek-R1-0528 (deepseek-reasoner)",
+     "output_usd_per_mtok": 2.19,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250609162358/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "R1-0528 released 2025-05-28 at the same price (Jun 9 snapshot). May 1 snapshot https://web.archive.org/web/20250501215717/https://api-docs.deepseek.com/quick_start/pricing shows $2.19 for R1."
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "DeepSeek-R1-0528 (deepseek-reasoner)",
+     "output_usd_per_mtok": 2.19,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250609162358/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Standard rate; off-peak $0.55."
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "DeepSeek-R1-0528 (deepseek-reasoner)",
+     "output_usd_per_mtok": 2.19,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250705171533/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Standard rate; off-peak $0.55."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "DeepSeek-V3.1 thinking (deepseek-reasoner)",
+     "output_usd_per_mtok": 2.19,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250901020532/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "V3.1 hybrid model released 2025-08-21; deepseek-reasoner maps to thinking mode. Old list in force until 2025-09-05 16:00 UTC."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "DeepSeek-V3.2-Exp thinking (deepseek-reasoner)",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251004112357/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Month-end price. From 2025-09-05 16:00 UTC reasoner and chat share one price ($1.68); $0.42 from 2025-09-29."
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "DeepSeek-V3.2-Exp thinking",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251004112357/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Same price as deepseek-chat."
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "DeepSeek-V3.2-Exp thinking",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251112001900/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Same price as deepseek-chat."
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "DeepSeek-V3.2 thinking",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251201114852/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Same price as deepseek-chat. V3.2-Speciale temporary endpoint at the same price until 2025-12-15."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "DeepSeek-V3.2 thinking",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260101121941/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Same price as deepseek-chat."
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "DeepSeek-V3.2 thinking",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260204135805/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Same price as deepseek-chat."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "DeepSeek-V3.2 thinking",
+     "output_usd_per_mtok": 0.42,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260301152905/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Same price as deepseek-chat."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "DeepSeek-V4-Flash thinking (deepseek-reasoner alias)",
+     "output_usd_per_mtok": 0.28,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://api-docs.deepseek.com/img/v4-price-en.png",
+     "note": "Launch-post table gives Flash $0.28; May 1 snapshot https://web.archive.org/web/20260501050639/https://api-docs.deepseek.com/quick_start/pricing confirms the alias. From 2026-04-24 the deepseek-reasoner name pointed at V4-Flash thinking mode; same price as Flash."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "DeepSeek-V4-Flash thinking (deepseek-reasoner alias)",
+     "output_usd_per_mtok": 0.28,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260501050639/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Alias, same price as Flash."
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "DeepSeek-V4-Flash thinking (deepseek-reasoner alias)",
+     "output_usd_per_mtok": 0.28,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260612150656/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Alias, same price as Flash. Names deepseek-chat and deepseek-reasoner were scheduled for deprecation 2026-07-24 15:59 UTC, so the lineage ends here."
+    }
+   ]
+  },
+  {
+   "tier": "Pro (V4-Pro)",
+   "mapping": "New premium tier that starts with V4-Pro in Apr 2026; no earlier equivalent.",
+   "points": [
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "DeepSeek-V4-Pro (preview)",
+     "output_usd_per_mtok": 3.48,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://api-docs.deepseek.com/img/v4-price-en.png",
+     "note": "Official launch-post price table (https://api-docs.deepseek.com/news/news260424) shows $3.48 output; May 1 snapshot https://web.archive.org/web/20260501050639/https://api-docs.deepseek.com/quick_start/pricing shows the same list with the discount. List price $3.48. Launch discount of 75% gave $0.87 (page footnote: discount extended until 2026-05-31 15:59 UTC). V4 released 2026-04-24.",
+     "promo_output_usd_per_mtok": 0.87
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "DeepSeek-V4-Pro (preview)",
+     "output_usd_per_mtok": 3.48,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260501050639/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "List price $3.48; 75% discount ($0.87) applied through at least 2026-05-31 per the May 1 page.",
+     "promo_output_usd_per_mtok": 0.87
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "DeepSeek-V4-Pro (preview)",
+     "output_usd_per_mtok": 0.87,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260612150656/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Page lists $0.87 with no discount marker, so $0.87 is the displayed price from June. No explicit announcement of a permanent cut was found."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "DeepSeek-V4-Pro (preview)",
+     "output_usd_per_mtok": 0.87,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260702051533/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Displayed price $0.87, no discount marker."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "DeepSeek-V4-Pro (GA, 2026-08-13)",
+     "output_usd_per_mtok": 3.96,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://api-docs.deepseek.com/img/v4_260813_price_en.png",
+     "note": "Month-end peak rate. Peak/off-peak pricing effective 2026-08-16 16:00 UTC: peak $3.96, off-peak $1.98. Confirmed in snapshot https://web.archive.org/web/20260828184437/https://api-docs.deepseek.com/quick_start/pricing.",
+     "promo_output_usd_per_mtok": 1.98
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "DeepSeek-V4-Pro-0813",
+     "output_usd_per_mtok": 3.96,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260922212416/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Peak $3.96, off-peak $1.98 (unchanged by V4.1-Flash release).",
+     "promo_output_usd_per_mtok": 1.98
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "DeepSeek-V4-Pro-0813",
+     "output_usd_per_mtok": 3.96,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261016015301/https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Peak $3.96, off-peak $1.98.",
+     "promo_output_usd_per_mtok": 1.98
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "DeepSeek-V4-Pro-0813",
+     "output_usd_per_mtok": 3.96,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+     "note": "Live page fetched 2026-11-18. Peak $3.96, off-peak $1.98.",
+     "promo_output_usd_per_mtok": 1.98
+    }
+   ]
+  }
+ ],
+ "discrepancies": [
+  "Chart V3-0324 $0.88 (Mar 25): no $0.88 on any snapshot. Page shows deepseek-chat standard $1.10 (00:30-16:30 UTC) and $0.55 off-peak (16:30-00:30 UTC). Source: https://web.archive.org/web/20250401093024/https://api-docs.deepseek.com/quick_start/pricing",
+  "Chart V3.1 $1.10 (Aug 25) matches the standard rate, but the price moved to $1.68 for both chat and reasoner on 2025-09-05 and to $0.42 on 2025-09-29. Sources: https://web.archive.org/web/20250901020532/https://api-docs.deepseek.com/quick_start/pricing and https://api-docs.deepseek.com/news/news250929",
+  "Chart V3.2 $0.38 (Dec 25): page shows $0.42 for deepseek-chat and deepseek-reasoner. Source: https://web.archive.org/web/20251201114852/https://api-docs.deepseek.com/quick_start/pricing",
+  "Chart V4 Pro $0.87 (May 26) is the 75% launch-discount price; list was $3.48 (output) on the May 1 page. Source: https://web.archive.org/web/20260501050639/https://api-docs.deepseek.com/quick_start/pricing. The page lists $0.87 as the plain price by Jun 12 (https://web.archive.org/web/20260612150656/https://api-docs.deepseek.com/quick_start/pricing).",
+  "Chart V4 Pro $1.98 (Aug 26) is the off-peak rate; the peak rate is $3.96 (2x). This file puts the peak rate in output_usd_per_mtok from Aug 26 on and the off-peak rate in promo_output_usd_per_mtok. Source: https://api-docs.deepseek.com/img/v4_260813_price_en.png",
+  "Chart R1 $2.19 (Jan 25) matches. R1 (reasoning) and V3 (chat) were separate tiers at the same time ($2.19 vs $1.10), so a single DeepSeek line in the chart mixes tiers. From Sep 2025 deepseek-chat and deepseek-reasoner share one price.",
+  "Month rule used in all files: price in effect at month end; mid-month changes are described in note. For Aug 26 and Sep 26 this means the peak rate, which is 2x the off-peak rate."
+ ],
+ "gaps": [
+  "Mar 25 point: no snapshot between Mar 15 and Apr 1; V3-0324 release date (2025-03-24) is from the change log and the price is the same in both adjacent snapshots.",
+  "Reasoner lineage ends Jun 26 (alias deprecated 2026-07-24); from Jul 26 the reasoning option is V4 Pro or Flash thinking mode inside the Pro and Flash tiers.",
+  "Wayback snapshots stop at the first page of each month; intra-month price changes (Sep 5 and Sep 29 2025, Apr 26 2026, Aug 16 and Sep 10 2026) come from the page footnotes and DeepSeek announcement pages, not from daily snapshots.",
+  "No evidence found for whether the V4 Pro price of $0.87 from June is a permanent cut or an extended discount."
+ ]
+}

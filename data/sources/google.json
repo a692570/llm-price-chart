@@ -1,0 +1,942 @@
+{
+ "provider": "Google",
+ "tiers": [
+  {
+   "tier": "Pro / flagship",
+   "mapping": "Lineage = Pro-named models (1.5 Pro, 2.5 Pro; 3 Pro and 3.1 Pro stayed preview-only). Series values are the GA-only price; the newer preview-only price is in preview_or_newer_alt. From Oct 2026 Google dropped the Pro name for Gemini 4 (Carbon, Argon, Neon, Hydrogen), so the lineage continues with Argon (Oct 26) and Carbon (Nov 26) as the flagship models.",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "Gemini 1.5 Pro",
+     "output_usd_per_mtok": 5.0,
+     "launch_month": "before Jan 25 (GA; launch month not verified)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250131021227id_/https://ai.google.dev/pricing",
+     "note": "Prompts up to 128k tokens ($10.00 above 128k). Gemini 2.0 Flash and 2.0 Pro were not on the paid list in this snapshot."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "Gemini 1.5 Pro",
+     "output_usd_per_mtok": 5.0,
+     "launch_month": "before Jan 25 (GA; launch month not verified)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250304102117id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 128k tokens. Gemini 2.0 Pro Experimental (Feb 5 2025, changelog) was free-only and never priced. Feb 11 2025 snapshot also shows $5.00: https://web.archive.org/web/20250211163751id_/https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "Gemini 1.5 Pro",
+     "output_usd_per_mtok": 5.0,
+     "launch_month": "before Jan 25 (GA; launch month not verified)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250401004436id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 128k tokens."
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "Gemini 1.5 Pro",
+     "output_usd_per_mtok": 5.0,
+     "launch_month": "before Jan 25 (GA; launch month not verified)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 128k tokens. Gemini 2.5 Pro Preview with billing released Apr 4 2025 at $10.00 per 1M output (prompts up to 200k), preview-only.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 2.5 Pro Preview",
+      "output_usd_per_mtok": 10.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "changelog": "https://ai.google.dev/gemini-api/docs/changelog"
+     }
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "Gemini 1.5 Pro",
+     "output_usd_per_mtok": 5.0,
+     "launch_month": "before Jan 25 (GA; launch month not verified)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250603033208id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 128k tokens. 2.5 Pro Preview (05-06 and 06-05 versions) $10.00 until GA.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 2.5 Pro Preview",
+      "output_usd_per_mtok": 10.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20250603033208id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "changelog": "https://ai.google.dev/gemini-api/docs/changelog"
+     }
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250701052920id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens. GA Jun 17 2025 per changelog."
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250801134936id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250902114840id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251002162244id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens. Gemini 1.5 models were shut down Sep 29 2025 per changelog although the pricing page snapshots kept listing them."
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251103074340id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens."
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251120213749id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens. Gemini 3 Pro Preview launched Nov 18 2025 at $12.00 (preview-only).",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3 Pro Preview",
+      "output_usd_per_mtok": 12.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20251120213749id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Nov 18 2025",
+      "changelog": "https://ai.google.dev/gemini-api/docs/changelog"
+     }
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260101134813id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens. Gemini 3 Pro Preview $12.00 is the newest Pro but preview-only.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3 Pro Preview",
+      "output_usd_per_mtok": 12.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260101134813id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Nov 18 2025"
+     }
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260201102619id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens. Gemini 3 Pro Preview $12.00 is the newest Pro but preview-only.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3 Pro Preview",
+      "output_usd_per_mtok": 12.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260201102619id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Nov 18 2025"
+     }
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260301091320id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens. Gemini 3.1 Pro Preview released Feb 19 2026 at $12.00; Gemini 3 Pro Preview shut down Mar 9 2026.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3.1 Pro Preview",
+      "output_usd_per_mtok": 12.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260301091320id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Feb 19 2026",
+      "note": "Still labelled Preview on the live page on Nov 18 2026; never GA."
+     }
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260401191258id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3.1 Pro Preview",
+      "output_usd_per_mtok": 12.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260401191258id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Feb 19 2026",
+      "note": "Still labelled Preview on the live page on Nov 18 2026; never GA."
+     }
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260501160638id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3.1 Pro Preview",
+      "output_usd_per_mtok": 12.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260501160638id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Feb 19 2026",
+      "note": "Still labelled Preview on the live page on Nov 18 2026; never GA."
+     }
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260602081519id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3.1 Pro Preview",
+      "output_usd_per_mtok": 12.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260602081519id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Feb 19 2026",
+      "note": "Still labelled Preview on the live page on Nov 18 2026; never GA."
+     }
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260702id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3.1 Pro Preview",
+      "output_usd_per_mtok": 12.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260702id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Feb 19 2026",
+      "note": "Still labelled Preview on the live page on Nov 18 2026; never GA."
+     }
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260801id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3.1 Pro Preview",
+      "output_usd_per_mtok": 12.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260801id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Feb 19 2026",
+      "note": "Still labelled Preview on the live page on Nov 18 2026; never GA."
+     }
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901002902id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3.1 Pro Preview",
+      "output_usd_per_mtok": 12.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260901002902id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Feb 19 2026",
+      "note": "Still labelled Preview on the live page on Nov 18 2026; never GA."
+     }
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "Gemini 2.5 Pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Jun 25 (GA Jun 17 2025; paid preview since Apr 4 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261005id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Prompts up to 200k tokens.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3.1 Pro Preview",
+      "output_usd_per_mtok": 12.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20261005id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Feb 19 2026",
+      "note": "Still labelled Preview on the live page on Nov 18 2026; never GA."
+     }
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "Gemini 4 Argon",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Oct 26 (GA Oct 13 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261101085645id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Introductory price $10.00 per 1M output through Nov 30 2026, then $20.00 from Dec 1 2026 (input $2.00 then $4.00). Nov 1 snapshot labels Argon 'Our flagship reasoning model'. Google dropped the Pro name for Gemini 4. Gemini 2.5 Pro still listed at $10.00 (deprecated Nov 2 2026; from Dec 1 2026 it routes to Gemini 3.8 Flash billing). Official Argon guide (fetched Nov 18 2026) confirms $2/$10 intro through Nov 30 2026, $4/$20 after: https://ai.google.dev/gemini-api/docs/whats-new-gemini-4-argon",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3.1 Pro Preview",
+      "output_usd_per_mtok": 12.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20261101085645id_/https://ai.google.dev/gemini-api/docs/pricing"
+     },
+     "official_confirmation_url": "https://ai.google.dev/gemini-api/docs/whats-new-gemini-4-argon"
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "Gemini 4 Carbon",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Nov 26 (GA Nov 10 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Introductory $10.00 per 1M output through Nov 30 2026, then $20.00 from Dec 1 2026. Carbon is described as the most capable Gemini 4 model. Argon (GA Oct 13 2026) now reads 'efficient' and has the identical $10.00 then $20.00 schedule.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 4 Argon",
+      "output_usd_per_mtok": 10.0,
+      "preview": false,
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "note": "Same intro schedule."
+     },
+     "official_confirmation_url": "https://ai.google.dev/gemini-api/docs/changelog (Nov 10 2026 entry, GA)"
+    }
+   ]
+  },
+  {
+   "tier": "Flash",
+   "mapping": "Lineage = Flash-named models, then Gemini 4 Hydrogen in Nov 26 (mapping judgment). Values are GA-only; preview-only newer models are in preview_or_newer_alt.",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "Gemini 1.5 Flash",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "before Jan 25 (GA; launch month not verified)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250131021227id_/https://ai.google.dev/pricing",
+     "note": "Prompts up to 128k tokens ($0.60 above 128k). 2.0 Flash not yet on the paid list in this snapshot."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "Gemini 2.0 Flash",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Feb 25 (GA Feb 5 2025, gemini-2.0-flash-001)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250211163751id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Feb 11 2025 snapshot, page text 'Our most capable multi-modal model'."
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "Gemini 2.0 Flash",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Feb 25 (GA Feb 5 2025, gemini-2.0-flash-001)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250401004436id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "Gemini 2.0 Flash",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Feb 25 (GA Feb 5 2025, gemini-2.0-flash-001)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Gemini 2.5 Flash Preview released Apr 17 2025: non-thinking $0.60, thinking $3.50 per 1M output (preview-only).",
+     "preview_or_newer_alt": {
+      "model": "Gemini 2.5 Flash Preview",
+      "output_usd_per_mtok": 3.5,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "non_thinking_output_usd_per_mtok": 0.6
+     }
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "Gemini 2.0 Flash",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Feb 25 (GA Feb 5 2025, gemini-2.0-flash-001)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250603033208id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "2.5 Flash Preview still preview: non-thinking $0.60, thinking $3.50.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 2.5 Flash Preview",
+      "output_usd_per_mtok": 3.5,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20250603033208id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "non_thinking_output_usd_per_mtok": 0.6
+     }
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "Gemini 2.5 Flash",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jun 25 (GA Jun 17 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250701052920id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Single output price for thinking and non-thinking after GA."
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "Gemini 2.5 Flash",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jun 25 (GA Jun 17 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250801134936id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "Gemini 2.5 Flash",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jun 25 (GA Jun 17 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250902114840id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "Gemini 2.5 Flash",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jun 25 (GA Jun 17 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251002162244id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "Gemini 2.5 Flash",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jun 25 (GA Jun 17 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251103074340id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "Gemini 2.5 Flash",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jun 25 (GA Jun 17 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251120213749id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "Gemini 2.5 Flash",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jun 25 (GA Jun 17 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260101134813id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Gemini 3 Flash Preview launched Dec 17 2025 at $3.00 (preview-only).",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3 Flash Preview",
+      "output_usd_per_mtok": 3.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260101134813id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Dec 17 2025"
+     }
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "Gemini 2.5 Flash",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jun 25 (GA Jun 17 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260201102619id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Gemini 3 Flash Preview $3.00 still preview-only.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3 Flash Preview",
+      "output_usd_per_mtok": 3.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260201102619id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Dec 17 2025"
+     }
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "Gemini 2.5 Flash",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jun 25 (GA Jun 17 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260301091320id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Gemini 3 Flash Preview $3.00 still preview-only.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3 Flash Preview",
+      "output_usd_per_mtok": 3.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260301091320id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Dec 17 2025"
+     }
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "Gemini 2.5 Flash",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jun 25 (GA Jun 17 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260401191258id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Gemini 3 Flash Preview $3.00 still preview-only.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3 Flash Preview",
+      "output_usd_per_mtok": 3.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260401191258id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Dec 17 2025"
+     }
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "Gemini 2.5 Flash",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jun 25 (GA Jun 17 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260501160638id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Gemini 3 Flash Preview $3.00 still preview-only.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3 Flash Preview",
+      "output_usd_per_mtok": 3.0,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260501160638id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Dec 17 2025"
+     }
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "Gemini 3.5 Flash",
+     "output_usd_per_mtok": 9.0,
+     "launch_month": "May 26 (GA May 19 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260602081519id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Output $9.00 (Gemini 2.5 Pro was $10.00; Flash list price is now close to the Pro list price). First snapshot after launch is Jun 2 (May 1 snapshot predates it); a May 29 snapshot shows the same $9.00: https://web.archive.org/web/20260529id_/https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "Gemini 3.5 Flash",
+     "output_usd_per_mtok": 9.0,
+     "launch_month": "May 26 (GA May 19 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260702id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Gemini 3.6 Flash GA is Jul 21 2026, after this Jul 2 snapshot (a Jul 17 snapshot also lacks it)."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "Gemini 3.6 Flash",
+     "output_usd_per_mtok": 7.5,
+     "launch_month": "Jul 26 (GA Jul 21 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260801id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Launch price $7.50 with no promo; Gemini 3.5 Flash still listed at $9.00. The Aug 1 snapshot is the first one after GA."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "Gemini 3.7 Flash",
+     "output_usd_per_mtok": 3.75,
+     "launch_month": "Aug 26 (GA Aug 13 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901002902id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Introductory $3.75 per 1M output through Dec 31 2026, then $7.50 from Jan 1 2027. Gemini 3.6 Flash was $7.50 on Aug 1 and $3.75 intro by Aug 18 (exact change day not pinned). Gemini 3.5 Flash stays $9.00. Aug 18 snapshot: https://web.archive.org/web/20260818id_/https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "Gemini 3.8 Flash",
+     "output_usd_per_mtok": 3.75,
+     "launch_month": "Sep 26 (GA Sep 2 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261005id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Introductory $3.75 through Dec 31 2026, then $7.50 from Jan 1 2027; 3.7 and 3.6 Flash on the same schedule; 3.5 Flash $9.00."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "Gemini 3.8 Flash",
+     "output_usd_per_mtok": 3.75,
+     "launch_month": "Sep 26 (GA Sep 2 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261101085645id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Introductory $3.75 through Dec 31 2026, then $7.50 from Jan 1 2027."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "Gemini 4 Hydrogen",
+     "output_usd_per_mtok": 7.5,
+     "launch_month": "Nov 26 (GA Nov 12 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "MAPPING JUDGMENT: Hydrogen is the Gemini 4 successor to Flash (changelog gives migration guidance from Gemini 3.8 Flash; has a free tier). List price $7.50, no intro discount. Gemini 3.8 Flash remains listed at $3.75 intro through Dec 31 2026.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3.8 Flash",
+      "output_usd_per_mtok": 3.75,
+      "preview": false,
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "note": "Intro price through Dec 31 2026, then $7.50."
+     },
+     "official_confirmation_url": "https://ai.google.dev/gemini-api/docs/changelog (Nov 12 2026 entry, GA, $1.50 in / $7.50 out)"
+    }
+   ]
+  },
+  {
+   "tier": "Flash-Lite",
+   "mapping": "Lineage = 1.5 Flash-8B then Flash-Lite models. Values are GA-only; preview-only newer models are in preview_or_newer_alt.",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "Gemini 1.5 Flash-8B",
+     "output_usd_per_mtok": 0.15,
+     "launch_month": "before Jan 25 (GA; launch month not verified)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250131021227id_/https://ai.google.dev/pricing",
+     "note": "Prompts up to 128k tokens ($0.30 above 128k). 2.0 Flash-Lite not on the list yet."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "Gemini 2.0 Flash-Lite",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Feb 25 (GA Feb 25 2025; preview Feb 5)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250304102117id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Preview Feb 5 at $0.30 (Feb 11 snapshot: prices effective at GA); GA Feb 25 per changelog; Mar 4 snapshot shows $0.30."
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "Gemini 2.0 Flash-Lite",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Feb 25 (GA Feb 25 2025; preview Feb 5)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250401004436id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "Gemini 2.0 Flash-Lite",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Feb 25 (GA Feb 25 2025; preview Feb 5)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250502025139id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "Gemini 2.0 Flash-Lite",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Feb 25 (GA Feb 25 2025; preview Feb 5)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250603033208id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "Gemini 2.0 Flash-Lite",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Feb 25 (GA Feb 25 2025; preview Feb 5)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250701052920id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Gemini 2.5 Flash-Lite Preview released Jun 17 2025 at $0.40 (preview-only until GA Jul 22 2025).",
+     "preview_or_newer_alt": {
+      "model": "Gemini 2.5 Flash-Lite Preview",
+      "output_usd_per_mtok": 0.4,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20250701052920id_/https://ai.google.dev/gemini-api/docs/pricing"
+     }
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "Gemini 2.5 Flash-Lite",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 25 (GA Jul 22 2025; preview Jun 17)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250801134936id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "GA Jul 22 2025 per changelog."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "Gemini 2.5 Flash-Lite",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 25 (GA Jul 22 2025; preview Jun 17)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250902114840id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "Gemini 2.5 Flash-Lite",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 25 (GA Jul 22 2025; preview Jun 17)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251002162244id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "Gemini 2.5 Flash-Lite",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 25 (GA Jul 22 2025; preview Jun 17)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251103074340id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "Gemini 2.5 Flash-Lite",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 25 (GA Jul 22 2025; preview Jun 17)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251120213749id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "Gemini 2.5 Flash-Lite",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 25 (GA Jul 22 2025; preview Jun 17)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260101134813id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "Gemini 2.5 Flash-Lite",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 25 (GA Jul 22 2025; preview Jun 17)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260201102619id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "Gemini 2.5 Flash-Lite",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 25 (GA Jul 22 2025; preview Jun 17)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260301091320id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "Gemini 2.5 Flash-Lite",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 25 (GA Jul 22 2025; preview Jun 17)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260401191258id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Gemini 3.1 Flash-Lite Preview launched Mar 3 2026 at $1.50 (preview-only until GA May 7 2026); it is absent from the Mar 1 snapshot and visible in the Apr 1 snapshot used here.",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3.1 Flash-Lite Preview",
+      "output_usd_per_mtok": 1.5,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260401191258id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Mar 3 2026"
+     }
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "Gemini 2.5 Flash-Lite",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 25 (GA Jul 22 2025; preview Jun 17)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260501160638id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Gemini 3.1 Flash-Lite Preview $1.50 still preview-only at end of April (GA May 7 2026).",
+     "preview_or_newer_alt": {
+      "model": "Gemini 3.1 Flash-Lite Preview",
+      "output_usd_per_mtok": 1.5,
+      "preview": true,
+      "source_url": "https://web.archive.org/web/20260501160638id_/https://ai.google.dev/gemini-api/docs/pricing",
+      "launched": "Mar 3 2026"
+     }
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "Gemini 3.1 Flash-Lite",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "May 26 (GA May 7 2026; preview Mar 3 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260602081519id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "GA released May 7 2026 per changelog; Jun 2 snapshot lists it without Preview at $1.50 (May 1 snapshot predates GA)."
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "Gemini 3.1 Flash-Lite",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "May 26 (GA May 7 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260702id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Gemini 2.0 Flash-Lite shut down Jun 1 2026 per changelog. Gemini 3.5 Flash-Lite GA is Jul 21 2026, after this Jul 2 snapshot."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "Gemini 3.5 Flash-Lite",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jul 26 (GA Jul 21 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260801id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "No intro discount. The Aug 1 snapshot is the first one after GA."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "Gemini 3.5 Flash-Lite",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jul 26 (GA Jul 21 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901002902id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "Gemini 3.5 Flash-Lite",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jul 26 (GA Jul 21 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261005id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "Gemini 3.5 Flash-Lite",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jul 26 (GA Jul 21 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261101085645id_/https://ai.google.dev/gemini-api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "Gemini 3.5 Flash-Lite",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jul 26 (GA Jul 21 2026)",
+     "status": "VERIFIED",
+     "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "No Gemini 4 Flash-Lite on the live page; Hydrogen at $7.50 is the lowest Gemini 4 tier. Changelog: from Dec 1 2026 gemini-2.5-flash requests are billed at 3.5 Flash-Lite rates."
+    }
+   ]
+  },
+  {
+   "tier": "Gemini 4 Neon (unmapped mid tier)",
+   "mapping": "No predecessor line; single point.",
+   "points": [
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "Gemini 4 Neon",
+     "output_usd_per_mtok": 15.0,
+     "launch_month": "Nov 26 (GA Nov 18 2026, the changelog entry dated today)",
+     "status": "VERIFIED",
+     "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+     "note": "Gemini 4 tier priced between Argon/Carbon ($10 intro, $20 from Dec 1) and Hydrogen ($7.50). List price, no intro discount; input $3.00. Not mapped to Pro, Flash or Flash-Lite.",
+     "official_confirmation_url": "https://ai.google.dev/gemini-api/docs/changelog (Nov 18 2026 entry, GA, $3.00 in / $15.00 out)"
+    }
+   ]
+  }
+ ],
+ "discrepancies": [
+  "Chart Google flagship Jan 25 to Apr 25 at $0.40 (Gemini 2.0 Flash): not supported as the flagship. The Jan 31 2025 pricing page (https://web.archive.org/web/20250131021227id_/https://ai.google.dev/pricing) lists only 1.5 Flash ($0.30), 1.5 Flash-8B ($0.15), 1.5 Pro ($5.00, prompts up to 128k) and 1.0 Pro; Gemini 2.0 Flash was not yet priced (GA Feb 5 2025 per changelog). The flagship Pro-line price in Jan to May 2025 was $5.00 (1.5 Pro, GA). 2.0 Flash ($0.40) is a Flash-tier price; its page text in Feb 2025 calls it 'our most capable multi-modal model', which may be why it was treated as flagship. Gemini 2.0 Pro Experimental (Feb 5 2025) was free-only and never had a paid price.",
+  "Chart jumps to $10 from May 25 (2.5 Pro). The $10.00 price first appears Apr 4 2025 (2.5 Pro Preview with billing, changelog) and is visible in the May 2 2025 snapshot, so Apr 25 is $10 if previews count; as GA, 2.5 Pro (stable) arrived Jun 17 2025, so the GA-only series is $5.00 (1.5 Pro) through May 25 and $10.00 from Jun 25.",
+  "Chart stays $10 until Dec 25 and moves to $12 from Jan 26 (3.1 Pro). Gemini 3 Pro Preview was priced $12.00 from Nov 18 2025 (changelog and Nov 20 2025 snapshot), so $12 applies from Nov 25 if previews count. Gemini 3.1 Pro Preview (Feb 19 2026) is the same $12.00 and is still labelled Preview on the live page on Nov 18 2026, so no Gemini 3.x Pro ever reached GA; the GA-only Pro series stays at $10.00 (2.5 Pro) until Gemini 4 Argon.",
+  "Chart Oct 26 = $10 Gemini 4 Argon intro, steps to $20 on Dec 1: confirmed (Argon GA Oct 13 2026; $10.00 through Nov 30, $20.00 from Dec 1 2026; Nov 1 snapshot and live page).",
+  "Top tier name: on the live page (Nov 18 2026) Gemini 4 Carbon (GA Nov 10) is 'our most capable reasoning model' and Argon (GA Oct 13) is the 'efficient' Gemini 4 model, both at $10.00 intro then $20.00 from Dec 1. The Nov 1 snapshot (and changelog Oct 13) called Argon the flagship. Carbon, Neon ($15.00) and Hydrogen ($7.50) were all added Nov 10 to Nov 18 2026, after the last Wayback snapshot (Nov 1).",
+  "Chart note 'Gemini 3.x Flash promo $3.75': confirmed for Gemini 3.6, 3.7 and 3.8 Flash (intro $3.75 through Dec 31 2026, $7.50 from Jan 1 2027). Not true of Gemini 3.5 Flash ($9.00 from GA May 19 2026, no promo) nor Gemini 3.6 Flash at launch (Jul 21 2026 GA at $7.50 on the Aug 1 snapshot, $3.75 by Aug 18). Gemini 3 Flash Preview was $3.00 and 3.5 Flash-Lite $2.50.",
+  "Gemini 2.5 Pro is deprecated (changelog Nov 2 2026): from Dec 1 2026 requests route to Gemini 3.8 Flash and bill at its rates; gemini-2.5-flash routes to 3.5 Flash-Lite. The $10.00 Pro-line point for Nov 26 in the chart's old logic would be 2.5 Pro, but it is superseded by Gemini 4 Carbon/Argon at $10.00 intro."
+ ],
+ "gaps": [
+  "Month values are the state at (or nearest snapshot to) month end; price changes inside a month are only dated where the official changelog (https://ai.google.dev/gemini-api/docs/changelog) gives a date.",
+  "Launch months for Gemini 1.5 Pro, 1.5 Flash and 1.5 Flash-8B are not verified (all pre-date Jan 2025; the changelog on the live page starts Jan 2025).",
+  "Wayback fetch of the Dec 6 2025 snapshot failed repeatedly; Dec 25 is read from the Jan 1 2026 snapshot and Nov 25 from Nov 20 2025. Nov 30 2025 and Sep 30 2026 states are from the nearest fetched snapshots (Nov 20 2025 and Oct 5 2026). Snapshots for 20260918 and 20261020 were requested but not retrieved, so Argon's launch price is verified via the Nov 1 2026 snapshot, the live page and the official Argon guide https://ai.google.dev/gemini-api/docs/whats-new-gemini-4-argon.",
+  "Exact day Gemini 3.6 Flash dropped from $7.50 to the $3.75 intro price is between Aug 1 and Aug 18 2026, not pinned (probably tied to the Aug 13 Gemini 3.7 Flash launch, UNVERIFIED).",
+  "Gemini 4 Carbon (Nov 10), Hydrogen (Nov 12) and Neon (Nov 18) prices come from the live pricing page and changelog fetched Nov 18 2026; no archived snapshot exists after Nov 2 2026.",
+  "Mapping of Gemini 4 names to old tiers is a judgment: Argon/Carbon to Pro/flagship, Hydrogen to Flash (migration guide from 3.8 Flash), Neon unmapped; Google publishes no tier mapping.",
+  "Prices are text output for the standard paid tier at base context. Long-context rates exist (1.5 Pro above 128k $10.00; 2.5 Pro and 3.x Pro above 200k higher, not recorded). Priority and flex tiers on the 2026 pages show higher or lower multiples (e.g. 2.5 Pro $18.00 priority) and are excluded. Batch is half price and excluded.",
+  "2.5 Flash Preview (Apr 17 to Jun 16 2025) had non-thinking $0.60 versus thinking $3.50; GA 2.5 Flash is a single $2.50.",
+  "The pricing page kept listing Gemini 1.5 models after the Sep 29 2025 shutdown (Oct and Nov 2025 snapshots), and the Pro series switches to 2.5 Pro in Jun 25 regardless."
+ ]
+}

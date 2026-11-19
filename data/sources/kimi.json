@@ -1,0 +1,250 @@
+{
+ "provider": "Kimi (Moonshot)",
+ "tiers": [
+  {
+   "tier": "K2 line (K2, K2.5, K2.6, K2.7-code)",
+   "mapping": "Open-weight K2 family and its successors; the K2 series was closed to new users on 2026-10-31.",
+   "points": [
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "kimi-k2-0711-preview",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jul 2025",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260421005651/https://platform.kimi.ai/docs/pricing/chat-k2",
+     "note": "Release dates from the Moonshot platform release log (https://platform.moonshot.ai/blog/posts/changelog): kimi-k2-0711-preview 2025-07-11, kimi-k2-0905-preview 2025-09-05, kimi-k2-thinking 2025-11-06 (with an input price cut; output change not stated). Output price not seen on a contemporaneous page: the pricing table of platform.moonshot.ai in 2025 is client-rendered and absent from archived captures. Value taken from the Apr 21 2026 page where kimi-k2-0711-preview, kimi-k2-0905-preview and kimi-k2-thinking are all $2.50 (input $0.60). kimi-k2-turbo-preview is $8.00."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "kimi-k2-0711-preview",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jul 2025",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260421005651/https://platform.kimi.ai/docs/pricing/chat-k2",
+     "note": "Release dates from the Moonshot platform release log (https://platform.moonshot.ai/blog/posts/changelog): kimi-k2-0711-preview 2025-07-11, kimi-k2-0905-preview 2025-09-05, kimi-k2-thinking 2025-11-06 (with an input price cut; output change not stated). Output price not seen on a contemporaneous page: the pricing table of platform.moonshot.ai in 2025 is client-rendered and absent from archived captures. Value taken from the Apr 21 2026 page where kimi-k2-0711-preview, kimi-k2-0905-preview and kimi-k2-thinking are all $2.50 (input $0.60). kimi-k2-turbo-preview is $8.00."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "kimi-k2-0905-preview",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jul 2025",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260421005651/https://platform.kimi.ai/docs/pricing/chat-k2",
+     "note": "Release dates from the Moonshot platform release log (https://platform.moonshot.ai/blog/posts/changelog): kimi-k2-0711-preview 2025-07-11, kimi-k2-0905-preview 2025-09-05, kimi-k2-thinking 2025-11-06 (with an input price cut; output change not stated). Output price not seen on a contemporaneous page: the pricing table of platform.moonshot.ai in 2025 is client-rendered and absent from archived captures. Value taken from the Apr 21 2026 page where kimi-k2-0711-preview, kimi-k2-0905-preview and kimi-k2-thinking are all $2.50 (input $0.60). kimi-k2-turbo-preview is $8.00."
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "kimi-k2-0905-preview",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jul 2025",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260421005651/https://platform.kimi.ai/docs/pricing/chat-k2",
+     "note": "Release dates from the Moonshot platform release log (https://platform.moonshot.ai/blog/posts/changelog): kimi-k2-0711-preview 2025-07-11, kimi-k2-0905-preview 2025-09-05, kimi-k2-thinking 2025-11-06 (with an input price cut; output change not stated). Output price not seen on a contemporaneous page: the pricing table of platform.moonshot.ai in 2025 is client-rendered and absent from archived captures. Value taken from the Apr 21 2026 page where kimi-k2-0711-preview, kimi-k2-0905-preview and kimi-k2-thinking are all $2.50 (input $0.60). kimi-k2-turbo-preview is $8.00."
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "kimi-k2-thinking",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jul 2025",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260421005651/https://platform.kimi.ai/docs/pricing/chat-k2",
+     "note": "Release dates from the Moonshot platform release log (https://platform.moonshot.ai/blog/posts/changelog): kimi-k2-0711-preview 2025-07-11, kimi-k2-0905-preview 2025-09-05, kimi-k2-thinking 2025-11-06 (with an input price cut; output change not stated). Output price not seen on a contemporaneous page: the pricing table of platform.moonshot.ai in 2025 is client-rendered and absent from archived captures. Value taken from the Apr 21 2026 page where kimi-k2-0711-preview, kimi-k2-0905-preview and kimi-k2-thinking are all $2.50 (input $0.60). kimi-k2-turbo-preview is $8.00."
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "kimi-k2-thinking",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "Jul 2025",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260421005651/https://platform.kimi.ai/docs/pricing/chat-k2",
+     "note": "Release dates from the Moonshot platform release log (https://platform.moonshot.ai/blog/posts/changelog): kimi-k2-0711-preview 2025-07-11, kimi-k2-0905-preview 2025-09-05, kimi-k2-thinking 2025-11-06 (with an input price cut; output change not stated). Output price not seen on a contemporaneous page: the pricing table of platform.moonshot.ai in 2025 is client-rendered and absent from archived captures. Value taken from the Apr 21 2026 page where kimi-k2-0711-preview, kimi-k2-0905-preview and kimi-k2-thinking are all $2.50 (input $0.60). kimi-k2-turbo-preview is $8.00."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "kimi-k2.5",
+     "output_usd_per_mtok": 3.0,
+     "launch_month": "Jan 2026",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260415080812/https://platform.kimi.ai/docs/pricing/chat-k25",
+     "note": "K2.5 released 2026-01-27 per secondary source https://cloudprice.net/models/moonshot-kimi-k2-5 (Jan 25 platform capture has no K2.5, Feb 5 capture does). $3.00 output (input $0.60) seen on the Apr 15 2026 Moonshot page, not on a Jan page."
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "kimi-k2.5",
+     "output_usd_per_mtok": 3.0,
+     "launch_month": "Jan 2026",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260415080812/https://platform.kimi.ai/docs/pricing/chat-k25",
+     "note": "K2.5 released 2026-01-27 (secondary: https://cloudprice.net/models/moonshot-kimi-k2-5); section appears on the Feb 5 2026 capture and not the Jan 25 capture. $3.00 output (input $0.60) seen on the Apr 15 2026 page, not on a Feb page."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "kimi-k2.5",
+     "output_usd_per_mtok": 3.0,
+     "launch_month": "Jan 2026",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260415080812/https://platform.kimi.ai/docs/pricing/chat-k25",
+     "note": "$3.00 seen Apr 15 2026; no Mar snapshot with the table."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "kimi-k2.6",
+     "output_usd_per_mtok": 4.0,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260420172022/https://platform.kimi.ai/docs/pricing/chat-k26",
+     "note": "K2.6 first seen on Apr 20 2026 snapshot; Apr 15 snapshot showed K2.5 ($3.00) only. Input $0.95."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "kimi-k2.6",
+     "output_usd_per_mtok": 4.0,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260611110236/https://platform.kimi.ai/docs/pricing/chat-k26",
+     "note": "Input $0.95. Apr 20 snapshot https://web.archive.org/web/20260420172022/https://platform.kimi.ai/docs/pricing/chat-k26 identical."
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "kimi-k2.7-code",
+     "output_usd_per_mtok": 4.0,
+     "launch_month": "Jun 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260612232111/https://platform.kimi.ai/docs/pricing/chat-k27-code",
+     "note": "K2.7-code first listed Jun 12 2026 (absent on Jun 1 main page). Input $0.95; highspeed variant $8.00."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "kimi-k2.7-code",
+     "output_usd_per_mtok": 4.0,
+     "launch_month": "Jun 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261003104019/https://platform.kimi.ai/docs/pricing/chat",
+     "note": "No Jul table snapshot; $4.00 on Jun 12 and Oct 3. K2.6 also $4.00."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "kimi-k2.7-code",
+     "output_usd_per_mtok": 4.0,
+     "launch_month": "Jun 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261003104019/https://platform.kimi.ai/docs/pricing/chat",
+     "note": "Bracketed by Jun 12 and Oct 3 ($4.00 both)."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "kimi-k2.7-code",
+     "output_usd_per_mtok": 4.0,
+     "launch_month": "Jun 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261003104019/https://platform.kimi.ai/docs/pricing/chat",
+     "note": "Bracketed by Jun 12 and Oct 3 ($4.00 both)."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "kimi-k2.7-code",
+     "output_usd_per_mtok": 4.0,
+     "launch_month": "Jun 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261023202130/https://platform.kimi.ai/docs/pricing/chat",
+     "note": "K2 series closed to new users from 2026-10-31; retirement planned end of Dec 2026."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "kimi-k2.7-code",
+     "output_usd_per_mtok": 4.0,
+     "launch_month": "Jun 2026",
+     "status": "VERIFIED",
+     "source_url": "https://platform.kimi.ai/docs/pricing/chat",
+     "note": "Live page 2026-11-18. K2.6 and K2.7-code both $4.00, not available to newly registered users."
+    }
+   ]
+  },
+  {
+   "tier": "K3 line (K3, K3.1 Pro)",
+   "mapping": "Premium flagship line launched Jul 2026; K3.1 Pro replaced K3 as the flagship in Oct 2026 at a lower price.",
+   "points": [
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "kimi-k3",
+     "output_usd_per_mtok": 15.0,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://www.kimi.com/blog/kimi-k3",
+     "note": "Official launch post: $0.30 cache-hit / $3.00 cache-miss input / $15.00 output per MTok; its evaluation data is dated July 16 2026. Moonshot pricing page snapshot (https://web.archive.org/web/20260717032544/https://platform.kimi.ai/docs/pricing/chat-k3) agrees; absent from the Jul 1 main-page capture. Batch is 60% of list."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "kimi-k3",
+     "output_usd_per_mtok": 15.0,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260717032544/https://platform.kimi.ai/docs/pricing/chat-k3",
+     "note": "No Aug table snapshot; $15.00 on Jul 17 and Oct 3 (https://web.archive.org/web/20261003104019/https://platform.kimi.ai/docs/pricing/chat)."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "kimi-k3",
+     "output_usd_per_mtok": 15.0,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261003104019/https://platform.kimi.ai/docs/pricing/chat",
+     "note": "Bracketed by Jul 17 and Oct 3 ($15.00 both)."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "kimi-k3.1-pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Oct 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261023202130/https://platform.kimi.ai/docs/pricing/chat",
+     "note": "K3.1 Pro absent from the Oct 3 capture, present Oct 23. Input $2.00, cached $0.20. kimi-k3.1-pro-highspeed $20.00. kimi-k3 stays at $15.00."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "kimi-k3.1-pro",
+     "output_usd_per_mtok": 10.0,
+     "launch_month": "Oct 2026",
+     "status": "VERIFIED",
+     "source_url": "https://platform.kimi.ai/docs/pricing/chat",
+     "note": "Live page 2026-11-18. kimi-k3.1-pro-highspeed $20.00; kimi-k3 $15.00."
+    }
+   ]
+  }
+ ],
+ "discrepancies": [
+  "Chart K2 $2.20 (Jul 25) disagrees: every Kimi page that lists the K2 series shows $2.50 output ($0.60 input, $0.15 cache hit). Source: https://web.archive.org/web/20260421005651/https://platform.kimi.ai/docs/pricing/chat-k2. The $2.20 value was not found on any fetched page.",
+  "Chart K3 $15 (Jul 26) matches. Source: https://web.archive.org/web/20260717032544/https://platform.kimi.ai/docs/pricing/chat-k3",
+  "Chart K3.1 Pro $10 (Oct 26) matches. Source: https://web.archive.org/web/20261023202130/https://platform.kimi.ai/docs/pricing/chat",
+  "K2.5 ($3.00) and K2.6 / K2.7-code ($4.00) sit between K2 and K3 in price and are not on the chart.",
+  "Month rule: price in effect at month end; kimi-k2-turbo, kimi-k3.1-pro-highspeed and batch rates are noted but not used."
+ ],
+ "gaps": [
+  "Jan-Jun 2025: Moonshot's LLM lineup at that time was moonshot-v1 and kimi-latest; the 2025 platform.moonshot.ai pricing table is client-rendered (the archived HTML contains no prices) so no USD price could be verified. No points given for those months.",
+  "Jul 2025 - Mar 2026: K2 and K2.5 output prices are UNVERIFIED because only the Apr 2026 per-model Moonshot pages carry the table; the earlier captures (2025-06-17, 2026-01-25, 2026-02-05) are empty shells for the price tables, and the K2 launch post and release log do not state output prices. The Nov 2025 release-log entry says input prices dropped up to 75% on 2025-11-06, so earlier K2 prices may have differed.",
+  "K2.5 release date 2026-01-27 and K2.6 2026-04-20 come from secondary source cloudprice.net (K2.6 matches the first Moonshot snapshot that lists it).",
+  "K3 launched about 2026-07-16 (launch post evaluation date; snapshot bracket Jul 1-17). K3.1 Pro has no dated source; bracketed between Oct 3 and Oct 23 2026 and its launch post is https://www.kimi.com/blog/kimi-k3-1-pro (no price stated there)."
+ ]
+}

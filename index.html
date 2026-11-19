@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LLM Flagship API Price Tracker</title>
-<meta name="description" content="Flagship output price per 1M tokens for 11 LLM providers, Jan 2025 to Nov 2026: where each line started, where it is now, and every repricing in between.">
+<title>LLM API Price Tracker</title>
+<meta name="description" content="Output price per 1M tokens for 11 LLM providers, Jan 2025 to Nov 2026, tracked tier by tier: Opus against Opus, Sonnet against Sonnet, Flash against Flash.">
 <style>
   @font-face { font-family: 'Geist Mono'; src: url('fonts/GeistMono-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; }
   @font-face { font-family: 'Geist Mono'; src: url('fonts/GeistMono-SemiBold.ttf') format('truetype'); font-weight: 500 700; font-style: normal; }
@@ -16,7 +16,7 @@
     --muted: #7A7468;
     --faint: #A39C8E;
     --rule: #E2DACA;
-        --up: #B5472A;      /* price went up: terracotta */
+    --up: #B5472A;      /* price went up: terracotta */
     --down: #1D8A6A;    /* price went down: green */
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -31,63 +31,64 @@
   /* ---------- header ---------- */
   .eyebrow { font-size: 11px; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 10px; }
   h1 { font-size: 26px; line-height: 1.25; font-weight: 600; letter-spacing: -0.02em; max-width: 42ch; }
-  .lede { font-size: 13px; line-height: 1.75; color: #4a463e; margin-top: 14px; max-width: 78ch; }
-  .lede b { color: var(--ink); font-weight: 600; }
 
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
   .stat { border-top: 2px solid var(--ink); padding-top: 12px; }
   .stat .num { font-size: 34px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; }
   .stat .num small { font-size: 15px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
-  .stat .cap { font-size: 11.5px; color: var(--muted); line-height: 1.6; margin-top: 6px; max-width: 34ch; }
+  .stat .cap { font-size: 11.5px; color: var(--muted); line-height: 1.6; margin-top: 6px; max-width: 38ch; }
 
   /* ---------- sections ---------- */
   section { margin-top: 56px; }
   h2 { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; }
-  .sub { font-size: 12.5px; color: var(--muted); line-height: 1.7; margin-top: 6px; max-width: 80ch; }
   .key { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 14px; font-size: 11.5px; color: var(--muted); }
   .key span { display: inline-flex; align-items: center; gap: 6px; }
   .sw { width: 14px; height: 3px; display: inline-block; }
+  .sw.dash { background: none !important; border-top: 3px dashed var(--ink); height: 0; }
   .ring, .disc { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
   .ring { border: 2px solid var(--ink); background: var(--card); }
+  .ring.dash { border-style: dashed; }
   .disc { background: var(--ink); }
 
   /* ---------- scoreboard (dumbbell) ---------- */
   .board { margin-top: 18px; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 8px 24px 20px; }
-  .axis { display: grid; grid-template-columns: 190px 1fr 96px; column-gap: 20px; height: 30px; align-items: end; }
+  .axis { display: grid; grid-template-columns: 200px 1fr 96px; column-gap: 20px; height: 30px; align-items: end; }
   .axis .ticks { position: relative; height: 100%; }
   .axis .t { position: absolute; bottom: 4px; transform: translateX(-50%); font-size: 10.5px; color: var(--faint); }
-  .row { display: grid; grid-template-columns: 190px 1fr 96px; column-gap: 20px; align-items: center; border-top: 1px solid var(--rule); min-height: 54px; }
-  .row .who { padding: 8px 0; }
+  .gh { font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding: 16px 0 6px; border-top: 1px solid var(--ink); margin-top: 8px; font-weight: 600; }
+  .row { display: grid; grid-template-columns: 200px 1fr 96px; column-gap: 20px; align-items: center; border-top: 1px solid var(--rule); min-height: 50px; }
+  .row .who { padding: 6px 0; }
   .row .who b { font-size: 13px; font-weight: 600; display: block; }
   .row .who span { font-size: 10.5px; color: var(--muted); display: block; line-height: 1.5; margin-top: 2px; }
-  .track { position: relative; height: 54px; }
+  .track { position: relative; height: 50px; }
   .grid-v { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--rule); opacity: 0.7; }
-  .bar { position: absolute; top: 27px; height: 3px; transform: translateY(-50%); border-radius: 2px; }
-  .pt { position: absolute; top: 27px; width: 11px; height: 11px; border-radius: 50%; transform: translate(-50%, -50%); border: 2px solid var(--ink); background: var(--card); }
+  .bar { position: absolute; top: 25px; height: 3px; transform: translateY(-50%); border-radius: 2px; }
+  .pt { position: absolute; top: 25px; width: 11px; height: 11px; border-radius: 50%; transform: translate(-50%, -50%); border: 2px solid var(--ink); background: var(--card); }
+  .pt.dash { border-style: dashed; }
   .pt.now { background: var(--ink); }
   .lab { position: absolute; font-size: 11px; transform: translateX(-50%); white-space: nowrap; }
-  .lab.a { top: 4px; color: var(--muted); }
-  .lab.b { top: 36px; font-weight: 600; }
+  .lab.a { top: 3px; color: var(--muted); }
+  .lab.b { top: 33px; font-weight: 600; }
+  .lab.only { top: 3px; font-weight: 600; color: var(--ink); }
   .delta { text-align: right; font-size: 13px; font-weight: 600; }
   .delta small { display: block; font-size: 10.5px; font-weight: 400; color: var(--muted); margin-top: 1px; }
-  .up { color: var(--up); } .dn { color: var(--down); }
+  .up { color: var(--up); } .dn { color: var(--down); } .flat { color: var(--muted); }
 
   /* ---------- small multiples ---------- */
-  .panels { margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
-  .panel { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 14px 10px; display: flex; flex-direction: column; }
+  .panels { margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .panel { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 14px 12px; display: flex; flex-direction: column; }
   .panel h3 { font-size: 13px; font-weight: 600; }
-  .panel .models { font-size: 11px; color: var(--muted); margin-top: 2px; line-height: 1.5; min-height: 16px; }
-  .panel svg { width: 100%; height: auto; display: block; margin-top: 6px; overflow: visible; }
-  .panel .note { font-size: 11px; color: var(--muted); line-height: 1.6; margin-top: 2px; min-height: 16px; }
-  .panel.how { background: transparent; border-style: dashed; justify-content: center; }
-  .panel.how p { font-size: 11.5px; line-height: 1.8; color: var(--muted); }
-  .panel.how p b { color: var(--ink); font-weight: 600; }
+  .panel svg { width: 100%; height: auto; display: block; margin-top: 8px; overflow: visible; }
+  .lgs { margin-top: 8px; border-top: 1px solid var(--rule); padding-top: 8px; display: grid; gap: 5px; }
+  .lg { display: grid; grid-template-columns: 14px 1fr; column-gap: 8px; align-items: baseline; font-size: 11px; line-height: 1.5; color: var(--muted); }
+  .lg i { width: 14px; height: 3px; display: block; transform: translateY(-3px); }
+  .lg b { color: var(--ink); font-weight: 600; }
   svg text { font-family: 'Geist Mono', ui-monospace, monospace; }
   .halo { paint-order: stroke; stroke: var(--card); stroke-width: 3.5px; stroke-linejoin: round; }
 
   /* ---------- biggest moves ---------- */
   .moves { margin-top: 18px; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 8px 24px 16px; }
-  .mrow { display: grid; grid-template-columns: 230px 1fr 140px; column-gap: 20px; align-items: center; border-top: 1px solid var(--rule); min-height: 40px; }
+  .mrow { display: grid; grid-template-columns: 230px 1fr 140px; column-gap: 20px; align-items: center; border-top: 1px solid var(--rule); min-height: 44px; }
   .mrow:first-child { border-top: none; }
   .mrow .what { font-size: 12px; line-height: 1.45; padding: 6px 0; }
   .mrow .what b { font-weight: 600; }
@@ -103,8 +104,6 @@
 
   /* ---------- footer ---------- */
   .notes { margin-top: 48px; font-size: 11.5px; line-height: 1.85; color: var(--muted); max-width: 100ch; }
-  .notes h2 { color: var(--ink); margin-bottom: 8px; }
-  .notes p + p { margin-top: 10px; }
   .credit { margin-top: 28px; font-size: 11px; color: var(--faint); }
   .credit a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--rule); }
   .credit a:hover { color: var(--down); }
@@ -117,22 +116,20 @@
   @media (max-width: 760px) {
     body { padding: 28px 16px 40px; }
     body { font-size: 14px; }
-    .lede { font-size: 14px; }
-    .sub { font-size: 13.5px; }
     .key { font-size: 12.5px; }
     .stat .cap { font-size: 13px; }
     h2 { font-size: 17px; }
     .axis .t { font-size: 11.5px; }
+    .axis .t.minor { display: none; }
     .lab { font-size: 12.5px; }
+    .gh { font-size: 11.5px; }
     .row .who b { font-size: 14.5px; }
     .row .who span { font-size: 12px; }
     .delta { font-size: 14.5px; }
     .delta small { font-size: 11.5px; }
-    .panel { padding: 16px 12px 12px; }
+    .panel { padding: 16px 12px 14px; }
     .panel h3 { font-size: 15px; }
-    .panel .models { font-size: 12.5px; }
-    .panel .note { font-size: 12px; }
-    .panel.how p { font-size: 13px; }
+    .lg { font-size: 12.5px; }
     .mrow .what { font-size: 13.5px; }
     .mrow .what span { font-size: 12px; }
     .mval { font-size: 14px; }
@@ -161,25 +158,21 @@
 <body>
 
 <header>
-  <div class="eyebrow">Flagship output price &middot; USD per 1M tokens &middot; Jan 2025 to Nov 2026</div>
-  <h1>LLM Flagship API Price Tracker</h1>
+  <div class="eyebrow">Output price per 1M tokens &middot; Jan 2025 to Nov 2026</div>
+  <h1>LLM API Price Tracker</h1>
 
   <div class="stats" id="stats"></div>
 </header>
 
 <section>
-  <h2>Where each line started and where it is now</h2>
-  <div class="key">
-    <span><i class="ring"></i> first charted price</span>
-    <span><i class="disc"></i> Nov 2026 price</span>
-    <span><i class="sw" style="background:var(--up)"></i> ended higher</span>
-    <span><i class="sw" style="background:var(--down)"></i> ended lower</span>
-  </div>
+  <h2>Same tier, first month and Nov 2026</h2>
+  <div class="key" id="boardKey"></div>
   <div class="board" id="board"></div>
 </section>
 
 <section>
   <h2>Price history by provider</h2>
+  <div class="key" id="panelKey"></div>
   <div class="panels" id="panels"></div>
 </section>
 
@@ -188,75 +181,99 @@
   <div class="moves" id="moves"></div>
 </section>
 
-<div class="notes">Source: provider pricing pages, 18 Nov 2026</div>
+<div class="notes">Source: provider pricing pages and launch posts, 18 Nov 2026</div>
 <div class="credit">Abhishek Sharma &middot; <a href="https://www.linkedin.com/in/absheksharma/" target="_blank" rel="noopener">linkedin.com/in/absheksharma</a></div>
 
 <div id="tip"></div>
 
 <script>
 /* ------------------------------------------------------------------
-   Data. Monthly output price, Jan 2025 (index 0) to Nov 2026 (index 22).
-   `m` names the model that took effect at each change point.
+   Data. One entry per tier lineage: the same named tier tracked across
+   model generations. Monthly output price, Jan 2025 (index 0) to Nov 2026
+   (index 22). d = price (null before the tier existed or after it ended),
+   u = 1 where the price could not be confirmed from a dated source,
+   m = model name that took effect at each change point.
+   hist = shown on the history charts only.
    ------------------------------------------------------------------ */
-const N = null;
 const MONTHS = ['Jan 25','Feb 25','Mar 25','Apr 25','May 25','Jun 25','Jul 25','Aug 25','Sep 25','Oct 25','Nov 25','Dec 25','Jan 26','Feb 26','Mar 26','Apr 26','May 26','Jun 26','Jul 26','Aug 26','Sep 26','Oct 26','Nov 26'];
 const LAST = MONTHS.length - 1;
+const MIN_MONTHS = 12;   // a tier needs a year of history to appear in the first-vs-now board
 
-const P = [
-  { name: 'OpenAI', d: [15,15,10,10,10,10,10,10,10,10,10,8,8,10,15,30,30,30,30,30,50,50,40],
-    m: {0:'GPT-4o',2:'GPT-4o price cut',11:'GPT-4.1',13:'GPT-5',14:'GPT-5.4',15:'GPT-5.5',20:'GPT-6 Astra',22:'GPT-6.2 Astra'} },
-  { name: 'Anthropic', d: [75,75,75,75,75,75,75,15,15,15,15,25,25,25,25,25,25,50,50,50,50,50,40],
-    m: {0:'Opus 3.5/4',7:'Sonnet 4',11:'Opus 4.6 to 4.8',17:'Fable 5.1',22:'Fable 5.2'}, },
-  { name: 'Google', d: [0.40,0.40,0.40,0.40,10,10,10,10,10,10,10,10,12,12,12,12,12,12,12,12,12,10,10],
-    m: {0:'Gemini 2.0 Flash',4:'Gemini 2.5 Pro',12:'Gemini 3.1 Pro',21:'Gemini 4 Argon (intro price)'}, },
-  { name: 'Meta', d: [N,N,N,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,20,20],
-    m: {3:'Llama 4 Maverick (host list)',21:'Muse Wonder'}, },
-  { name: 'Kimi / Moonshot', d: [N,N,N,N,N,N,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,2.20,15,15,15,10,10],
-    m: {6:'K2',18:'K3',21:'K3.1 Pro'}, },
-  { name: 'Qwen', d: [6.40,6.40,6.40,6.40,6.40,1.20,1.20,1.20,1.20,1.20,6.40,6.40,6.40,0.69,0.69,0.69,2.40,2.40,3.75,6.00,6.00,6.00,6.00],
-    m: {0:'Qwen-Max',5:'Qwen-Plus',10:'Qwen3-Max',13:'Qwen3.5-Plus',18:'Qwen3.7-Max (promo)',19:'Qwen3.8-Max'}, },
-  { name: 'xAI', d: [10,15,15,15,15,15,15,15,15,15,15,15,15,15,6,6,2.50,2.50,6,6,6,6,6],
-    m: {0:'Grok 2',1:'Grok 3',14:'Grok 4.2',16:'Grok 4.3',18:'Grok 4.5'} },
-  { name: 'Mistral', d: [6,6,6,6,6,6,6,6,6,6,6,1.50,1.50,1.50,1.50,7.50,7.50,7.50,7.50,7.50,7.50,4.18,4.18],
-    m: {0:'Large 2',11:'Large 3',15:'Medium 3.5',21:'Large 4 (preview)'} },
-  { name: 'GLM / Zhipu', d: [N,N,N,N,N,N,2.20,2.20,2.20,2.20,2.20,2.20,2.20,3.20,3.20,4.40,4.40,4.40,4.40,4.40,4.40,4.40,4.40],
-    m: {6:'GLM-4.5',13:'GLM-5',15:'GLM-5.1 / 5.2'}, },
-  { name: 'DeepSeek', d: [2.19,2.19,0.88,0.88,0.88,0.88,0.88,1.10,1.10,1.10,1.10,0.38,0.38,0.38,0.38,0.38,0.87,0.87,0.87,1.98,1.98,1.98,1.98],
-    m: {0:'R1',2:'V3-0324',7:'V3.1',11:'V3.2',16:'V4 Pro',19:'V4 Pro (off-peak)'}, },
-  { name: 'MiniMax', d: [1.10,1.10,1.10,1.10,1.10,1.76,1.76,1.76,1.76,1.00,1.00,1.00,1.00,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20],
-    m: {0:'MiniMax-01',5:'M1',9:'M2',13:'M2.7 / M3'}, },
+const L = [
+  {"prov":"Anthropic","grp":"Anthropic","tier":"Opus","d":[75,75,75,75,75,75,75,75,75,75,25,25,25,25,25,25,25,25,25,25,20,20,20],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"Opus 3","4":"Opus 4","7":"Opus 4.1","10":"Opus 4.5","13":"Opus 4.6","15":"Opus 4.7","16":"Opus 4.8","18":"Opus 5","20":"Opus 5.5"}},
+  {"prov":"Anthropic","grp":"Anthropic","tier":"Sonnet","d":[15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,10,10,10,10,10,10],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"Sonnet 3.5","1":"Sonnet 3.7","4":"Sonnet 4","8":"Sonnet 4.5","13":"Sonnet 4.6","17":"Sonnet 5","20":"Sonnet 5.5"}},
+  {"prov":"Anthropic","grp":"Anthropic","tier":"Haiku","d":[4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,0.5,0.5],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"Haiku 3.5","9":"Haiku 4.5","21":"Haiku 5.5"}},
+  {"prov":"Anthropic","grp":"Anthropic","tier":"Fable","d":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,50,50,50,50,50,40],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"17":"Fable 5","20":"Fable 5.1","22":"Fable 5.2"}},
+  {"prov":"OpenAI","grp":"OpenAI Mini and Nano","tier":"Mini","d":[0.6,0.6,0.6,1.6,1.6,1.6,1.6,2.0,2.0,2.0,2.0,2.0,2.0,2.0,4.5,4.5,4.5,4.5,4.5,4.5,4.5,4.5,4.5],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"GPT-4o mini","3":"GPT-4.1 mini","7":"GPT-5 mini","14":"GPT-5.4 mini"}},
+  {"prov":"OpenAI","grp":"OpenAI Mini and Nano","tier":"Nano","d":[null,null,null,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.25,1.25],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"3":"GPT-4.1 nano","7":"GPT-5 nano","14":"GPT-5.4 nano"}},
+  {"prov":"OpenAI","grp":"OpenAI Frontier, Sol, Terra and Luna","tier":"Frontier","d":[10,10,10,8,8,8,8,10,10,10,10,14,14,14,15,30,30,30,30,20,50,50,40],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"GPT-4o","3":"GPT-4.1","7":"GPT-5","10":"GPT-5.1","11":"GPT-5.2","14":"GPT-5.4","15":"GPT-5.5","18":"GPT-5.6 Sol","19":"GPT-5.6 Sol","20":"GPT-6 Astra","22":"GPT-6.2 Astra"},"hist":1},
+  {"prov":"OpenAI","grp":"OpenAI Frontier, Sol, Terra and Luna","tier":"Sol","d":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,30,20,10,10,10],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"18":"GPT-5.6 Sol","19":"GPT-5.6 Sol","20":"GPT-6.1 Sol","22":"GPT-6.2 Sol"}},
+  {"prov":"OpenAI","grp":"OpenAI Frontier, Sol, Terra and Luna","tier":"Terra","d":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,12,12,12,5,5],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"18":"GPT-5.6 Terra","21":"GPT-6.1 Terra"}},
+  {"prov":"OpenAI","grp":"OpenAI Frontier, Sol, Terra and Luna","tier":"Luna","d":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1.2,1.2,0.5,0.5,0.5],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"18":"GPT-5.6 Luna","20":"GPT-6 Luna"}},
+  {"prov":"Google","grp":"Google","tier":"Pro","d":[5.0,5.0,5.0,5.0,5.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,null,null],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"Gemini 1.5 Pro","5":"Gemini 2.5 Pro"}},
+  {"prov":"Google","grp":"Google","tier":"Flash","d":[0.3,0.4,0.4,0.4,0.4,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,9.0,9.0,7.5,3.75,3.75,3.75,3.75],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"Gemini 1.5 Flash","1":"Gemini 2.0 Flash","5":"Gemini 2.5 Flash","16":"Gemini 3.5 Flash","18":"Gemini 3.6 Flash","19":"Gemini 3.7 Flash (intro price)","20":"Gemini 3.8 Flash (intro price)"}},
+  {"prov":"Google","grp":"Google","tier":"Flash-Lite","d":[0.15,0.3,0.3,0.3,0.3,0.3,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,1.5,1.5,2.5,2.5,2.5,2.5,2.5],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"Gemini 1.5 Flash-8B","1":"Gemini 2.0 Flash-Lite","6":"Gemini 2.5 Flash-Lite","16":"Gemini 3.1 Flash-Lite","18":"Gemini 3.5 Flash-Lite"}},
+  {"prov":"Google","grp":"Google","tier":"Gemini 4","d":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,10.0,10.0],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"21":"Gemini 4 Argon (intro price)"}},
+  {"prov":"xAI","grp":"xAI","tier":"Grok","d":[10,10,10,15,15,15,15,15,15,15,15,15,15,15,6,6,2.5,2.5,6,6,6,6,6],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"Grok 2","3":"Grok 3","6":"Grok 4","14":"Grok 4.20","16":"Grok 4.3","18":"Grok 4.5","19":"Grok 4.6","20":"Grok 4.7"}},
+  {"prov":"xAI","grp":"xAI","tier":"Grok Fast","d":[null,null,null,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,null,null,null,null,null,null,null],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"3":"Grok 3 mini","8":"Grok 4 Fast","11":"Grok 4.1 Fast"}},
+  {"prov":"xAI","grp":"xAI","tier":"Grok Code","d":[null,null,null,null,null,null,null,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,2.0,2.0,2.0,2.0,2.0,2.0,2.0],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],"m":{"7":"Grok Code Fast 1","16":"Grok Build 0.1"}},
+  {"prov":"Mistral","grp":"Mistral","tier":"Large","d":[6,6,6,6,6,6,6,6,6,6,6,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,4.18,2.1],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"Large 2.1","11":"Large 3","21":"Large 4 (preview)","22":"Large 4"}},
+  {"prov":"Mistral","grp":"Mistral","tier":"Medium","d":[null,null,null,null,2,2,2,2,2,2,2,2,2,2,2,7.5,7.5,7.5,7.5,7.5,7.5,7.5,null],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"4":"Medium 3","10":"Medium 3.1","15":"Medium 3.5"}},
+  {"prov":"Mistral","grp":"Mistral","tier":"Small","d":[0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6],"u":[0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"Small 3","2":"Small 3.1","5":"Small 3.2","14":"Small 4"}},
+  {"prov":"Meta","grp":"Meta","tier":"Maverick (host list)","d":[null,null,null,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85,0.85],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"3":"Llama 4 Maverick"}},
+  {"prov":"Meta","grp":"Meta","tier":"Scout (host list)","d":[null,null,null,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59,0.59],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0],"m":{"3":"Llama 4 Scout"}},
+  {"prov":"Meta","grp":"Meta","tier":"Muse Spark","d":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,4.25,4.25,4.25,4.25,4.25],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"18":"Muse Spark"}},
+  {"prov":"Meta","grp":"Meta","tier":"Muse Wonder","d":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,20,20],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"21":"Muse Wonder"}},
+  {"prov":"DeepSeek","grp":"DeepSeek","tier":"Chat / Flash","d":[1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,0.42,0.42,0.42,0.42,0.42,0.42,0.42,0.28,0.28,0.28,0.28,1.32,1.2,1.2,1.2],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"V3","7":"V3.1","8":"V3.2-Exp","11":"V3.2","15":"V4 Flash","19":"V4 Flash (peak rate)","20":"V4.1 Flash (peak rate)"}},
+  {"prov":"DeepSeek","grp":"DeepSeek","tier":"Reasoner","d":[2.19,2.19,2.19,2.19,2.19,2.19,2.19,2.19,0.42,0.42,0.42,0.42,0.42,0.42,0.42,0.28,0.28,0.28,null,null,null,null,null],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"R1","7":"V3.1 thinking","8":"V3.2-Exp thinking","11":"V3.2 thinking","15":"V4 Flash thinking"}},
+  {"prov":"DeepSeek","grp":"DeepSeek","tier":"Pro","d":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,3.48,3.48,0.87,0.87,3.96,3.96,3.96,3.96],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"15":"V4 Pro (preview)","17":"V4 Pro (preview)","19":"V4 Pro (peak rate)"}},
+  {"prov":"Qwen","grp":"Qwen","tier":"Max","d":[6.4,6.4,6.4,6.4,6.4,6.4,6.4,6.4,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,7.5,7.5,7.5,6.0,6.0,6.0,4.5],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"Qwen-Max","8":"Qwen3-Max","16":"Qwen3.7-Max","19":"Qwen3.8-Max","22":"Qwen4-Max"}},
+  {"prov":"Qwen","grp":"Qwen","tier":"Plus","d":[1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,2.4,2.4,3.0,1.6,1.6,1.6,1.6,1.6,1.6,1.6],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0],"m":{"0":"Qwen-Plus","13":"Qwen3.5-Plus","15":"Qwen3.6-Plus","16":"Qwen3.7-Plus"}},
+  {"prov":"Qwen","grp":"Qwen","tier":"Turbo / Flash","d":[0.2,0.2,0.2,0.2,0.2,0.2,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,1.5,1.5,1.5,1.5,0.47,0.47,0.47,0.47],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0],"m":{"0":"Qwen-Turbo","6":"Qwen-Flash","13":"Qwen3.5-Flash","15":"Qwen3.6-Flash","19":"Qwen3.8-Flash"}},
+  {"prov":"MiniMax","grp":"MiniMax","tier":"M-series","d":[1.1,1.1,1.1,1.1,1.1,2.2,2.2,2.2,2.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"0":"Text-01","5":"M1","9":"M2","11":"M2.1","13":"M2.5","14":"M2.7","17":"M3"}},
+  {"prov":"MiniMax","grp":"MiniMax","tier":"Highspeed","d":[null,null,null,null,null,null,null,null,null,null,null,null,null,2.4,2.4,2.4,2.4,2.4,2.4,2.4,2.4,2.4,null],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"13":"M2.5 lightning","14":"M2.7 highspeed"}},
+  {"prov":"MiniMax","grp":"MiniMax","tier":"Flash","d":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0.6,0.6],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],"m":{"21":"M3.1 Flash"}},
+  {"prov":"GLM","grp":"GLM","tier":"GLM","d":[null,null,null,null,null,null,2.2,2.2,2.2,2.2,2.2,2.2,2.2,3.2,3.2,4.4,4.4,4.4,4.4,4.4,4.4,4.4,4.4],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"6":"GLM-4.5","8":"GLM-4.6","11":"GLM-4.7","13":"GLM-5","15":"GLM-5.1","17":"GLM-5.2","19":"GLM-5.3"}},
+  {"prov":"GLM","grp":"GLM","tier":"Air / Flash","d":[null,null,null,null,null,null,1.1,1.1,1.1,1.1,1.1,1.1,1.1,0.4,0.4,0.4,0.4,0.4,0.4,0.5,0.5,0.5,0.5],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"6":"GLM-4.5-Air","13":"GLM-4.7-FlashX","19":"GLM-5.3-Flash"}},
+  {"prov":"Kimi","grp":"Kimi","tier":"K2","d":[null,null,null,null,null,null,2.5,2.5,2.5,2.5,2.5,2.5,3.0,3.0,3.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0],"u":[0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0],"m":{"6":"K2","8":"K2 0905","10":"K2 Thinking","12":"K2.5","15":"K2.6","17":"K2.7 Code"}},
+  {"prov":"Kimi","grp":"Kimi","tier":"K3","d":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,15.0,15.0,15.0,10.0,10.0],"u":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"m":{"18":"K3","21":"K3.1 Pro"}}
 ];
 
 /* ------------------------------------------------------------------
-   Derived numbers. Everything on the page is computed from P.
+   Derived numbers. Everything on the page is computed from L.
    ------------------------------------------------------------------ */
-const first = d => d.findIndex(v => v !== null);
-const money = v => '$' + (v >= 10 ? v.toFixed(v % 1 ? 2 : 0) : v.toFixed(2).replace(/0$/, '').replace(/\.$/, ''));
 const fmtMoney = v => '$' + (Math.abs(v - Math.round(v)) < 1e-9 ? String(Math.round(v)) : v.toFixed(2));
 const long = i => { const [mo, yy] = MONTHS[i].split(' '); return mo + ' 20' + yy; };
+const pct = r => r >= 2 ? r.toFixed(r >= 10 ? 0 : 1) + 'x' : (r > 1 ? '+' : '−') + Math.round(Math.abs(r - 1) * 100) + '%';
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
-P.forEach(p => {
-  p.s = first(p.d);
-  p.a = p.d[p.s];
-  p.b = p.d[LAST];
-  p.ratio = p.b / p.a;
-  p.events = [];
-  for (let i = p.s + 1; i <= LAST; i++) {
-    if (p.d[i] !== p.d[i - 1]) p.events.push({ p, i, from: p.d[i - 1], to: p.d[i], r: p.d[i] / p.d[i - 1], model: p.m[i] || '' });
+L.forEach(l => {
+  l.s = l.d.findIndex(v => v !== null);
+  l.e = l.d.length - 1 - [...l.d].reverse().findIndex(v => v !== null);
+  l.a = l.d[l.s]; l.b = l.d[l.e];
+  l.ratio = l.b / l.a;
+  l.n = l.e - l.s + 1;
+  l.board = !l.hist && l.n >= MIN_MONTHS;
+  const names = Object.entries(l.m).sort((x, y) => x[0] - y[0]).map(x => x[1]);
+  l.firstModel = names[0]; l.lastModel = names[names.length - 1];
+  l.events = [];
+  for (let i = l.s + 1; i <= l.e; i++) {
+    if (l.d[i] !== l.d[i - 1]) l.events.push({ l, i, from: l.d[i - 1], to: l.d[i], r: l.d[i] / l.d[i - 1], model: l.m[i] || '' });
   }
 });
-const events = P.flatMap(p => p.events);
+const tiers = L.filter(l => l.board);
+// headline numbers use only prices confirmed from a dated source
+const sure = tiers.filter(l => !l.u[l.s] && !l.u[l.e]);
+const events = L.filter(l => !l.hist).flatMap(l => l.events).filter(e => !e.l.u[e.i] && !e.l.u[e.i - 1]);
 const upEvents = events.filter(e => e.r > 1).length;
-const endedHigher = P.filter(p => p.ratio > 1).length;
-const jan = P.filter(p => p.d[0] !== null).map(p => p.d[0]);
-const now = P.map(p => p.b);
-const spreadJan = Math.max(...jan) / Math.min(...jan);
-const spreadNow = Math.max(...now) / Math.min(...now);
+const higher = sure.filter(l => l.ratio > 1).length;
+const rise = [...sure].sort((x, y) => y.ratio - x.ratio)[0];
+const cut = [...sure].sort((x, y) => x.ratio - y.ratio)[0];
 
 document.getElementById('stats').innerHTML = `
-  <div class="stat"><div class="num">${endedHigher} <small>of ${P.length}</small></div><div class="cap">flagship lines end Nov 2026 above their first charted price</div></div>
+  <div class="stat"><div class="num">${higher} <small>of ${sure.length}</small></div><div class="cap">tiers end Nov 2026 above their first charted price</div></div>
   <div class="stat"><div class="num">${upEvents} <small>of ${events.length}</small></div><div class="cap">repricings were increases; ${events.length - upEvents} were cuts</div></div>
-  <div class="stat"><div class="num">${Math.round(spreadJan)}x <small>&rarr; ${Math.round(spreadNow)}x</small></div><div class="cap">gap between the cheapest and priciest flagship, Jan 2025 vs Nov 2026</div></div>`;
+  <div class="stat"><div class="num">${pct(rise.ratio)} <small>/ ${pct(cut.ratio)}</small></div><div class="cap">largest rise (${rise.prov} ${rise.tier}) and largest cut (${cut.prov} ${cut.tier}) within one tier</div></div>`;
 
 /* ---------- tooltip ---------- */
 const tip = document.getElementById('tip');
@@ -269,82 +286,93 @@ function showTip(html, ev) {
   tip.style.left = x + 'px'; tip.style.top = y + 'px';
 }
 const hideTip = () => { tip.style.opacity = 0; };
-const pct = r => r >= 2 ? r.toFixed(r >= 10 ? 0 : 1) + 'x' : (r > 1 ? '+' : '−') + Math.round(Math.abs(r - 1) * 100) + '%';
 function evTip(e) {
   const cls = e.r > 1 ? 'u' : 'd', arrow = e.r > 1 ? '↑' : '↓';
-  return `<b>${e.p.name}</b> &middot; ${long(e.i)}<br>${e.model || 'repricing'}<br>${fmtMoney(e.from)} &rarr; <b>${fmtMoney(e.to)}</b> <span class="${cls}">${arrow} ${pct(e.r)}</span>`;
+  return `<b>${e.l.prov} ${esc(e.l.tier)}</b> &middot; ${long(e.i)}<br>${esc(e.model || 'repricing')}<br>${fmtMoney(e.from)} &rarr; <b>${fmtMoney(e.to)}</b> <span class="${cls}">${arrow} ${pct(e.r)}</span>`;
 }
 
+const anyDashStart = tiers.some(l => l.u[l.s]);
+const anyDashSeg = L.some(l => l.u.some(Boolean));
+
 /* ------------------------------------------------------------------
-   1. Scoreboard (start vs now)
+   1. Scoreboard (first month vs Nov 2026), grouped by provider
    ------------------------------------------------------------------ */
 (function () {
-  const LO = 0.3, HI = 100, lx = v => (Math.log(v) - Math.log(LO)) / (Math.log(HI) - Math.log(LO)) * 100;
-  const ticks = [0.3, 1, 3, 10, 30, 100];
-  const rows = [...P].sort((a, b) => b.b - a.b);
+  const LO = 0.1, HI = 100, lx = v => (Math.log(v) - Math.log(LO)) / (Math.log(HI) - Math.log(LO)) * 100;
+  const ticks = [0.1, 0.3, 1, 3, 10, 30, 100];
   const grid = ticks.map(t => `<i class="grid-v" style="left:${lx(t)}%"></i>`).join('');
-  let html = `<div class="axis"><div></div><div class="ticks">${ticks.map(t => `<span class="t" style="left:${lx(t)}%">$${t}</span>`).join('')}</div><div></div></div>`;
-  rows.forEach(p => {
-    const up = p.ratio > 1, col = up ? 'var(--up)' : 'var(--down)';
-    const l = lx(Math.min(p.a, p.b)), r = lx(Math.max(p.a, p.b));
-    const firstModel = p.m[p.s], lastModel = Object.entries(p.m).sort((x, y) => x[0] - y[0]).pop()[1];
-    const delta = up ? (p.ratio >= 2 ? p.ratio.toFixed(p.ratio >= 10 ? 0 : 1) + 'x' : '+' + Math.round((p.ratio - 1) * 100) + '%')
-                     : '−' + Math.round((1 - p.ratio) * 100) + '%';
+  document.getElementById('boardKey').innerHTML =
+    `<span><i class="ring"></i> first charted price</span>` +
+    (anyDashStart ? `<span><i class="ring dash"></i> first price unconfirmed</span>` : '') +
+    `<span><i class="disc"></i> Nov 2026 price</span>` +
+    `<span><i class="sw" style="background:var(--up)"></i> ended higher</span>` +
+    `<span><i class="sw" style="background:var(--down)"></i> ended lower</span>`;
+  let html = `<div class="axis"><div></div><div class="ticks">${ticks.map(t => `<span class="t${/^[3]/.test(String(t)) ? ' minor' : ''}" style="left:${lx(t)}%">$${t}</span>`).join('')}</div><div></div></div>`;
+  let prov = null;
+  tiers.forEach(l => {
+    if (l.prov !== prov) { prov = l.prov; html += `<div class="gh">${prov}</div>`; }
+    const flat = l.ratio === 1, up = l.ratio > 1, col = flat ? 'var(--faint)' : up ? 'var(--up)' : 'var(--down)';
+    const lo = lx(Math.min(l.a, l.b)), hi = lx(Math.max(l.a, l.b));
+    const delta = flat ? 'no change' : (up ? (l.ratio >= 2 ? l.ratio.toFixed(l.ratio >= 10 ? 0 : 1) + 'x' : '+' + Math.round((l.ratio - 1) * 100) + '%') : '−' + Math.round((1 - l.ratio) * 100) + '%');
+    const span = l.firstModel === l.lastModel ? esc(l.firstModel) : `${esc(l.firstModel)} \u2192 ${esc(l.lastModel)}`;
+    const when = (l.s > 0 ? 'from ' + MONTHS[l.s] : '') + (l.s > 0 && l.e < LAST ? ' ' : '') + (l.e < LAST ? 'to ' + MONTHS[l.e] : '');
     html += `<div class="row">
-      <div class="who"><b>${p.name}</b><span>${firstModel} &rarr; ${lastModel}${p.s > 0 ? ' &middot; from ' + MONTHS[p.s] : ''}</span></div>
+      <div class="who"><b>${esc(l.tier)}</b><span>${span}${when ? ' &middot; ' + when : ''}</span></div>
       <div class="track">${grid}
-        <i class="bar" style="left:${l}%;width:${r - l}%;background:${col}"></i>
-        <i class="pt" style="left:${lx(p.a)}%"></i><i class="pt now" style="left:${lx(p.b)}%"></i>
-        <span class="lab a" style="left:${lx(p.a)}%">${fmtMoney(p.a)}</span>
-        <span class="lab b" style="left:${lx(p.b)}%">${fmtMoney(p.b)}</span>
+        ${flat ? '' : `<i class="bar" style="left:${lo}%;width:${hi - lo}%;background:${col}"></i><i class="pt${l.u[l.s] ? ' dash' : ''}" style="left:${lx(l.a)}%"></i>`}<i class="pt now" style="left:${lx(l.b)}%"></i>
+        ${flat ? `<span class="lab only" style="left:${lx(l.b)}%">${fmtMoney(l.b)}</span>` : `<span class="lab a" style="left:${lx(l.a)}%">${fmtMoney(l.a)}</span><span class="lab b" style="left:${lx(l.b)}%">${fmtMoney(l.b)}</span>`}
       </div>
-      <div class="delta ${up ? 'up' : 'dn'}">${up ? '↑' : '↓'} ${delta}<small>${fmtMoney(p.a)} &rarr; ${fmtMoney(p.b)}</small></div>
+      <div class="delta ${flat ? 'flat' : up ? 'up' : 'dn'}">${flat ? '' : up ? '↑ ' : '↓ '}${delta}<small>${flat ? fmtMoney(l.a) : fmtMoney(l.a) + ' &rarr; ' + fmtMoney(l.b)}</small></div>
     </div>`;
   });
   document.getElementById('board').innerHTML = html;
 })();
 
 /* ------------------------------------------------------------------
-   2. Small multiples
+   2. Small multiples, one panel per provider group
    ------------------------------------------------------------------ */
 (function () {
-  const W = 320, H = 196, ml = 30, mr = 58, mt = 14, mb = 22;
+  const W = 340, H = 214, ml = 36, mr = 46, mt = 14, mb = 22;
   const pw = W - ml - mr, ph = H - mt - mb;
-  const LO = 0.15, HI = 100;
+  const LO = 0.1, HI = 100;
   const X = i => ml + (i / LAST) * pw;
   const Y = v => mt + (1 - (Math.log(v) - Math.log(LO)) / (Math.log(HI) - Math.log(LO))) * ph;
+  const COLORS = ['#1B1A17', '#3F7893', '#B8862B', '#8C8577'];
 
-  const stepPath = p => {
-    let d = `M${X(p.s).toFixed(1)} ${Y(p.d[p.s]).toFixed(1)}`;
-    for (let i = p.s + 1; i <= LAST; i++) if (p.d[i] !== p.d[i - 1]) d += ` L${X(i).toFixed(1)} ${Y(p.d[i - 1]).toFixed(1)} L${X(i).toFixed(1)} ${Y(p.d[i]).toFixed(1)}`;
-    return d + ` L${X(LAST).toFixed(1)} ${Y(p.d[LAST]).toFixed(1)}`;
-  };
+  document.getElementById('panelKey').innerHTML =
+    `<span><i class="sw" style="background:var(--up)"></i> price rose</span>` +
+    `<span><i class="sw" style="background:var(--down)"></i> price fell</span>` +
+    (anyDashSeg ? `<span><i class="sw dash"></i> price unconfirmed</span>` : '');
 
-  const yTicks = [1, 10, 100], xTicks = [0, 6, 12, 18];
-  const frame = yTicks.map(t => `<line x1="${ml}" x2="${ml + pw}" y1="${Y(t)}" y2="${Y(t)}" stroke="var(--rule)" stroke-width="1"/><text x="${ml - 6}" y="${Y(t) + 3.5}" text-anchor="end" font-size="10.5" fill="var(--faint)">$${t}</text>`).join('')
-    + xTicks.map(i => `<line x1="${X(i)}" x2="${X(i)}" y1="${mt}" y2="${mt + ph}" stroke="var(--rule)" stroke-width="1" stroke-dasharray="2 3"/>` + (i % 12 === 0 ? `<text x="${X(i)}" y="${H - 6}" text-anchor="start" font-size="10.5" fill="var(--faint)">Jan \u2019${MONTHS[i].slice(-2)}</text>` : '')).join('')
-    + `<text x="${X(LAST)}" y="${H - 6}" text-anchor="end" font-size="10.5" fill="var(--faint)">Nov \u201926</text>`;
+  const yTicks = [0.1, 1, 10, 100], xTicks = [0, 6, 12, 18];
+  const yLab = t => '$' + t;
+  const frame = yTicks.map(t => `<line x1="${ml}" x2="${ml + pw}" y1="${Y(t)}" y2="${Y(t)}" stroke="var(--rule)" stroke-width="1"/><text x="${ml - 6}" y="${Y(t) + 3.5}" text-anchor="end" font-size="10.5" fill="var(--faint)">${yLab(t)}</text>`).join('')
+    + xTicks.map(i => `<line x1="${X(i)}" x2="${X(i)}" y1="${mt}" y2="${mt + ph}" stroke="var(--rule)" stroke-width="1" stroke-dasharray="2 3"/>` + (i % 12 === 0 ? `<text x="${X(i)}" y="${H - 6}" text-anchor="start" font-size="10.5" fill="var(--faint)">Jan ’${25 + i / 12}</text>` : '')).join('')
+    + `<text x="${X(LAST)}" y="${H - 6}" text-anchor="end" font-size="10.5" fill="var(--faint)">Nov ’26</text>`;
 
-  const order = [...P]; // keep the narrative order defined in P
+  const groups = [];
+  L.forEach(l => { let g = groups.find(x => x.title === l.grp); if (!g) groups.push(g = { title: l.grp, lines: [] }); g.lines.push(l); });
+
   let html = '';
-  order.forEach((p, pi) => {
-    const lastModel = Object.entries(p.m).sort((x, y) => x[0] - y[0]).pop()[1];
-    const own = `<path d="${stepPath(p)}" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round"/>`;
-    const risers = p.events.map(e => `<line x1="${X(e.i)}" x2="${X(e.i)}" y1="${Y(e.from)}" y2="${Y(e.to)}" stroke="${e.r > 1 ? 'var(--up)' : 'var(--down)'}" stroke-width="2.6"/>`).join('');
-    const startDot = `<circle cx="${X(p.s)}" cy="${Y(p.a)}" r="3.6" fill="var(--card)" stroke="var(--ink)" stroke-width="2"/>`;
-    // Label placement: try spots around each dot and keep the first that clears the step lines and other labels.
+  groups.forEach((g, gi) => {
     const placed = [];
     const hit = b => placed.some(o => b.x < o.x + o.w && b.x + b.w > o.x && b.y < o.y + o.h && b.y + b.h > o.y);
-    const lastEv = p.events[p.events.length - 1];
-    const late = lastEv && lastEv.i >= LAST - 2;
-    // obstacles: every riser and every flat segment of this provider's line, plus the end marker
-    const levels = [p.s, ...p.events.map(e => e.i), LAST];
-    levels.slice(0, -1).forEach((i0, k) => {
-      const i1 = levels[k + 1], y = Y(p.d[i0]);
-      placed.push({ x: X(i0), y: y - 2, w: X(i1) - X(i0), h: 4 });
+    // obstacles: every flat run and riser of every line in the panel
+    const runs = g.lines.map(l => {
+      const out = []; let i0 = l.s;
+      for (let i = l.s + 1; i <= l.e + 1; i++) {
+        if (i === l.e + 1 || l.d[i] !== l.d[i0] || l.u[i] !== l.u[i0]) { out.push({ i0, i1: Math.min(i, l.e), v: l.d[i0], u: l.u[i0] }); i0 = i; }
+      }
+      return out;
     });
-    p.events.forEach(e => { const y0 = Math.min(Y(e.from), Y(e.to)); placed.push({ x: X(e.i) - 2, y: y0, w: 4, h: Math.abs(Y(e.from) - Y(e.to)) }); });
-    placed.push({ x: X(LAST) + 6, y: Y(p.b) - 11, w: 54, h: late ? 32 : 17 });
+    runs.forEach(rs => rs.forEach(r => { if (r.i1 > r.i0) placed.push({ x: X(r.i0), y: Y(r.v) - 2, w: X(r.i1) - X(r.i0), h: 4 }); }));
+    g.lines.forEach(l => l.events.forEach(e => { const y0 = Math.min(Y(e.from), Y(e.to)); placed.push({ x: X(e.i) - 2, y: y0, w: 4, h: Math.abs(Y(e.from) - Y(e.to)) }); }));
+
+    // right-edge price labels, nudged apart so they never overlap
+    const ends = g.lines.filter(l => l.e === LAST).map(l => ({ l, y: Y(l.b) + 4 })).sort((p, q) => p.y - q.y);
+    for (let k = 1; k < ends.length; k++) if (ends[k].y - ends[k - 1].y < 13) ends[k].y = ends[k - 1].y + 13;
+    ends.forEach(o => placed.push({ x: X(LAST) + 4, y: o.y - 11, w: 44, h: 14 }));
+
     const place = (x, y, text, up) => {
       const w = text.length * 6.7 + 2, h = 12;
       const spots = up
@@ -352,41 +380,70 @@ function evTip(e) {
         : [[x + 6, y + 14, 'start'], [x - 6, y + 14, 'end'], [x + 6, y - 7, 'start'], [x - 6, y - 7, 'end']];
       for (const [tx, ty, anchor] of spots) {
         const b = { x: anchor === 'start' ? tx : tx - w, y: ty - 9, w, h };
-        if (b.x < ml - 4 || b.x + b.w > W - 2 || hit(b)) continue;
+        if (b.x < ml - 4 || b.x + b.w > W - 2 || b.y < 0 || b.y + b.h > mt + ph + 4 || hit(b)) continue;
         placed.push(b);
         return [tx, ty, anchor];
       }
       return null;
     };
-    const startPos = place(X(p.s), Y(p.a), fmtMoney(p.a), !(p.events[0] && p.events[0].r > 1));
-    const startLab = startPos ? `<text class="halo" x="${startPos[0]}" y="${startPos[1]}" text-anchor="${startPos[2]}" font-size="11" fill="var(--muted)">${fmtMoney(p.a)}</text>` : '';
 
-    // Biggest moves claim label space first. Changes in the last 3 months use the end marker ("was $X") instead.
-    const labels = new Map();
-    [...p.events].filter(e => e.i < LAST - 2).sort((x, y) => Math.abs(Math.log(y.r)) - Math.abs(Math.log(x.r))).forEach(e => {
-      const pos = place(X(e.i), Y(e.to), fmtMoney(e.to), e.r > 1);
-      if (pos) labels.set(e, `<text class="halo" x="${pos[0]}" y="${pos[1]}" text-anchor="${pos[2]}" font-size="11" fill="${e.r > 1 ? 'var(--up)' : 'var(--down)'}" font-weight="600">${fmtMoney(e.to)}</text>`);
+    let paths = '', marks = '', labels = '';
+    g.lines.forEach((l, k) => {
+      const col = COLORS[k % COLORS.length];
+      // flat runs, dashed where the price is unconfirmed
+      runs[k].forEach(r => {
+        if (r.i1 <= r.i0) return;
+        paths += `<path d="M${X(r.i0).toFixed(1)} ${Y(r.v).toFixed(1)} L${X(r.i1).toFixed(1)} ${Y(r.v).toFixed(1)}" fill="none" stroke="${col}" stroke-width="2.2"${r.u ? ' stroke-dasharray="4 3"' : ''}/>`;
+      });
+      // risers + dots at every repricing
+      l.events.forEach(e => {
+        const c = e.r > 1 ? 'var(--up)' : 'var(--down)', x = X(e.i);
+        paths += `<line x1="${x}" x2="${x}" y1="${Y(e.from)}" y2="${Y(e.to)}" stroke="${c}" stroke-width="2.6"/>`;
+      });
+      marks += `<circle cx="${X(l.s)}" cy="${Y(l.a)}" r="3.6" fill="var(--card)" stroke="${col}" stroke-width="2"/>`;
+      if (l.e < LAST) marks += `<circle cx="${X(l.e)}" cy="${Y(l.b)}" r="3.2" fill="${col}"/>`;
     });
-    const dots = p.events.map(e => {
+
+    // start labels first, then the biggest moves, then labels for tiers that ended early
+    g.lines.forEach((l, k) => {
+      const col = COLORS[k % COLORS.length];
+      const pos = place(X(l.s), Y(l.a), fmtMoney(l.a), !(l.events[0] && l.events[0].r > 1));
+      if (pos) labels += `<text class="halo" x="${pos[0]}" y="${pos[1]}" text-anchor="${pos[2]}" font-size="11" fill="${col}">${fmtMoney(l.a)}</text>`;
+    });
+    const big = g.lines.flatMap(l => l.events.filter(e => e.i < LAST - 1 && Math.abs(Math.log(e.r)) >= Math.log(2)))
+      .sort((x, y) => Math.abs(Math.log(y.r)) - Math.abs(Math.log(x.r)));
+    big.forEach(e => {
+      const pos = place(X(e.i), Y(e.to), fmtMoney(e.to), e.r > 1);
+      if (pos) labels += `<text class="halo" x="${pos[0]}" y="${pos[1]}" text-anchor="${pos[2]}" font-size="11" font-weight="600" fill="${e.r > 1 ? 'var(--up)' : 'var(--down)'}">${fmtMoney(e.to)}</text>`;
+    });
+    g.lines.forEach((l, k) => {
+      if (l.e === LAST) return;
+      const pos = place(X(l.e), Y(l.b), fmtMoney(l.b), true);
+      if (pos) labels += `<text class="halo" x="${pos[0]}" y="${pos[1]}" text-anchor="${pos[2]}" font-size="11" font-weight="600" fill="${COLORS[k % COLORS.length]}">${fmtMoney(l.b)}</text>`;
+    });
+
+    const dots = g.lines.map((l, k) => l.events.map((e, ei) => {
       const c = e.r > 1 ? 'var(--up)' : 'var(--down)', x = X(e.i), y = Y(e.to);
-      return `<circle cx="${x}" cy="${y}" r="3.6" fill="${c}"/>${labels.get(e) || ''}<circle class="hit" data-p="${pi}" data-e="${p.events.indexOf(e)}" cx="${x}" cy="${y}" r="10" fill="transparent" style="cursor:pointer"/>`;
+      return `<circle cx="${x}" cy="${y}" r="3.6" fill="${c}"/><circle class="hit" data-g="${gi}" data-l="${k}" data-e="${ei}" cx="${x}" cy="${y}" r="10" fill="transparent" style="cursor:pointer"/>`;
+    }).join('')).join('');
+
+    const endLabels = ends.map(o => `<text class="halo" x="${X(LAST) + 8}" y="${o.y}" font-size="13" font-weight="600" fill="${COLORS[g.lines.indexOf(o.l) % COLORS.length]}">${fmtMoney(o.l.b)}</text>`).join('');
+
+    const legend = g.lines.map((l, k) => {
+      const span = l.firstModel === l.lastModel ? l.firstModel : `${l.firstModel} → ${l.lastModel}`;
+      const ended = l.e < LAST ? ` · to ${MONTHS[l.e]}` : '';
+      const named = l.firstModel.toLowerCase().includes(l.tier.toLowerCase());
+      return `<div class="lg"><i style="background:${COLORS[k % COLORS.length]}"></i><div>${named ? `<b>${esc(span)}</b>` : `<b>${esc(l.tier)}</b> ${esc(span)}`}${ended}</div></div>`;
     }).join('');
 
-    const end = `<text class="halo" x="${X(LAST) + 8}" y="${Y(p.b) + (late ? 0 : 4)}" font-size="13.5" font-weight="600" fill="var(--ink)">${fmtMoney(p.b)}</text>`
-      + (late ? `<text class="halo" x="${X(LAST) + 8}" y="${Y(p.b) + 12}" font-size="10.5" fill="${lastEv.r > 1 ? 'var(--up)' : 'var(--down)'}">was ${fmtMoney(lastEv.from)}</text>` : '');
-
-    html += `<div class="panel">
-      <h3>${p.name}</h3>
-      <div class="models">${p.m[p.s]} &rarr; ${lastModel}</div>
-      <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${p.name} flagship output price, ${fmtMoney(p.a)} to ${fmtMoney(p.b)}">${frame}${own}${risers}${startDot}${startLab}${dots}${end}</svg>
-    </div>`;
+    g.svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(g.title)} output price by tier">${frame}${paths}${marks}${labels}${dots}${endLabels}</svg>`;
+    html += `<div class="panel"><h3>${esc(g.title)}</h3>${g.svg}<div class="lgs">${legend}</div></div>`;
   });
+
   const root = document.getElementById('panels');
   root.innerHTML = html;
-  root.addEventListener('pointerover', ev => {
-    const h = ev.target.closest('.hit'); if (!h) return;
-    showTip(evTip(order[h.dataset.p].events[h.dataset.e]), ev);
-  });
+  const evOf = h => groups[h.dataset.g].lines[h.dataset.l].events[h.dataset.e];
+  root.addEventListener('pointerover', ev => { const h = ev.target.closest('.hit'); if (h) showTip(evTip(evOf(h)), ev); });
   root.addEventListener('pointermove', ev => { if (ev.target.closest('.hit')) showTip(tip.innerHTML, ev); });
   root.addEventListener('pointerout', ev => { if (ev.target.closest('.hit')) hideTip(); });
 })();
@@ -402,7 +459,7 @@ function evTip(e) {
   top.forEach(e => {
     const up = e.r > 1, w = Math.abs(pos(e.r));
     html += `<div class="mrow">
-      <div class="what"><b>${e.model.startsWith(e.p.name.split(' ')[0]) ? e.model : e.p.name}</b> ${e.model.startsWith(e.p.name.split(' ')[0]) ? '' : e.model}<span>${long(e.i)}</span></div>
+      <div class="what"><b>${esc(e.model)}</b><span>${e.l.prov} ${esc(e.l.tier)} &middot; ${long(e.i)}</span></div>
       <div class="mtrack"><i class="mzero"></i><i class="mbar" style="background:${up ? 'var(--up)' : 'var(--down)'};${up ? `left:50%;width:${w}%` : `right:50%;width:${w}%`}"></i></div>
       <div class="mval ${up ? 'up' : 'dn'}">${up ? '↑' : '↓'} ${pct(e.r)}<small>${fmtMoney(e.from)} &rarr; ${fmtMoney(e.to)}</small></div>
     </div>`;

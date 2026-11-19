@@ -1,0 +1,557 @@
+{
+ "provider": "xAI",
+ "tiers": [
+  {
+   "tier": "Flagship (Grok 2 > 3 > 4 > 4.20 > 4.3 > 4.5 > 4.6 > 4.7)",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "grok-2-1212 (Grok 2)",
+     "output_usd_per_mtok": 10,
+     "launch_month": "Dec 2024",
+     "status": "VERIFIED",
+     "source_url": "https://x.ai/news/grok-1212",
+     "note": "Official xAI launch post dated Dec 12 2024: 'we are also lowering the price of these models to $2 / 1M input tokens and $10 / 1M output tokens'. No xAI pricing-page capture inside Jan-Mar 2025 renders the table (Wayback captures are script-rendered shells), so the in-window price rests on this launch post, a Dec 15 2024 TestingCatalog report (https://www.testingcatalog.com/grok-ai-slashes-api-costs-boosts-instruction-following-with-grok-2-1212.md) and xAI's x.ai/api page of 5 May 2025 listing grok-2-vision-1212 at $10 (https://web.archive.org/web/20250505193233id_/https://x.ai/api). Convention: price in effect at month end; mid-month changes are noted."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "grok-2-1212 (Grok 2)",
+     "output_usd_per_mtok": 10,
+     "launch_month": "Dec 2024",
+     "status": "VERIFIED",
+     "source_url": "https://x.ai/news/grok-1212",
+     "note": "Carried forward, same sources. Grok 3 was announced Feb 19 2025 but \"API coming soon\" (https://x.ai/news/grok-3); API launch is Apr 3 2025 (release notes)."
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "grok-2-1212 (Grok 2)",
+     "output_usd_per_mtok": 10,
+     "launch_month": "Dec 2024",
+     "status": "VERIFIED",
+     "source_url": "https://x.ai/news/grok-1212",
+     "note": "Carried forward, same sources. Grok 3 was announced Feb 19 2025 but \"API coming soon\" (https://x.ai/news/grok-3); API launch is Apr 3 2025 (release notes)."
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "grok-3 (grok-3-beta)",
+     "output_usd_per_mtok": 15,
+     "launch_month": "Apr 2025 (API; announced Feb 2025)",
+     "status": "VERIFIED",
+     "source_url": "https://docs.x.ai/developers/release-notes",
+     "note": "Release notes: 'Apr 3 Grok 3 models launch on API'. $15 output read from x.ai/api snapshot of 5 May 2025 (https://web.archive.org/web/20250505193233id_/https://x.ai/api); no April snapshot renders the table."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "grok-3 (grok-3-beta)",
+     "output_usd_per_mtok": 15,
+     "launch_month": "Apr 2025 (API)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250505193233id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "grok-3 (grok-3-beta)",
+     "output_usd_per_mtok": 15,
+     "launch_month": "Apr 2025 (API)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250611094417id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "grok-4 (grok-4-0709)",
+     "output_usd_per_mtok": 15,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://docs.x.ai/developers/release-notes",
+     "note": "Release notes: 'Jul 9 Grok 4 is released'. $15 output confirmed on x.ai/api snapshot of 5 Aug 2025 (https://web.archive.org/web/20250805170626id_/https://x.ai/api)."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "grok-4 (grok-4-0709)",
+     "output_usd_per_mtok": 15,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250805170626id_/https://x.ai/api",
+     "note": "Snapshot taken 20250805."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "grok-4 (grok-4-0709)",
+     "output_usd_per_mtok": 15,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250901180226id_/https://x.ai/api",
+     "note": "Snapshot taken 20250901."
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "grok-4 (grok-4-0709)",
+     "output_usd_per_mtok": 15,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251001004851id_/https://x.ai/api",
+     "note": "Snapshot taken 20251001."
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "grok-4 (grok-4-0709)",
+     "output_usd_per_mtok": 15,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251108005912id_/https://x.ai/api",
+     "note": "Snapshot taken 20251108."
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "grok-4 (grok-4-0709)",
+     "output_usd_per_mtok": 15,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251203093151id_/https://x.ai/api",
+     "note": "Snapshot taken 20251203."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "grok-4 (grok-4-0709)",
+     "output_usd_per_mtok": 15,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260103091815id_/https://x.ai/api",
+     "note": "Snapshot taken 20260103."
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "grok-4 (grok-4-0709)",
+     "output_usd_per_mtok": 15,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260202014645id_/https://x.ai/api",
+     "note": "Snapshot taken 20260202."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "grok-4.20 (grok-4.20-reasoning / non-reasoning)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260323024630id_/https://x.ai/api",
+     "note": "Release notes: 'Mar 10 Grok 4.20 and Grok 4.20 Multi-agent are live'. Launch price $2 in / $6 out (snapshot 23 Mar 2026). The 6 Mar 2026 snapshot still listed grok-4 at $15."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "grok-4.20 (grok-4.20-reasoning / non-reasoning)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260422091102id_/https://x.ai/api",
+     "note": "Snapshots 5, 17, 22 Apr 2026 all show $6 output. Price was cut to $2.50 sometime between 1 May and 6 May 2026."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "grok-4.3",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260506163144id_/https://x.ai/api",
+     "note": "First snapshot listing grok-4.3 is 6 May 2026 ($1.25 in / $2.50 out); the 1 May 2026 snapshot (https://web.archive.org/web/20260501070356id_/https://x.ai/api) still listed only grok-4.20 at $6, so launch is 2-6 May. grok-4.20 was repriced to $2.50 at the same time. Model page: https://docs.x.ai/developers/models/grok-4.3"
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "grok-4.3",
+     "output_usd_per_mtok": 2.5,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260608182734id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "grok-4.5",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260731103659id_/https://docs.x.ai/developers/pricing",
+     "note": "Release notes: 'July 8 Grok 4.5 ... $2 / 1M input and $6 / 1M output' (https://docs.x.ai/developers/release-notes). Pricing page snapshot 31 Jul 2026 lists grok-4.5 at $6 output; grok-4.3 stays listed at $2.50 as a cheaper option. Official post https://x.ai/news/grok-4-5 ('$2 per million input tokens and $6 per million output tokens') is dated Jul 16 2026 on the news page, 8 days after the release-notes date; both are July."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "grok-4.6",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Aug 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260823070308id_/https://x.ai/api",
+     "note": "Release notes: 'August 12 Grok 4.6 ... $2 / $0.50 / $6'."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "grok-4.7",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://docs.x.ai/developers/release-notes",
+     "note": "Release notes: 'September 21 Grok 4.7 ... $2 / $0.50 / $6'. grok-4.6 (also $6) was the flagship until Sep 21. Oct snapshot confirms $6 (https://web.archive.org/web/20261002221725id_/https://x.ai/api)."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "grok-4.7",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261002221725id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "grok-4.7",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://docs.x.ai/developers/pricing",
+     "note": "Live page fetched 18 Nov 2026: grok-4.7, 4.6, 4.5 all $6.00 output; grok-4.3 and grok-4.20 $2.50; grok-build-0.1 $2.00."
+    }
+   ]
+  },
+  {
+   "tier": "Fast/mini (grok-3-mini > grok-4-fast > grok-4.1-fast)",
+   "points": [
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "grok-3-mini",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Apr 2025 (API)",
+     "status": "VERIFIED",
+     "source_url": "https://docs.x.ai/developers/release-notes",
+     "note": "Release notes: Apr 3 Grok 3 models launch on API (grok-3 and grok-3-mini). $0.50 output read from x.ai/api snapshot 5 May 2025 (https://web.archive.org/web/20250505193233id_/https://x.ai/api); no April snapshot renders the table. Convention: price in effect at month end; mid-month changes are noted."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "grok-3-mini (grok-3-mini-beta)",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Apr 2025 (API)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250505193233id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "grok-3-mini (grok-3-mini-beta)",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Apr 2025 (API)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250611094417id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "grok-3-mini",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Apr 2025 (API)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250805170626id_/https://x.ai/api",
+     "note": "Bracketed by 11 Jun and 5 Aug 2025 snapshots, both $0.50."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "grok-3-mini",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Apr 2025 (API)",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250805170626id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "grok-4-fast (reasoning / non-reasoning)",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://x.ai/news/grok-4-fast",
+     "note": "Blog dated Sep 19 2025: $0.20 in / $0.50 out (<128k). grok-3-mini ($0.50) remained listed (1 Sep and 1 Oct snapshots)."
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "grok-4-fast (reasoning / non-reasoning)",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251001004851id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "grok-4-fast (reasoning / non-reasoning)",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251108005912id_/https://x.ai/api",
+     "note": "Grok 4.1 Fast launched Nov 19 2025 (release notes) at the same $0.50 output; grok-4-fast stayed listed."
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "grok-4.1-fast (reasoning / non-reasoning)",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Nov 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251203093151id_/https://x.ai/api",
+     "note": "Grok 4.1 Fast: release notes Nov 19 2025; blog https://x.ai/news/grok-4-1-fast ($0.20 in / $0.50 out)."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "grok-4.1-fast (reasoning / non-reasoning)",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Nov 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260103091815id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "grok-4.1-fast (reasoning / non-reasoning)",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Nov 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260202014645id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "grok-4.1-fast (reasoning / non-reasoning)",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Nov 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260306031949id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "grok-4.1-fast (reasoning / non-reasoning)",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Nov 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260422091102id_/https://x.ai/api",
+     "note": "Last month this tier exists: grok-4-fast, grok-4-1-fast, grok-3 and grok-4-0709 were retired 15 May 2026 and redirect to grok-4.3 at $2.50 (https://docs.x.ai/developers/migration/may-15-retirement). May 2026 is omitted because the slugs were retired mid-month and billed at grok-4.3 rates afterward."
+    }
+   ]
+  },
+  {
+   "tier": "Code (grok-code-fast-1 > grok-build-0.1)",
+   "points": [
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "grok-code-fast-1",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://x.ai/news/grok-code-fast-1",
+     "note": "Blog dated Aug 28 2025: $0.20 in / $1.50 out. Coding-specialist lineage ending with grok-build-0.1."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "grok-code-fast-1",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250901180226id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "grok-code-fast-1",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251001004851id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "grok-code-fast-1",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251108005912id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "grok-code-fast-1",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251203093151id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "grok-code-fast-1",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260103091815id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "grok-code-fast-1",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260202014645id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "grok-code-fast-1",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260306031949id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "grok-code-fast-1",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Aug 2025",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260422091102id_/https://x.ai/api",
+     "note": "The Apr 2026 x.ai/api snapshots list only grok-4.20 and grok-4-1-fast, so the price is not shown. Model was retired 15 May 2026 per migration guide, so it was live in April; $1.50 carried from Mar 2026."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "grok-build-0.1",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260522182653id_/https://x.ai/api",
+     "note": "Release notes: 'May 19 Grok Build 0.1' (early access); $1.00 in / $2.00 out. grok-code-fast-1 retired May 15 and redirects to grok-build-0.1."
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "grok-build-0.1",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260608182734id_/https://x.ai/api",
+     "note": ""
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "grok-build-0.1",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260731103659id_/https://docs.x.ai/developers/pricing",
+     "note": ""
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "grok-build-0.1",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261107235102id_/https://docs.x.ai/developers/pricing",
+     "note": "Carried forward: bracketed by the 31 Jul 2026 and 7 Nov 2026 docs.x.ai/developers/pricing snapshots, both $2.00. The Aug x.ai/api capture shows only the flagship row."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "grok-build-0.1",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261107235102id_/https://docs.x.ai/developers/pricing",
+     "note": "Carried forward, bracketed as above; the Sep 2026 pricing-page capture was an empty shell."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "grok-build-0.1",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261107235102id_/https://docs.x.ai/developers/pricing",
+     "note": "Carried forward, bracketed as above."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "grok-build-0.1",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://docs.x.ai/developers/pricing",
+     "note": "Live page 18 Nov 2026."
+    }
+   ]
+  }
+ ],
+ "discrepancies": [
+  "Chart has Grok 3 at $15 in Feb 25 and Mar 25. Grok 3 was announced Feb 19 2025 with 'API coming soon' (https://x.ai/news/grok-3); the API launch is Apr 3 2025 (release notes, https://docs.x.ai/developers/release-notes). API flagship in Jan-Mar 2025 was Grok 2 at $10, so chart indexes 1 and 2 should be 10 if the chart tracks API availability.",
+  "Chart Jan 25 Grok 2 $10 agrees (official xAI launch post https://x.ai/news/grok-1212, Dec 12 2024: $2 in / $10 out).",
+  "Chart Mar 26 Grok 4.2 $6 agrees (grok-4.20 launched Mar 10 2026 at $2 in / $6 out). Chart Apr 26 $6 agrees.",
+  "Chart May 26 and Jun 26 Grok 4.3 $2.50 agree. Note grok-4.20 was also repriced from $6 to $2.50 at the same time (still listed at $2.50 on the live page).",
+  "Chart Jul 26 onward $6 agrees: Grok 4.5 (launch Jul 8), 4.6 (Aug 12), 4.7 (Sep 21) all $6 output below 200k prompt tokens ($12 above).",
+  "Chart has no mid or fast xAI tier; the Fast/mini tier ($0.50 output from Apr 2025 to Apr 2026) and Code tier ($1.50 then $2.00) are additions."
+ ],
+ "gaps": [
+  "No xAI pricing-page snapshot renders the model price table for Jan-Apr 2025 (docs.x.ai/docs/models and x.ai/api Wayback captures are shells); Jan-Mar 2025 Grok 2 price rests on the official Dec 12 2024 launch post, not an in-window snapshot.",
+  "x.ai/api snapshots for Jul 2025 (8 Jul) and Sep 2026 (3 Sep) could not be used: the Jul 2025 capture predates the Jul 9 Grok 4 launch and the Sep 2026 docs pricing capture was an empty shell. Those months rely on bracketing snapshots plus dated release notes.",
+  "Apr 2026 grok-code-fast-1 price is not shown on any Apr 2026 snapshot (UNVERIFIED, carried).",
+  "May 2026 omitted for the Fast/mini tier because the slugs retired 15 May 2026 and were redirected to grok-4.3 pricing.",
+  "Grok 4.3 exact launch day is only bracketed to 2-6 May 2026; xAI release notes have no 4.3 entry and https://x.ai/news/grok-4-3 and /grok-4-20 return 404.",
+  "Grok 4.5 launch date differs between sources: release notes say Jul 8 2026, the x.ai/news/grok-4-5 post is dated Jul 16 2026.",
+  "Prices are standard short-context output (below 200k prompt tokens); long-context tiers (2x) ignored. US regional endpoint carries a 1.1x premium, ignored. Cached/batch discounts ignored."
+ ]
+}

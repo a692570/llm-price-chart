@@ -1,0 +1,732 @@
+{
+ "provider": "Qwen (Alibaba Model Studio)",
+ "tiers": [
+  {
+   "tier": "Max (flagship: qwen-max to qwen3-max to qwen3.7/3.8-max to qwen4-max)",
+   "mapping": "Top model of each generation: qwen-max/Qwen2.5-Max, qwen3-max, qwen3.7-max, qwen3.8-max, qwen4-max. Output price in the lowest input bracket.",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "qwen-max (Qwen2.5-Max, qwen-max-2025-01-25)",
+     "output_usd_per_mtok": 6.4,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250130085941/https://www.alibabacloud.com/help/en/model-studio/getting-started/models",
+     "note": "Listed as $0.0064 per 1K tokens = $6.40 per 1M. Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "qwen-max (Qwen2.5-Max, qwen-max-2025-01-25)",
+     "output_usd_per_mtok": 6.4,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250209170946/https://www.alibabacloud.com/help/en/model-studio/getting-started/models",
+     "note": "Listed as $0.0064 per 1K tokens = $6.40 per 1M. Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "qwen-max (Qwen2.5-Max, qwen-max-2025-01-25)",
+     "output_usd_per_mtok": 6.4,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250305233958/https://www.alibabacloud.com/help/en/model-studio/getting-started/models",
+     "note": "Listed as $0.0064 per 1K tokens = $6.40 per 1M. Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "qwen-max",
+     "output_usd_per_mtok": 6.4,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250409115449/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "$0.0064 per 1K tokens. Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "qwen-max",
+     "output_usd_per_mtok": 6.4,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250614205430/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "No snapshot in May; $6.4 in Apr 9 (https://web.archive.org/web/20250409115449/https://www.alibabacloud.com/help/en/model-studio/models) and Jun 14 snapshots."
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "qwen-max",
+     "output_usd_per_mtok": 6.4,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250614205430/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": " Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "qwen-max",
+     "output_usd_per_mtok": 6.4,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250724002411/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": " Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "qwen-max",
+     "output_usd_per_mtok": 6.4,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250908201053/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "No snapshot in Aug; $6.4 on Jul 24 and Sep 8 snapshots."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "qwen3-max-preview / qwen3-max (2025-09-23)",
+     "output_usd_per_mtok": 6.0,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250908201053/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "Tiered by input: 0-32K $6, 32K-128K $12, 128K-252K $15. Lowest bracket shown. qwen-max stayed at $6.40 in parallel. Source for qwen3-max GA id 2025-09-23: https://web.archive.org/web/20251102163238/https://www.alibabacloud.com/help/en/model-studio/models"
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "qwen3-max (2025-09-23)",
+     "output_usd_per_mtok": 6.0,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251102163238/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "No Oct snapshot; same tiering ($6/$12/$15) on Sep 8 and Nov 2 snapshots."
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "qwen3-max (2025-09-23)",
+     "output_usd_per_mtok": 6.0,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251102163238/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "Tiered 0-32K $6, 32K-128K $12, 128K-252K $15."
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "qwen3-max",
+     "output_usd_per_mtok": 6.0,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260116072901/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "No Dec snapshot with prices (Dec 4 capture is an empty shell); $6 on Nov 2 and Jan 16."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "qwen3-max (2026-01-23 snapshot added)",
+     "output_usd_per_mtok": 6.0,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260116072901/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Tiered 0-32K $6."
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "qwen3-max-2026-01-23",
+     "output_usd_per_mtok": 6.0,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260210034228/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Tiered 0-32K $6, 32K-128K $12, 128K-252K $15."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "qwen3-max-2026-01-23",
+     "output_usd_per_mtok": 6.0,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260301130655/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Tiered 0-32K $6."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "qwen3-max-2026-01-23",
+     "output_usd_per_mtok": 6.0,
+     "launch_month": "Sep 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260402181911/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Page 'Last Updated Apr 01, 2026'. A qwen3.6-max-preview ($7.8 for 0-128K) appears only in later snapshots with no date, so it is not used for this month."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "qwen3.7-max (announced 2026-05-20)",
+     "output_usd_per_mtok": 7.5,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://www.digitalapplied.com/blog/qwen-3-7-max-alibaba-flagship-ai-model-2026",
+     "note": "SECONDARY SOURCE: digitalapplied.com reports qwen3.7-max announced 2026-05-20 at $2.50 input / $7.50 output; docs.apiyi.com (https://docs.apiyi.com/en/news/qwen-3-7-max-launch.md) dates the release 2026-05-20 UTC+8. Jul 11 Alibaba page (https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing) shows the same $7.5; preview ID dated 2026-05-17."
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "qwen3.7-max (2026-05-20 / 2026-06-08)",
+     "output_usd_per_mtok": 7.5,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Flat $7.5 across 0-1M. Bracketed by the secondary launch report (https://www.digitalapplied.com/blog/qwen-3-7-max-alibaba-flagship-ai-model-2026, $7.50 in May) and the Jul 11 Alibaba page. Model IDs dated 2026-05-20 and 2026-06-08."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "qwen3.7-max",
+     "output_usd_per_mtok": 7.5,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Standard price $7.5 (input $2.5). Page lists standard prices only; a $3.75 promo (chart value) is not documented on the page, promotions are shown in the console."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "qwen3.8-max",
+     "output_usd_per_mtok": 6.0,
+     "launch_month": "Aug 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260831001007/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Page 'Last Updated Aug 28, 2026'; absent from Aug 2 snapshot (https://web.archive.org/web/20260802131610/https://www.alibabacloud.com/help/en/model-studio/model-pricing). Flat $6 for 0-1M. qwen3.7-max stays at $7.5."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "qwen3.8-max (0902 snapshot)",
+     "output_usd_per_mtok": 6.0,
+     "launch_month": "Aug 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901064027/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Flat $6 for 0-1M."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "qwen3.8-max-0902",
+     "output_usd_per_mtok": 6.0,
+     "launch_month": "Aug 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261029014753/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Flat $6 for 0-1M."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "qwen4-max",
+     "output_usd_per_mtok": 4.5,
+     "launch_month": "Nov 2026",
+     "status": "VERIFIED",
+     "source_url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Live page 2026-11-18: qwen4-max $4.5 (input $1.5), qwen3.8-max $6 still listed. Alibaba press release dated 2026-11-16 announces the release (https://www.alibabacloud.com/press-room/alibaba-unveils-qwen4-max; cache-hit price $0.075 stated there). Absent from the 2026-11-01 snapshot."
+    }
+   ]
+  },
+  {
+   "tier": "Plus (qwen-plus to qwen3.5/3.6/3.7-plus)",
+   "mapping": "Mid tier. qwen-plus then qwen3.5-plus, 3.6-plus, 3.7-plus. Non-thinking output where split.",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "qwen-plus (qwen-plus-2025-01-25)",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250130085941/https://www.alibabacloud.com/help/en/model-studio/getting-started/models",
+     "note": "$0.0012 per 1K = $1.20 per 1M; single mode (no thinking mode yet). Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "qwen-plus (qwen-plus-2025-01-25)",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250209170946/https://www.alibabacloud.com/help/en/model-studio/getting-started/models",
+     "note": "$0.0012 per 1K = $1.20 per 1M; single mode (no thinking mode yet). Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "qwen-plus (qwen-plus-2025-01-25)",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250305233958/https://www.alibabacloud.com/help/en/model-studio/getting-started/models",
+     "note": "$0.0012 per 1K = $1.20 per 1M; single mode (no thinking mode yet). Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "qwen-plus",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250409115449/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "Qwen3 based qwen-plus-2025-04-28 released after this snapshot at $1.2 non-thinking. Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "qwen-plus-2025-04-28 (Qwen3)",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250614205430/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "Non-thinking output $1.2; thinking mode $8 per the Jun 14 page. No May snapshot."
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "qwen-plus-2025-04-28 (Qwen3)",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250614205430/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "Non-thinking $1.2; thinking $8 (listed on qwen-plus-latest). Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "qwen-plus-2025-07-14",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250724002411/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "Non-thinking $1.2; thinking mode $4 (was $8 in June). Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "qwen-plus-2025-07-28",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250908201053/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "Non-thinking $1.2, thinking $4. No Aug snapshot; same on Jul 24 and Sep 8."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "qwen-plus-2025-09-11",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250908201053/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "Non-thinking $1.2, thinking $4. 256K-1M bracket: $3.6 / $12."
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "qwen-plus-2025-09-11",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251102163238/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "Non-thinking $1.2, thinking $4. No Oct snapshot; same on Sep 8 and Nov 2."
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "qwen-plus-2025-09-11",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251102163238/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "Non-thinking $1.2, thinking $4."
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "qwen-plus-2025-12-01",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260116072901/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Non-thinking $1.2, thinking $4. Model ID dated 2025-12-01; no Dec snapshot with prices."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "qwen-plus-2025-12-01",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260116072901/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Non-thinking $1.2, thinking $4; 256K-1M bracket $3.6 / $12."
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "qwen3.5-plus (2026-02-15)",
+     "output_usd_per_mtok": 2.4,
+     "launch_month": "Feb 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260301130655/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Thinking and non-thinking both $2.4; 256K-1M bracket $3. China (Beijing) price on the same page is $0.688, which matches the chart value."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "qwen3.5-plus (2026-02-15)",
+     "output_usd_per_mtok": 2.4,
+     "launch_month": "Feb 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260402181911/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Both modes $2.4; 256K-1M bracket $3."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "qwen3.6-plus (2026-04-02)",
+     "output_usd_per_mtok": 3.0,
+     "launch_month": "Apr 2026",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Both modes $3; 256K-1M bracket $6. qwen3.5-plus-2026-04-20 update kept $2.4. Archived copies of the pricing page dated 2026-04-02, 2026-05-01, 2026-06-01 and 2026-06-13 all show 'Last Updated Apr 01, 2026' and omit qwen3.6/3.7 models, so this month is inferred from the 2026-07-11 snapshot (https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing) and the date in the model ID."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "qwen3.7-plus (2026-05-26)",
+     "output_usd_per_mtok": 1.6,
+     "launch_month": "May 2026",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Both modes $1.6; 256K-1M bracket $4.8. Archived copies of the pricing page dated 2026-04-02, 2026-05-01, 2026-06-01 and 2026-06-13 all show 'Last Updated Apr 01, 2026' and omit qwen3.6/3.7 models, so this month is inferred from the 2026-07-11 snapshot (https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing) and the date in the model ID."
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "qwen3.7-plus (2026-05-26)",
+     "output_usd_per_mtok": 1.6,
+     "launch_month": "May 2026",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Both modes $1.6. Archived copies of the pricing page dated 2026-04-02, 2026-05-01, 2026-06-01 and 2026-06-13 all show 'Last Updated Apr 01, 2026' and omit qwen3.6/3.7 models, so this month is inferred from the 2026-07-11 snapshot (https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing) and the date in the model ID."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "qwen3.7-plus",
+     "output_usd_per_mtok": 1.6,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Both modes $1.6; 256K-1M bracket $4.8."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "qwen3.7-plus",
+     "output_usd_per_mtok": 1.6,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260831001007/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Both modes $1.6."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "qwen3.7-plus",
+     "output_usd_per_mtok": 1.6,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901064027/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Both modes $1.6."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "qwen3.7-plus",
+     "output_usd_per_mtok": 1.6,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261029014753/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Both modes $1.6."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "qwen3.7-plus",
+     "output_usd_per_mtok": 1.6,
+     "launch_month": "May 2026",
+     "status": "VERIFIED",
+     "source_url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Live page shows 'Original $1.6 (20% off for a limited time)', i.e. about $1.28 while the promo runs.",
+     "promo_output_usd_per_mtok": 1.28
+    }
+   ]
+  },
+  {
+   "tier": "Turbo/Flash (qwen-turbo to qwen-flash to qwen3.x-flash)",
+   "mapping": "Cheap tier. qwen-turbo until Jun 2025, qwen-flash from Jul 2025, then qwen3.5/3.6/3.8-flash.",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "qwen-turbo (qwen-turbo-2024-11-01)",
+     "output_usd_per_mtok": 0.2,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250130085941/https://www.alibabacloud.com/help/en/model-studio/getting-started/models",
+     "note": "$0.0002 per 1K = $0.20 per 1M. Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "qwen-turbo (qwen-turbo-2024-11-01)",
+     "output_usd_per_mtok": 0.2,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250209170946/https://www.alibabacloud.com/help/en/model-studio/getting-started/models",
+     "note": "$0.0002 per 1K = $0.20 per 1M. Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "qwen-turbo (qwen-turbo-2024-11-01)",
+     "output_usd_per_mtok": 0.2,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250305233958/https://www.alibabacloud.com/help/en/model-studio/getting-started/models",
+     "note": "$0.0002 per 1K = $0.20 per 1M. Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "qwen-turbo",
+     "output_usd_per_mtok": 0.2,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250409115449/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "$0.0002 per 1K. Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "qwen-turbo (2025-04-28)",
+     "output_usd_per_mtok": 0.2,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250614205430/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "No May snapshot; $0.2 on Apr 9 and Jun 14."
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "qwen-turbo",
+     "output_usd_per_mtok": 0.2,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250614205430/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": " Singapore (International) price, lowest input bracket."
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "qwen-flash (2025-07-28)",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250908201053/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "qwen-flash launched 2025-07-28 (model ID date) and was listed Sep 8; Jul 24 snapshot (https://web.archive.org/web/20250724002411/https://www.alibabacloud.com/help/en/model-studio/models) still showed only qwen-turbo at $0.2. 256K-1M bracket: $2."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "qwen-flash (2025-07-28)",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250908201053/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "Both modes $0.4 in lowest bracket; 256K-1M $2."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "qwen-flash (2025-07-28)",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250908201053/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "256K-1M bracket $2."
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "qwen-flash (2025-07-28)",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251102163238/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "No Oct snapshot; same on Sep 8 and Nov 2."
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "qwen-flash (2025-07-28)",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251102163238/https://www.alibabacloud.com/help/en/model-studio/models",
+     "note": "256K-1M bracket $2."
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "qwen-flash (2025-07-28)",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260116072901/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "No Dec snapshot with prices; $0.4 on Nov 2 and Jan 16."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "qwen-flash (2025-07-28)",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Jul 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260116072901/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "256K-1M bracket $2."
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "qwen3.5-flash (2026-02-23)",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Feb 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260301130655/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Flat $0.4 for 0-1M."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "qwen3.5-flash (2026-02-23)",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Feb 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260402181911/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Flat $0.4."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "qwen3.6-flash (2026-04-16)",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Apr 2026",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "0-256K $1.5, 256K-1M $4. Archived copies of the pricing page dated 2026-04-02, 2026-05-01, 2026-06-01 and 2026-06-13 all show 'Last Updated Apr 01, 2026' and omit qwen3.6/3.7 models, so this month is inferred from the 2026-07-11 snapshot (https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing) and the date in the model ID. Last verified model in this month: qwen3.5-flash at $0.4."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "qwen3.6-flash (2026-04-16)",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Apr 2026",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "0-256K $1.5. Archived copies of the pricing page dated 2026-04-02, 2026-05-01, 2026-06-01 and 2026-06-13 all show 'Last Updated Apr 01, 2026' and omit qwen3.6/3.7 models, so this month is inferred from the 2026-07-11 snapshot (https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing) and the date in the model ID."
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "qwen3.6-flash (2026-04-16)",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Apr 2026",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "0-256K $1.5. Archived copies of the pricing page dated 2026-04-02, 2026-05-01, 2026-06-01 and 2026-06-13 all show 'Last Updated Apr 01, 2026' and omit qwen3.6/3.7 models, so this month is inferred from the 2026-07-11 snapshot (https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing) and the date in the model ID."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "qwen3.6-flash",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260802131610/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "0-256K $1.5, 256K-1M $4. qwen3.7-flash (ID date 2026-07-15, $0.13 for 0-32K) is not on the Aug 2 snapshot; first seen Aug 31."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "qwen3.8-flash",
+     "output_usd_per_mtok": 0.47,
+     "launch_month": "Aug 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260831001007/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Flat $0.47. qwen3.7-flash ($0.13 / $0.40 / $0.80 by input bracket) listed alongside. qwen3.8-flash absent on Aug 2 snapshot."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "qwen3.8-flash",
+     "output_usd_per_mtok": 0.47,
+     "launch_month": "Aug 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901064027/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Flat $0.47."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "qwen3.8-flash",
+     "output_usd_per_mtok": 0.47,
+     "launch_month": "Aug 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261029014753/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Flat $0.47."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "qwen3.8-flash",
+     "output_usd_per_mtok": 0.47,
+     "launch_month": "Aug 2026",
+     "status": "VERIFIED",
+     "source_url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "note": "Flat $0.47 on the live page."
+    }
+   ]
+  }
+ ],
+ "discrepancies": [
+  "Chart Qwen-Max $6.40 (Jan 25) matches the International page (qwen-max $6.4 per 1M output). Source: https://web.archive.org/web/20250130085941/https://www.alibabacloud.com/help/en/model-studio/getting-started/models",
+  "Chart Qwen-Plus $1.20 (Jun 25) matches the non-thinking output price; thinking mode was $8 in Jun 2025 and $4 from Jul 2025. Source: https://web.archive.org/web/20250614205430/https://www.alibabacloud.com/help/en/model-studio/models",
+  "Chart Qwen3-Max $6.40 (Nov 25) differs: qwen3-max is $6 (0-32K input bracket) with $12 and $15 for longer inputs; $6.40 is the older qwen-max price. Source: https://web.archive.org/web/20251102163238/https://www.alibabacloud.com/help/en/model-studio/models",
+  "Chart Qwen3.5-Plus $0.69 (Feb 26) is the China (Beijing) price ($0.688); the International (Singapore) price is $2.4. Source: https://web.archive.org/web/20260301130655/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+  "Chart Qwen3.5-Plus $2.40 (May 26) matches the 3.5-plus International price, but qwen3.6-plus ($3, from 2026-04-02) and qwen3.7-plus ($1.6, from 2026-05-26) were the newer Plus models by May 26. Archived pages from Apr-Jun 2026 are stale (see gaps).",
+  "Chart Qwen3.7-Max $3.75 promo (Jul 26): not found on any snapshot; the page states it lists standard prices only and shows $7.5. Source: https://web.archive.org/web/20260711091745/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+  "Chart Qwen3.8-Max $6 (Aug 26) matches. Source: https://web.archive.org/web/20260831001007/https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+  "Mixed tiers in the chart: Qwen-Max ($6-7.5) and Qwen-Plus ($1.2-2.4) are different tiers; Qwen-Max moved 6.4 -> 6 -> 7.5 -> 6 -> 4.5 while Plus moved 1.2 -> 2.4 -> 3 -> 1.6.",
+  "Month rule: price in effect at month end, International (Singapore) page, lowest input-length bracket, non-thinking output where thinking and non-thinking differ."
+ ],
+ "gaps": [
+  "Apr, May, Jun 2026: archived copies of the pricing page (2026-04-02, 05-01, 06-01, 06-13) all say 'Last Updated Apr 01, 2026' and omit qwen3.6-plus, qwen3.6/3.7-max and qwen3.6-flash even though their model IDs are dated Apr-Jun 2026. Plus and Flash prices for those months are inferred from the 2026-07-11 snapshot and flagged UNVERIFIED; Max for May-Jun is VERIFIED from secondary coverage.",
+  "qwen3.6-max-preview ($1.3 input / $7.8 output, 0-128K) has no launch date on any fetched source; it first appears on the 2026-07-11 snapshot and is not used as a tier point. Launch dates for qwen3.6-plus (2026-04-02) and qwen3.7-max (2026-05-20) are confirmed by secondary coverage (https://docs.apiyi.com/en/news/qwen-3-6-plus-launch.md, https://the-decoder.com/alibaba-launches-qwen3-6-plus-its-third-proprietary-ai-model-in-days/) but those pieces give no price for 3.6-plus.",
+  "qwen4-max: release dated 2026-11-16 by the Alibaba press release; its $4.5 output price is read from the live pricing page, not the press release.",
+  "Dec 2025: the 2025-12-04 capture of the models page is an empty shell, so Dec 25 prices are carried from Nov 2 and Jan 16.",
+  "Alibaba pricing pages carry no release dates; launch months come from dated model IDs and the first snapshot where a model appears."
+ ]
+}

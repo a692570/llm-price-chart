@@ -1,0 +1,378 @@
+{
+ "provider": "MiniMax",
+ "tiers": [
+  {
+   "tier": "Flagship M-series (Text-01, M1, M2, M2.1, M2.5, M2.7, M3)",
+   "mapping": "Standard-speed top model of each generation.",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "MiniMax-Text-01",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://www.minimax.io/news/minimax-01-series-2",
+     "note": "Official launch post dated 2025.1.15: standard pricing $0.2 per 1M input and $1.1 per 1M output. Release notes (https://platform.minimax.io/docs/release-notes/models) agree on the date. Oct 25 2025 pricing page (https://web.archive.org/web/20251025070556/https://platform.minimax.io/docs/guides/pricing) still lists $1.1."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "MiniMax-Text-01",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://www.minimax.io/news/minimax-01-series-2",
+     "note": "Launch-post price carried forward; no change found. Input $0.2 confirmed on https://web.archive.org/web/20250416132113/https://www.minimax.io/platform_overview (Apr 2025); output $1.1 on the Oct 25 2025 pricing page."
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "MiniMax-Text-01",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://www.minimax.io/news/minimax-01-series-2",
+     "note": "Launch-post price carried forward; no change found. Input $0.2 confirmed on https://web.archive.org/web/20250416132113/https://www.minimax.io/platform_overview (Apr 2025); output $1.1 on the Oct 25 2025 pricing page."
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "MiniMax-Text-01",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://www.minimax.io/news/minimax-01-series-2",
+     "note": "Launch-post price carried forward; no change found. Input $0.2 confirmed on https://web.archive.org/web/20250416132113/https://www.minimax.io/platform_overview (Apr 2025); output $1.1 on the Oct 25 2025 pricing page."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "MiniMax-Text-01",
+     "output_usd_per_mtok": 1.1,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://www.minimax.io/news/minimax-01-series-2",
+     "note": "Launch-post price carried forward; no change found. Input $0.2 confirmed on https://web.archive.org/web/20250416132113/https://www.minimax.io/platform_overview (Apr 2025); output $1.1 on the Oct 25 2025 pricing page."
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "MiniMax-M1",
+     "output_usd_per_mtok": 2.2,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://www.minimax.io/news/minimaxm1",
+     "note": "Official M1 launch post dated 06.16.2025: $0.4 input / $2.2 output per 1M for 0-200K input; $1.3 input / $2.2 output for 200K-1M. Text-01 stayed available at $1.1."
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "MiniMax-M1",
+     "output_usd_per_mtok": 2.2,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://www.minimax.io/news/minimaxm1",
+     "note": "Launch-post price carried forward; no change found. Same $2.2 on the Oct 25 2025 pricing page (https://web.archive.org/web/20251025070556/https://platform.minimax.io/docs/guides/pricing)."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "MiniMax-M1",
+     "output_usd_per_mtok": 2.2,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://www.minimax.io/news/minimaxm1",
+     "note": "Launch-post price carried forward; no change found. Same $2.2 on the Oct 25 2025 pricing page (https://web.archive.org/web/20251025070556/https://platform.minimax.io/docs/guides/pricing)."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "MiniMax-M1",
+     "output_usd_per_mtok": 2.2,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://www.minimax.io/news/minimaxm1",
+     "note": "Launch-post price carried forward; no change found. Same $2.2 on the Oct 25 2025 pricing page (https://web.archive.org/web/20251025070556/https://platform.minimax.io/docs/guides/pricing)."
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "MiniMax-M2",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Oct 2025",
+     "status": "VERIFIED",
+     "source_url": "https://www.minimax.io/news/minimax-m2",
+     "note": "Official launch post dated 2025.10.27: $0.30 input / $1.20 output per 1M. Nov 2 snapshot https://web.archive.org/web/20251102050239/https://platform.minimax.io/docs/guides/pricing agrees. M2 released 2025-10-27. Month-end price. Oct 25 snapshot (https://web.archive.org/web/20251025070556/https://platform.minimax.io/docs/guides/pricing) still listed M1 $2.2 and Text-01 $1.1."
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "MiniMax-M2",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Oct 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251204235220/https://platform.minimax.io/docs/pricing/pay-as-you-go",
+     "note": "$0.3 input, $1.2 output. Nov 2 snapshot https://web.archive.org/web/20251102050239/https://platform.minimax.io/docs/guides/pricing identical."
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "MiniMax-M2.1",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260213062719/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "M2.1 released 2025-12-22. Dec 4 snapshot lists M2 only; Feb 13 2026 snapshot lists M2.1 at $1.2."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "MiniMax-M2.1",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260213062719/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "No Jan snapshot; $1.2 on Dec 4 (M2) and Feb 13."
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "MiniMax-M2.5",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Feb 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260301152915/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "M2.5 released Feb 2026 (release notes give no day). Also on Feb 13 snapshot https://web.archive.org/web/20260213062719/https://platform.minimax.io/docs/guides/pricing-paygo."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "MiniMax-M2.7",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260601045637/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "M2.7 released 2026-03-18. Mar 1 snapshot shows M2.5 at $1.2 (https://web.archive.org/web/20260301152915/https://platform.minimax.io/docs/guides/pricing-paygo); M2.7 at $1.2 on Jun 1."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "MiniMax-M2.7",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260601045637/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "No Apr snapshot with prices (Apr 14 capture is a redirect); $1.2 on Mar 1 (M2.5) and Jun 1 (M2.7)."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "MiniMax-M2.7",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260601045637/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "$1.2 on Jun 1 snapshot."
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "MiniMax-M3",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jun 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260616040022/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "M3 released 2026-06-01. List $2.40 output with 'Permanent 50% off' = $1.20 effective (input $0.60 list, $0.30 effective). The Jun 1 snapshot said '7-day 50% off'; by Jun 10 and Jun 16 it read 'Permanent 50% off'. Over 512K input tokens: $4.80 list / $2.40 effective. Priority tier 1.5x. This file treats the permanent discount as the price."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "MiniMax-M3",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jun 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260709084549/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "List $2.40, 'Permanent 50% off' $1.20."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "MiniMax-M3",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jun 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260811053739/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "List $2.40, 'Permanent 50% off' $1.20."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "MiniMax-M3",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jun 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260910171543/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "List $2.40, 'Permanent 50% off' $1.20."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "MiniMax-M3",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jun 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261002184926/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "List $2.40, 'Permanent 50% off' $1.20."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "MiniMax-M3",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jun 2026",
+     "status": "VERIFIED",
+     "source_url": "https://platform.minimax.io/docs/pricing/overview",
+     "note": "Live page 2026-11-18: list $2.40, 'Permanent 50% off' $1.20 for <=512K input."
+    }
+   ]
+  },
+  {
+   "tier": "Highspeed (M2.5 lightning/highspeed, M2.7-highspeed)",
+   "mapping": "Same model as the flagship at 2x price for faster output; only exists Feb-Oct 2026.",
+   "points": [
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "MiniMax-M2.5-lightning / highspeed",
+     "output_usd_per_mtok": 2.4,
+     "launch_month": "Feb 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260301152915/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "Same model at about 2x price for faster output. Feb 13 snapshot calls it 'lightning' (https://web.archive.org/web/20260213062719/https://platform.minimax.io/docs/guides/pricing-paygo); renamed 'highspeed' by Mar 1. Input $0.6 (lightning on Feb 13 listed $0.3)."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "MiniMax-M2.7-highspeed",
+     "output_usd_per_mtok": 2.4,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260601045637/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "M2.7-highspeed released with M2.7 on 2026-03-18; priced $2.4 on the Jun 1 page. M2.5-highspeed $2.4 on Mar 1."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "MiniMax-M2.7-highspeed",
+     "output_usd_per_mtok": 2.4,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260601045637/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "No snapshot this month; $2.4 on Mar 1 (M2.5-hs) and Jun 1 (M2.7-hs)."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "MiniMax-M2.7-highspeed",
+     "output_usd_per_mtok": 2.4,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260601045637/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "No snapshot this month; $2.4 on Mar 1 (M2.5-hs) and Jun 1 (M2.7-hs)."
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "MiniMax-M2.7-highspeed",
+     "output_usd_per_mtok": 2.4,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260616040022/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "Listed alongside M3 at $2.4."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "MiniMax-M2.7-highspeed",
+     "output_usd_per_mtok": 2.4,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260709084549/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "$2.4."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "MiniMax-M2.7-highspeed",
+     "output_usd_per_mtok": 2.4,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260811053739/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "$2.4."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "MiniMax-M2.7-highspeed",
+     "output_usd_per_mtok": 2.4,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260910171543/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "$2.4."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "MiniMax-M2.7-highspeed",
+     "output_usd_per_mtok": 2.4,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261002184926/https://platform.minimax.io/docs/guides/pricing-paygo",
+     "note": "$2.4. Not listed on the live Nov 18 page, so the tier ends here."
+    }
+   ]
+  },
+  {
+   "tier": "Flash (M3.1-Flash)",
+   "mapping": "New small tier from Oct 2026.",
+   "points": [
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "MiniMax-M3.1-Flash",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Oct 2026",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20261104080518/https://platform.minimax.io/docs/pricing/overview",
+     "note": "Released 2026-10-19 (https://platform.minimax.io/docs/release-notes/models). Price first seen on the Nov 4 snapshot ($0.15 input, $0.60 output); not on the Oct 2 snapshot (predates release). Month-end price not seen directly."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "MiniMax-M3.1-Flash",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Oct 2026",
+     "status": "VERIFIED",
+     "source_url": "https://platform.minimax.io/docs/pricing/overview",
+     "note": "Live page 2026-11-18: $0.15 input, $0.60 output, $0.015 cache read."
+    }
+   ]
+  }
+ ],
+ "discrepancies": [
+  "Chart MiniMax-01 $1.10 (Jan 25) matches the official launch post ($0.2 in / $1.1 out). Source: https://www.minimax.io/news/minimax-01-series-2",
+  "Chart M1 $1.76 (Jun 25) disagrees: the official M1 launch post gives $2.2 output ($0.4 input up to 200K, $1.3 above), unchanged on the Oct 25 2025 pricing page. No $1.76 on any page fetched. Sources: https://www.minimax.io/news/minimaxm1 and https://web.archive.org/web/20251025070556/https://platform.minimax.io/docs/guides/pricing",
+  "Chart M2 $1.00 (Oct 25) disagrees: the official M2 launch post gives $1.20 output ($0.30 input). Source: https://www.minimax.io/news/minimax-m2",
+  "Chart M2.7/M3 $1.20 (Feb 26) matches M2.5/M2.7 at $1.2, and M3 at $1.2 effective. M3 list price is $2.40 with a 'Permanent 50% off' label. Source: https://web.archive.org/web/20260616040022/https://platform.minimax.io/docs/guides/pricing-paygo",
+  "Chart mixes tiers: M2.5/M2.7 'highspeed' variants are $2.4 at the same time as the $1.2 base models.",
+  "Month rule: price in effect at month end; M3 uses the effective ($1.20) price with the $2.40 list price in note."
+ ],
+ "gaps": [
+  "Jan-Sep 2025 prices come from the official launch posts (Text-01 2025.1.15, M1 06.16.2025) and are carried forward, because no contemporaneous pricing page could be fetched (the Apr and Jul 2025 platform_overview pages show input prices only; earliest platform.minimax.io pricing capture is 2025-10-25, which shows the same prices). A mid-2025 price change would not be visible.",
+  "M2.5 release day not given in the release notes (month only: Feb 2026).",
+  "Highspeed tier excluded after Oct 26 because the live page lists only M3 and M3.1-Flash.",
+  "M3 priority tier (1.5x, $3.60 effective output) not modeled as a separate tier.",
+  "M3.1-Flash price at launch (2026-10-19) not seen; first price evidence is the Nov 4 snapshot."
+ ]
+}

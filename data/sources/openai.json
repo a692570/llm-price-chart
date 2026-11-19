@@ -1,0 +1,874 @@
+{
+ "provider": "OpenAI",
+ "tiers": [
+  {
+   "tier": "Frontier (Astra lineage)",
+   "mapping": "Most capable general GPT model per the pricing page: GPT-4o, GPT-4.1 (Apr 2025), GPT-5, 5.1, 5.2, 5.4, 5.5, then GPT-5.6 Sol (Jul-Aug 2026, the frontier tier of that family), GPT-6 Astra, GPT-6.2 Astra. Excludes Pro variants, reasoning o-series (o1 $60, o3 $40 then $8), GPT-4.5 preview ($150) and domain models (Cyber, Rosalind, Law).",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "GPT-4o",
+     "output_usd_per_mtok": 10,
+     "launch_month": "May 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250121103038/https://openai.com/api/pricing/",
+     "note": "Alias gpt-4o and gpt-4o-2024-11-20 are $10. The legacy gpt-4o-2024-05-13 snapshot on the same page is $15, which is the likely origin of a $15 figure. Output cut to $10 with gpt-4o-2024-08-06 (changelog Aug 6, 2024)."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "GPT-4o",
+     "output_usd_per_mtok": 10,
+     "launch_month": "May 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250201145921/https://openai.com/api/pricing/",
+     "note": "GPT-4.5 research preview launched Feb 27 at $150 output; excluded as a research preview (deprecation announced Apr 14, 2025)."
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "GPT-4o",
+     "output_usd_per_mtok": 10,
+     "launch_month": "May 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250303222338/https://openai.com/api/pricing/",
+     "note": "GPT-4.5 preview ($150) listed on the Mar 3 page; excluded as a research preview. Mar 31 value also confirmed on the Apr 1 snapshot https://web.archive.org/web/20250401134720/https://openai.com/api/pricing/"
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "GPT-4.1",
+     "output_usd_per_mtok": 8,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250415013610/https://openai.com/index/gpt-4-1/",
+     "note": "Launched Apr 14, 2025. Price taken from the launch post snapshot dated Apr 15. Pricing page card labelled GPT-4.1 'Smartest model for complex tasks'. GPT-4o stayed at $10 and remained available."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "GPT-4.1",
+     "output_usd_per_mtok": 8,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250503232709/https://openai.com/api/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "GPT-4.1",
+     "output_usd_per_mtok": 8,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250602152701/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "GPT-4.1",
+     "output_usd_per_mtok": 8,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250702152237/https://openai.com/api/pricing/",
+     "note": "Aug 2 2025 snapshot also shows $8: https://web.archive.org/web/20250802193301/https://openai.com/api/pricing/"
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "GPT-5",
+     "output_usd_per_mtok": 10,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250902002545/https://openai.com/api/pricing/",
+     "note": "GPT-5 launched Aug 7, 2025 per changelog. Pricing page snapshot dated Sep 2 shows $10; no Aug snapshot after Aug 7 was read, the Aug 2 snapshot is pre-launch."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "GPT-5",
+     "output_usd_per_mtok": 10,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250902002545/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "GPT-5",
+     "output_usd_per_mtok": 10,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251004182904/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "GPT-5.1",
+     "output_usd_per_mtok": 10,
+     "launch_month": "Nov 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251130204053/https://openai.com/api/pricing/",
+     "note": "GPT-5.1 launched Nov 13, 2025 at the same $10 output as GPT-5."
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "GPT-5.2",
+     "output_usd_per_mtok": 14,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251231144552/https://openai.com/api/pricing/",
+     "note": "GPT-5.2 launched Dec 11, 2025."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "GPT-5.2",
+     "output_usd_per_mtok": 14,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251231144552/https://openai.com/api/pricing/",
+     "note": "No Jan 2026 snapshot read; Dec 31 and Feb 5 snapshots both show $14 and the changelog lists no pricing change in January."
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "GPT-5.2",
+     "output_usd_per_mtok": 14,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260205022429/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "GPT-5.4",
+     "output_usd_per_mtok": 15,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260401024903/https://openai.com/api/pricing/",
+     "note": "GPT-5.4 launched Mar 5, 2026. Mar 4 dev-page snapshot still shows GPT-5.2 at $14. Also https://web.archive.org/web/20260401100127/https://developers.openai.com/api/docs/pricing"
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "GPT-5.5",
+     "output_usd_per_mtok": 30,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260503061320/https://developers.openai.com/api/docs/pricing",
+     "note": "GPT-5.5 launched Apr 24, 2026 (changelog). Snapshot dated May 3 is the first read after launch."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "GPT-5.5",
+     "output_usd_per_mtok": 30,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260503061320/https://developers.openai.com/api/docs/pricing",
+     "note": "Jun 1 openai.com snapshot also shows $30: https://web.archive.org/web/20260601063732/https://openai.com/api/pricing/"
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "GPT-5.5",
+     "output_usd_per_mtok": 30,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260605161335/https://developers.openai.com/api/docs/pricing",
+     "note": "Jul 5 snapshot also shows GPT-5.5 at $30 before 5.6 launch: https://web.archive.org/web/20260705205005/https://developers.openai.com/api/docs/pricing"
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "GPT-5.6 Sol",
+     "output_usd_per_mtok": 30,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260709175029/https://developers.openai.com/api/docs/pricing",
+     "note": "GPT-5.6 family launched Jul 9, 2026; Sol described as the frontier-capability tier (alias gpt-5.6 routes to Sol). Aug 1 snapshot also $30: https://web.archive.org/web/20260801091023/https://developers.openai.com/api/docs/pricing"
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "GPT-5.6 Sol",
+     "output_usd_per_mtok": 20,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901103152/https://developers.openai.com/api/docs/pricing",
+     "note": "Output cut from $30 to $20 on Aug 21, 2026 (changelog). Live page calls it promotional pricing available until Nov 30, 2026 (changelog and Oct 1 snapshot said Nov 21, so it was extended). List price after the promo is not stated on the page."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "GPT-6 Astra",
+     "output_usd_per_mtok": 50,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261001103102/https://developers.openai.com/api/docs/pricing",
+     "note": "GPT-6 Astra launched Sep 3, 2026 as the most capable model. The Sep 1 snapshot predates launch."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "GPT-6 Astra",
+     "output_usd_per_mtok": 50,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261101133115/https://developers.openai.com/api/docs/pricing",
+     "note": "Oct 1 snapshot also $50: https://web.archive.org/web/20261001103102/https://developers.openai.com/api/docs/pricing"
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "GPT-6.2 Astra",
+     "output_usd_per_mtok": 40,
+     "launch_month": "Nov 2026",
+     "status": "VERIFIED",
+     "source_url": "https://developers.openai.com/api/docs/pricing",
+     "note": "GPT-6.2 Astra launched Nov 17, 2026 at $40 output (live page read Nov 18, 2026; changelog https://developers.openai.com/api/docs/changelog). GPT-6 Astra remains listed at $50. Month is in progress."
+    }
+   ]
+  },
+  {
+   "tier": "Sol",
+   "mapping": "Exists from GPT-5.6 (Jul 2026): 5.6 Sol, 6 Sol/6.1 Sol, 6.2 Sol. Duplicates the frontier tier in Jul-Aug 2026.",
+   "points": [
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "GPT-5.6 Sol",
+     "output_usd_per_mtok": 30,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260709175029/https://developers.openai.com/api/docs/pricing",
+     "note": "Same model as the frontier tier in Jul 2026."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "GPT-5.6 Sol",
+     "output_usd_per_mtok": 20,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901103152/https://developers.openai.com/api/docs/pricing",
+     "note": "Promotional output rate since Aug 21, 2026, available until Nov 30, 2026 per live page."
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "GPT-6.1 Sol",
+     "output_usd_per_mtok": 10,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261001103102/https://developers.openai.com/api/docs/pricing",
+     "note": "GPT-6 Sol launched Sep 22 at $10 output and GPT-6.1 Sol on Sep 29 at $10 (changelog). Sol output price fell from $20 (5.6 Sol promo) to $10."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "GPT-6.1 Sol",
+     "output_usd_per_mtok": 10,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261101133115/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "GPT-6.2 Sol",
+     "output_usd_per_mtok": 10,
+     "launch_month": "Nov 2026",
+     "status": "VERIFIED",
+     "source_url": "https://developers.openai.com/api/docs/pricing",
+     "note": "GPT-6.2 Sol launched Nov 17, 2026. Month is in progress."
+    }
+   ]
+  },
+  {
+   "tier": "Terra",
+   "mapping": "Exists from GPT-5.6 (Jul 2026): 5.6 Terra then 6.1 Terra. No predecessor named Terra.",
+   "points": [
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "GPT-5.6 Terra",
+     "output_usd_per_mtok": 12,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260801091023/https://developers.openai.com/api/docs/pricing",
+     "note": "Launched Jul 9 at $15 output (Jul 9 snapshot https://web.archive.org/web/20260709175029/https://developers.openai.com/api/docs/pricing); cut 20% to $12 on Jul 30 (changelog). The $12 value is the Jul 31 price."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "GPT-5.6 Terra",
+     "output_usd_per_mtok": 12,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901103152/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "GPT-5.6 Terra",
+     "output_usd_per_mtok": 12,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261001103102/https://developers.openai.com/api/docs/pricing",
+     "note": "No GPT-6 Terra existed; 5.6 Terra stayed current. Appears in the page's all-models data blob."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "GPT-6.1 Terra",
+     "output_usd_per_mtok": 5,
+     "launch_month": "Oct 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261101133115/https://developers.openai.com/api/docs/pricing",
+     "note": "GPT-6.1 Terra launched Oct 26, 2026 (changelog)."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "GPT-6.1 Terra",
+     "output_usd_per_mtok": 5,
+     "launch_month": "Oct 2026",
+     "status": "VERIFIED",
+     "source_url": "https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "tier": "Luna",
+   "mapping": "Exists from GPT-5.6 (Jul 2026): 5.6 Luna then 6 Luna. No predecessor named Luna.",
+   "points": [
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "GPT-5.6 Luna",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260801091023/https://developers.openai.com/api/docs/pricing",
+     "note": "Launched Jul 9 at $6 output (Jul 9 snapshot https://web.archive.org/web/20260709175029/https://developers.openai.com/api/docs/pricing); cut 80% to $1.20 on Jul 30 (changelog). The $1.20 value is the Jul 31 price."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "GPT-5.6 Luna",
+     "output_usd_per_mtok": 1.2,
+     "launch_month": "Jul 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901103152/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "GPT-6 Luna",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261001103102/https://developers.openai.com/api/docs/pricing",
+     "note": "GPT-6 Luna launched Sep 22, 2026 at $0.50 output (changelog)."
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "GPT-6 Luna",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261101133115/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "GPT-6 Luna",
+     "output_usd_per_mtok": 0.5,
+     "launch_month": "Sep 2026",
+     "status": "VERIFIED",
+     "source_url": "https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "tier": "Mini (legacy small tier)",
+   "mapping": "Editorial extension: GPT-4o mini, 4.1 mini, 5 mini, 5.4 mini. Not mapped to Terra by OpenAI.",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "GPT-4o mini",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Jul 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250121103038/https://openai.com/api/pricing/",
+     "note": "Legacy small-model lineage (mini). The pricing page does not map it to Terra; this mapping is an editorial choice."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "GPT-4o mini",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Jul 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250201145921/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "GPT-4o mini",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Jul 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250303222338/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "GPT-4.1 mini",
+     "output_usd_per_mtok": 1.6,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250415013610/https://openai.com/index/gpt-4-1/",
+     "note": "Launched Apr 14, 2025."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "GPT-4.1 mini",
+     "output_usd_per_mtok": 1.6,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250503232709/https://openai.com/api/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "GPT-4.1 mini",
+     "output_usd_per_mtok": 1.6,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250602152701/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "GPT-4.1 mini",
+     "output_usd_per_mtok": 1.6,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250702152237/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "GPT-5 mini",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250902002545/https://openai.com/api/pricing/",
+     "note": "Launched Aug 7, 2025. Sep 2 snapshot is the first read after launch."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "GPT-5 mini",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250902002545/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "GPT-5 mini",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251004182904/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "GPT-5 mini",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251130204053/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "GPT-5 mini",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251231144552/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "GPT-5 mini",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260210041738/https://developers.openai.com/api/docs/pricing",
+     "note": "Dec 31 and Feb 5 snapshots both list $2.00; no Jan snapshot read."
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "GPT-5 mini",
+     "output_usd_per_mtok": 2.0,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260210041738/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "GPT-5.4 mini",
+     "output_usd_per_mtok": 4.5,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260401024903/https://openai.com/api/pricing/",
+     "note": "GPT-5.4 mini launched Mar 17, 2026 (changelog)."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "GPT-5.4 mini",
+     "output_usd_per_mtok": 4.5,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260503061320/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "GPT-5.4 mini",
+     "output_usd_per_mtok": 4.5,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260503061320/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "GPT-5.4 mini",
+     "output_usd_per_mtok": 4.5,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260605161335/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "GPT-5.4 mini",
+     "output_usd_per_mtok": 4.5,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260801091023/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "GPT-5.4 mini",
+     "output_usd_per_mtok": 4.5,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901103152/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "GPT-5.4 mini",
+     "output_usd_per_mtok": 4.5,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261001103102/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "GPT-5.4 mini",
+     "output_usd_per_mtok": 4.5,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261101133115/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "GPT-5.4 mini",
+     "output_usd_per_mtok": 4.5,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://developers.openai.com/api/docs/pricing",
+     "note": "Still listed on the live page; no newer mini model exists."
+    }
+   ]
+  },
+  {
+   "tier": "Nano (legacy smallest tier)",
+   "mapping": "Editorial extension: 4.1 nano, 5 nano, 5.4 nano. Not mapped to Luna by OpenAI.",
+   "points": [
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "GPT-4.1 nano",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250415013610/https://openai.com/index/gpt-4-1/",
+     "note": "Legacy smallest-model lineage (nano). The pricing page does not map it to Luna; this mapping is an editorial choice. No nano model existed before Apr 2025 (GPT-4o mini was the smallest)."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "GPT-4.1 nano",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250503232709/https://openai.com/api/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "GPT-4.1 nano",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250602152701/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "GPT-4.1 nano",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Apr 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250702152237/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "GPT-5 nano",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250902002545/https://openai.com/api/pricing/",
+     "note": "Launched Aug 7, 2025."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "GPT-5 nano",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250902002545/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "GPT-5 nano",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251004182904/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "GPT-5 nano",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251130204053/https://openai.com/api/pricing/",
+     "note": ""
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "GPT-5 nano",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260210041738/https://developers.openai.com/api/docs/pricing",
+     "note": "Nano card was dropped from the openai.com cards after Nov 2025, price read from the Feb 10 2026 page; Nov 30 and Feb 10 both $0.40."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "GPT-5 nano",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260210041738/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "GPT-5 nano",
+     "output_usd_per_mtok": 0.4,
+     "launch_month": "Aug 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260210041738/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "GPT-5.4 nano",
+     "output_usd_per_mtok": 1.25,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260401024903/https://openai.com/api/pricing/",
+     "note": "GPT-5.4 nano launched Mar 17, 2026 (changelog)."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "GPT-5.4 nano",
+     "output_usd_per_mtok": 1.25,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260503061320/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "GPT-5.4 nano",
+     "output_usd_per_mtok": 1.25,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260503061320/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "GPT-5.4 nano",
+     "output_usd_per_mtok": 1.25,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260605161335/https://developers.openai.com/api/docs/pricing",
+     "note": "Nano rows sit in the page's all-models data blob, not the default visible table, from Jun 2026."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "GPT-5.4 nano",
+     "output_usd_per_mtok": 1.25,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260801091023/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "GPT-5.4 nano",
+     "output_usd_per_mtok": 1.25,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260901103152/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "GPT-5.4 nano",
+     "output_usd_per_mtok": 1.25,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261001103102/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "GPT-5.4 nano",
+     "output_usd_per_mtok": 1.25,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261101133115/https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "GPT-5.4 nano",
+     "output_usd_per_mtok": 1.25,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://developers.openai.com/api/docs/pricing",
+     "note": ""
+    }
+   ]
+  }
+ ],
+ "discrepancies": [
+  "Convention used: price in effect on the last day of each month (Nov 26 uses the live page on Nov 18). Mid-month changes are in notes.",
+  "Chart Jan-Feb 25 GPT-4o $15: verified $10. The Jan 21 and Feb 1 2025 pages list gpt-4o and gpt-4o-2024-11-20 at $10; only the legacy gpt-4o-2024-05-13 snapshot is $15. Chart Mar 25 'GPT-4o price cut' did not happen in Mar 2025; the cut to $10 came with gpt-4o-2024-08-06 (Aug 6, 2024).",
+  "Chart Apr-Jul 25 stays at $10: if the flagship is GPT-4o that is correct, but the pricing page card 'Smartest model for complex tasks' from Apr 14, 2025 is GPT-4.1 at $8. This file uses GPT-4.1 ($8). If the chart keeps the GPT-4o line, Apr-Jul 25 stays $10.",
+  "Chart Dec 25 and Jan 26 GPT-4.1 $8: wrong. GPT-4.1 launched Apr 2025. In Dec 25 and Jan 26 the flagship is GPT-5.2 at $14 (launched Dec 11, 2025).",
+  "Chart Feb 26 GPT-5 $10: GPT-5 launched Aug 2025 at $10 (GPT-5.1 Nov 2025 also $10). Feb 26 flagship is GPT-5.2 at $14.",
+  "Chart Mar 26 GPT-5.4 $15: confirmed. Chart Apr, May and Jun 26 GPT-5.5 $30: confirmed (launched Apr 24, 2026).",
+  "Chart Jul 26 $30 confirmed (GPT-5.6 Sol $30 at launch Jul 9). Chart Aug 26 $30: Sol output was cut to $20 on Aug 21, 2026, so month-end Aug is $20 (promo, extended to Nov 30).",
+  "Chart Sep-Oct 26 GPT-6 Astra $50 confirmed (launched Sep 3). Chart Nov 26 GPT-6.2 Astra $40 confirmed (launched Nov 17).",
+  "Chart notes: GPT-5.6 Sol $30 confirmed at launch (now $20 promo). GPT-5.6 Terra $12 is the post-Jul 30 price; launch price was $15. GPT-6 Luna $0.50 confirmed. GPT-5.6 Luna is $1.20 (launch $6).",
+  "Chart series is missing the Sol, Terra and Luna tiers' later models: GPT-6.1 Sol and GPT-6.2 Sol are $10, GPT-6.1 Terra (Oct 26, 2026) is $5."
+ ],
+ "gaps": [
+  "No pricing-page snapshot was read for Aug 2025 after the Aug 7 GPT-5 launch; Aug 25 relies on the Sep 2 snapshot and the changelog launch date.",
+  "No Jan 2026 snapshot read; Jan 26 is bracketed by Dec 31 2025 and Feb 5 2026 snapshots (both unchanged) plus a changelog with no January price event.",
+  "No snapshot was read dated Jun 30, 2026; Jun 26 rests on the Jun 5 and Jul 5 snapshots, both showing GPT-5.5 at $30.",
+  "GPT-5.6 Sol promo: list price after the promo ends (Nov 30, 2026) is not stated on any page read. The Aug 21 changelog says the new $20 is promotional and the launch price was $30.",
+  "GPT-6 Sol and GPT-6 Terra: GPT-6 Sol ($10) is in the all-models blob; no GPT-6 Terra exists. Sol points use the newest Sol model at month end (6.1 Sol in Sep and Oct).",
+  "openai.com/api/pricing returned 403 live and several Wayback captures returned 403 or 308; the Nov 4 2026 openai.com capture is the ChatGPT Business page, not usable. platform.openai.com/docs/pricing snapshots are JS shells with no price data and redirect to the developers.openai.com page from Mar 2026.",
+  "Launch dates come from the live changelog (developers.openai.com/api/docs/changelog), not from individual launch posts, except GPT-4.1 whose launch post snapshot was read.",
+  "The Mini and Nano tiers are editorial extensions to cover pre-Terra and pre-Luna history; OpenAI does not state a mapping.",
+  "Standard processing, short context (<=272K) output price only. Batch, Flex, Priority/Fast, Ultrafast, cached and long-context rates excluded."
+ ]
+}

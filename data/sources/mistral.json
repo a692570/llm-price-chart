@@ -1,0 +1,675 @@
+{
+ "provider": "Mistral",
+ "tiers": [
+  {
+   "tier": "Large (Large 2.1 > Large 3 > Large 4)",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "Mistral Large 2.1 (mistral-large-2411)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250203181748id_/https://mistral.ai/technology",
+     "note": "Technology page snapshot 3 Feb 2025 lists 'Mistral Large 24.11' $2 in / $6 out. Launch date Nov 18 2024 per https://docs.mistral.ai/resources/changelogs ; model card https://docs.mistral.ai/models/mistral-large-2-1-24-11. Jan carried back from the Feb 3 capture. Convention: price in effect at month end; mid-month changes are noted."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "Mistral Large 2.1 (mistral-large-2411)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250203181748id_/https://mistral.ai/technology",
+     "note": ""
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "Mistral Large 2.1 (mistral-large-2411)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250525061708id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by Feb 3 and May 25 2025 snapshots, both $6 (no pricing-page capture for this month; the 21 Mar 2025 mistral.ai/pricing capture was a 404)."
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "Mistral Large 2.1 (mistral-large-2411)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250525061708id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by Feb 3 and May 25 2025 snapshots, both $6 (no pricing-page capture for this month; the 21 Mar 2025 mistral.ai/pricing capture was a 404)."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "Mistral Large 2.1 (Large 24.11)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250525061708id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "Mistral Large 2.1 (Large 24.11)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by 25 May and 5 Nov 2025 snapshots, both $2 in / $6 out."
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "Mistral Large 2.1 (Large 24.11)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by 25 May and 5 Nov 2025 snapshots, both $2 in / $6 out."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "Mistral Large 2.1 (Large 24.11)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by 25 May and 5 Nov 2025 snapshots, both $2 in / $6 out."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "Mistral Large 2.1 (Large 24.11)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by 25 May and 5 Nov 2025 snapshots, both $2 in / $6 out."
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "Mistral Large 2.1 (Large 24.11)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by 25 May and 5 Nov 2025 snapshots, both $2 in / $6 out."
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "Mistral Large 2.1 (Large 24.11)",
+     "output_usd_per_mtok": 6,
+     "launch_month": "Nov 2024",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "Mistral Large 3",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260118045426id_/https://mistral.ai/pricing",
+     "note": "Changelog: 'December 2 We released Mistral Large 3 (mistral-large-2512)' (https://docs.mistral.ai/resources/changelogs); model card https://docs.mistral.ai/models/mistral-large-3-25-12 dated Dec 2 2025. Official launch post https://mistral.ai/news/mistral-3/ (Dec 2 2025) lists Large 3 at $0.5 in / $1.5 out; the 18 Jan 2026 snapshot confirms the same. Large 2.1 was deprecated 2/27/2026 per its model card."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "Mistral Large 3",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260118045426id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "Mistral Large 3",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260302131735id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by 18 Jan and 2 Mar 2026 snapshots."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "Mistral Large 3",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260302131735id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "Mistral Large 3",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260406094048id_/https://mistral.ai/pricing",
+     "note": "Mistral Medium 3.5 launched Apr 28 2026 at $7.50 but Large 3 stayed listed at $1.50."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "Mistral Large 3",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260509063839id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "Mistral Large 3",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260701051001id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by 9 May and 1 Jul 2026 snapshots."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "Mistral Large 3",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260701172032id_/https://mistral.ai/pricing/api",
+     "note": "The same Jul 2026 page has a stale FAQ line 'Mistral Large costs $2 /M tokens in and $6 /M tokens out'; the price tables on the page say Large 3 $0.5/$1.5, so the FAQ was ignored."
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "Mistral Large 3",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260806181159id_/https://mistral.ai/pricing/api",
+     "note": ""
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "Mistral Large 3",
+     "output_usd_per_mtok": 1.5,
+     "launch_month": "Dec 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260904032052id_/https://mistral.ai/pricing/api",
+     "note": ""
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "Mistral Large 4 (public preview)",
+     "output_usd_per_mtok": 4.18,
+     "launch_month": "Oct 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261029030246id_/https://docs.mistral.ai/inference/pricing",
+     "note": "Changelog: 'October 6 Mistral Large 4 (mistral-large-4) is now available in Public Preview ... Launch pricing: 50% off for 2 weeks.' (https://docs.mistral.ai/resources/changelogs). Official launch post as captured Oct 6 2026 (https://web.archive.org/web/20261006132643id_/https://mistral.ai/news/mistral-large-4/) shows Input $1.36 / Output $4.18 per M tokens. Docs pricing snapshots of 6, 8, 17, 19 Oct do not list Large 4 yet; the 21 and 29 Oct snapshots list it at $1.36 in / $4.18 out. Large 3 ($1.50) was still listed and was deprecated 10/31/2026."
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "Mistral Large 4 (GA)",
+     "output_usd_per_mtok": 2.1,
+     "launch_month": "Oct 2026",
+     "status": "VERIFIED",
+     "source_url": "https://docs.mistral.ai/inference/pricing",
+     "note": "GA Nov 5 2026 per model card https://docs.mistral.ai/models/mistral-large-4-0; $0.70 in / $2.10 out on the live page (18 Nov 2026) and on the 1, 7, 14 Nov snapshots (https://web.archive.org/web/20261101130106id_/https://docs.mistral.ai/inference/pricing). Price fell from $4.18 (Oct 29 snapshot) to $2.10 (Nov 1 snapshot). The live launch post https://mistral.ai/news/mistral-large-4/ now shows $0.7 / $2.1."
+    }
+   ]
+  },
+  {
+   "tier": "Medium (Medium 3 > 3.1 > 3.5)",
+   "points": [
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "Mistral Medium 3",
+     "output_usd_per_mtok": 2,
+     "launch_month": "May 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250525061708id_/https://mistral.ai/pricing",
+     "note": "mistral.ai/pricing snapshot 25 May 2025: Mistral Medium 3 $0.4 in / $2 out. Launch May 7 2025 (changelog https://docs.mistral.ai/resources/changelogs). Convention: price in effect at month end; mid-month changes are noted."
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "Mistral Medium 3",
+     "output_usd_per_mtok": 2,
+     "launch_month": "May 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by 25 May and 5 Nov 2025 snapshots, both $2. Medium 3.1 (mistral-medium-2508) released Aug 12 2025 (changelog); the pricing page kept the label \"Mistral Medium 3\" at $0.4/$2."
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "Mistral Medium 3",
+     "output_usd_per_mtok": 2,
+     "launch_month": "May 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward as above."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "Mistral Medium 3 (3.1 from Aug 12 2025)",
+     "output_usd_per_mtok": 2,
+     "launch_month": "May 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward as above."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "Mistral Medium 3 (3.1 from Aug 12 2025)",
+     "output_usd_per_mtok": 2,
+     "launch_month": "May 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward as above."
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "Mistral Medium 3 (3.1 from Aug 12 2025)",
+     "output_usd_per_mtok": 2,
+     "launch_month": "May 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward as above."
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "Mistral Medium 3.1 (listed as Medium 3)",
+     "output_usd_per_mtok": 2,
+     "launch_month": "May 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "Mistral Medium 3.1 (listed as Medium 3)",
+     "output_usd_per_mtok": 2,
+     "launch_month": "May 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260118045426id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by 5 Nov 2025 and 18 Jan 2026 snapshots."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "Mistral Medium 3.1 (listed as Medium 3)",
+     "output_usd_per_mtok": 2,
+     "launch_month": "May 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260118045426id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "Mistral Medium 3.1 (listed as Medium 3)",
+     "output_usd_per_mtok": 2,
+     "launch_month": "May 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260302131735id_/https://mistral.ai/pricing",
+     "note": "Carried forward."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "Mistral Medium 3.1 (listed as Medium 3)",
+     "output_usd_per_mtok": 2,
+     "launch_month": "May 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260302131735id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "Mistral Medium 3.5",
+     "output_usd_per_mtok": 7.5,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260509063839id_/https://mistral.ai/pricing",
+     "note": "Changelog: 'April 28 We released Mistral Medium 3.5 (mistral-medium-3-5)'; $1.50 in / $7.50 out read from the 9 May 2026 snapshot (the 6 Apr snapshot still showed Medium 3 at $2). Medium 3 and 3.1 deprecation date 5/22/2026 per model cards."
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "Mistral Medium 3.5",
+     "output_usd_per_mtok": 7.5,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260509063839id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "Mistral Medium 3.5",
+     "output_usd_per_mtok": 7.5,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260701051001id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by 9 May and 1 Jul 2026 snapshots."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "Mistral Medium 3.5",
+     "output_usd_per_mtok": 7.5,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260701172032id_/https://mistral.ai/pricing/api",
+     "note": ""
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "Mistral Medium 3.5",
+     "output_usd_per_mtok": 7.5,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260806181159id_/https://mistral.ai/pricing/api",
+     "note": ""
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "Mistral Medium 3.5",
+     "output_usd_per_mtok": 7.5,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260904032052id_/https://mistral.ai/pricing/api",
+     "note": ""
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "Mistral Medium 3.5",
+     "output_usd_per_mtok": 7.5,
+     "launch_month": "Apr 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261029030246id_/https://docs.mistral.ai/inference/pricing",
+     "note": "Deprecated with retirement 10/31/2026, replaced by Large 4 (model card https://docs.mistral.ai/models/mistral-medium-3-5-26-04). Absent from the 1 Nov 2026 pricing snapshot, so Nov 26 is omitted."
+    }
+   ]
+  },
+  {
+   "tier": "Small (Small 3 > 3.1 > 3.2 > 4)",
+   "points": [
+    {
+     "month": "Jan 25",
+     "index": 0,
+     "model": "Mistral Small 3 (mistral-small-2501)",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250203181748id_/https://mistral.ai/technology",
+     "note": "Technology page snapshot 3 Feb 2025 lists 'Mistral Small 25.01' $0.1 in / $0.3 out; launched Jan 30 2025 (changelog https://docs.mistral.ai/resources/changelogs). Jan 25 uses the Feb 3 capture. Convention: price in effect at month end; mid-month changes are noted."
+    },
+    {
+     "month": "Feb 25",
+     "index": 1,
+     "model": "Mistral Small 3 (mistral-small-2501)",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Jan 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250203181748id_/https://mistral.ai/technology",
+     "note": ""
+    },
+    {
+     "month": "Mar 25",
+     "index": 2,
+     "model": "Mistral Small 3.1 (mistral-small-2503)",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Mar 2025",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20250525061708id_/https://mistral.ai/pricing",
+     "note": "Small 3.1 launched Mar 17 2025 (model card https://docs.mistral.ai/models/mistral-small-3-1-25-03). No Mar or Apr 2025 pricing capture was fetched; $0.3 is bracketed by Small 3 on 3 Feb (0.3) and Small 3.1 on 25 May (0.3)."
+    },
+    {
+     "month": "Apr 25",
+     "index": 3,
+     "model": "Mistral Small 3.1 (mistral-small-2503)",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Mar 2025",
+     "status": "UNVERIFIED",
+     "source_url": "https://web.archive.org/web/20250525061708id_/https://mistral.ai/pricing",
+     "note": "Small 3.1 launched Mar 17 2025 (model card https://docs.mistral.ai/models/mistral-small-3-1-25-03). No Mar or Apr 2025 pricing capture was fetched; $0.3 is bracketed by Small 3 on 3 Feb (0.3) and Small 3.1 on 25 May (0.3)."
+    },
+    {
+     "month": "May 25",
+     "index": 4,
+     "model": "Mistral Small 3.1",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Mar 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20250525061708id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 25",
+     "index": 5,
+     "model": "Mistral Small 3.2 (mistral-small-2506)",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Small 3.2 released Jun 20 2025 (changelog). Carried forward, bracketed by 25 May (Small 3.1, $0.3) and 5 Nov 2025 (Small 3.2, $0.3) snapshots."
+    },
+    {
+     "month": "Jul 25",
+     "index": 6,
+     "model": "Mistral Small 3.2 (mistral-small-2506)",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward as above."
+    },
+    {
+     "month": "Aug 25",
+     "index": 7,
+     "model": "Mistral Small 3.2 (mistral-small-2506)",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward as above."
+    },
+    {
+     "month": "Sep 25",
+     "index": 8,
+     "model": "Mistral Small 3.2 (mistral-small-2506)",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward as above."
+    },
+    {
+     "month": "Oct 25",
+     "index": 9,
+     "model": "Mistral Small 3.2 (mistral-small-2506)",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": "Carried forward as above."
+    },
+    {
+     "month": "Nov 25",
+     "index": 10,
+     "model": "Mistral Small 3.2",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20251105122204id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Dec 25",
+     "index": 11,
+     "model": "Mistral Small 3.2",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260118045426id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by 5 Nov 2025 and 18 Jan 2026 snapshots."
+    },
+    {
+     "month": "Jan 26",
+     "index": 12,
+     "model": "Mistral Small 3.2",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260118045426id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Feb 26",
+     "index": 13,
+     "model": "Mistral Small 3.2",
+     "output_usd_per_mtok": 0.3,
+     "launch_month": "Jun 2025",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260302131735id_/https://mistral.ai/pricing",
+     "note": "Carried forward."
+    },
+    {
+     "month": "Mar 26",
+     "index": 14,
+     "model": "Mistral Small 4",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260406094048id_/https://mistral.ai/pricing",
+     "note": "Changelog: 'March 16 We released Mistral Small 4 (mistral-small-2603)'. The 2 Mar 2026 snapshot still showed Small 3.2 at $0.3; the 6 Apr snapshot shows Small 4 at $0.15 in / $0.6 out. Small 3.2 deprecation date 4/30/2026."
+    },
+    {
+     "month": "Apr 26",
+     "index": 15,
+     "model": "Mistral Small 4",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260406094048id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "May 26",
+     "index": 16,
+     "model": "Mistral Small 4",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260509063839id_/https://mistral.ai/pricing",
+     "note": ""
+    },
+    {
+     "month": "Jun 26",
+     "index": 17,
+     "model": "Mistral Small 4",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260701051001id_/https://mistral.ai/pricing",
+     "note": "Carried forward, bracketed by 9 May and 1 Jul 2026."
+    },
+    {
+     "month": "Jul 26",
+     "index": 18,
+     "model": "Mistral Small 4",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260701172032id_/https://mistral.ai/pricing/api",
+     "note": ""
+    },
+    {
+     "month": "Aug 26",
+     "index": 19,
+     "model": "Mistral Small 4",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260806181159id_/https://mistral.ai/pricing/api",
+     "note": ""
+    },
+    {
+     "month": "Sep 26",
+     "index": 20,
+     "model": "Mistral Small 4",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20260904032052id_/https://mistral.ai/pricing/api",
+     "note": ""
+    },
+    {
+     "month": "Oct 26",
+     "index": 21,
+     "model": "Mistral Small 4",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://web.archive.org/web/20261021094351id_/https://docs.mistral.ai/inference/pricing",
+     "note": ""
+    },
+    {
+     "month": "Nov 26",
+     "index": 22,
+     "model": "Mistral Small 4",
+     "output_usd_per_mtok": 0.6,
+     "launch_month": "Mar 2026",
+     "status": "VERIFIED",
+     "source_url": "https://docs.mistral.ai/inference/pricing",
+     "note": "Live page 18 Nov 2026 and 1 Nov snapshot."
+    }
+   ]
+  }
+ ],
+ "discrepancies": [
+  "Chart Mistral Large 2 $6 to Nov 25: agrees on price. The model in force is Mistral Large 2.1 (mistral-large-2411, Nov 18 2024); the Large 2 (2407) card is marked Retired.",
+  "Chart Large 3 $1.50 in Dec 25: agrees (launch Dec 2 2025, $0.50 in / $1.50 out).",
+  "Chart Medium 3.5 $7.50 from Apr 26 through Sep 26: agrees on price and launch (Apr 28 2026) but the chart line switches from the Large lineage to the Medium lineage. Large 3 stayed listed at $1.50 for all of Apr-Oct 2026, so the Large tier did not rise to $7.50; the $7.50 is a separate, pricier Medium tier.",
+  "Chart Large 4 preview $4.18 in Oct 26: agrees (docs pricing snapshots 21 and 29 Oct list $1.36 in / $4.18 out; changelog dates the public preview Oct 6).",
+  "Chart Nov 26 at $4.18 disagrees: the 1 Nov 2026 snapshot, the 7 and 14 Nov snapshots and the live page show Large 4 at $0.70 in / $2.10 out, and the model card dates GA Nov 5 2026. Index 22 should be 2.10 for Large 4.",
+  "The changelog says Large 4 launch pricing was '50% off for 2 weeks' from Oct 6, but no fetched page shows a discounted rate: the Oct 6 capture of the official launch post already shows $1.36/$4.18, and the Nov GA price of $2.10 is about half of that. Whether $4.18 was the list rate and $2.10 a later cut, or the reverse, is not determinable from the pages read."
+ ],
+ "gaps": [
+  "No pricing-page capture for Mar-Apr 2025 (mistral.ai/pricing 21 Mar 2025 was a 404; /technology 6 Mar and 4 Apr 2025 are marketing shells), so Small 3.1 in Mar-Apr 2025 is UNVERIFIED (bracketed at $0.3). Large 2.1 and Medium carry-forwards are bracketed by identical snapshots.",
+  "The Dec 2025 pricing capture (2 Dec 2025) was not fetched; Dec 25 Large 3 uses the 18 Jan 2026 snapshot plus the Dec 2 changelog and model card.",
+  "Medium 3.1 (Aug 2025) price is inferred from the pricing page label 'Mistral Medium 3' at $0.4/$2 on 5 Nov 2025; the page never names Medium 3.1.",
+  "Nov 26 omitted for the Medium tier: Medium 3.5 and Large 3 were deprecated with retirement 10/31/2026 and are absent from the 1 Nov snapshot.",
+  "Standard (non-batch, non-cached, non-priority) output prices in USD only."
+ ]
+}
