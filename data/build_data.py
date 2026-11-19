@@ -161,9 +161,14 @@ for t in ['Large', 'Medium', 'Small']:
     L.append(finish('Mistral', 'Mistral', t, d, u, n))
 
 # ---------------- Meta ----------------
-for t, name in [('Llama 4 Maverick', 'Maverick (host list)'), ('Llama 4 Scout', 'Scout (host list)'), ('Muse Spark', 'Muse Spark'), ('Muse Wonder', 'Muse Wonder')]:
-    d, u, n = series(tier('meta', t), lab_meta)
-    L.append(finish('Meta', 'Meta', name, d, u, n))
+# Maverick (Together host list price) > Muse Spark (Meta first-party API, Jul 2026): press coverage describes Muse Spark as the replacement for Llama 4 Maverick.
+mv = [p for p in tier('meta', 'Llama 4 Maverick') if p['index'] <= 17] + tier('meta', 'Muse Spark')
+d, u, n = series(mv, lab_meta, suffix=lambda i: ' (host list)' if i <= 17 else '')
+L.append(finish('Meta', 'Meta', 'Maverick / Spark', d, u, n))
+d, u, n = series(tier('meta', 'Llama 4 Scout'), lab_meta)
+L.append(finish('Meta', 'Meta', 'Scout (host list)', d, u, n))
+d, u, n = series(tier('meta', 'Muse Wonder'), lab_meta)
+L.append(finish('Meta', 'Meta', 'Muse Wonder', d, u, n))
 
 # ---------------- DeepSeek ----------------
 for t, name in [('Chat', 'Chat / Flash'), ('Reasoner', 'Reasoner'), ('Pro', 'Pro')]:

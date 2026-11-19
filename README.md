@@ -24,6 +24,7 @@ Output price per 1M tokens (USD) for 11 providers, Jan 2025 to Nov 2026, tracked
 - Tier names are each provider's own. No tier is mapped onto another provider's, and no old tier is joined to a new one.
 - OpenAI Mini and Nano are followed as their own lines (GPT-4o mini to GPT-5.4 mini, GPT-4.1 nano to GPT-5.4 nano). OpenAI publishes no mapping from them to Terra or Luna, so they are not joined.
 - Google Pro runs 1.5 Pro, 2.5 Pro, then 3 Pro and 3.1 Pro (preview-only at $12 from Nov 2025; no Gemini 3.x Pro reached GA), then Gemini 4 Argon (Oct 2026) and Carbon (Nov 2026). Google dropped the Pro name for Gemini 4 and publishes no mapping; Argon was labelled its flagship reasoning model on the 1 Nov 2026 pricing page. Flash runs 1.5, 2.0, 2.5, 3 Flash (preview, $3.00 from 17 Dec 2025; Mar to Apr 2026 not confirmed), 3.5 to 3.8, then Gemini 4 Hydrogen ($7.50), whose migration guide points from 3.8 Flash. Gemini 4 Neon ($15) is not mapped to any tier.
+- Meta is one line from Llama 4 Maverick to Muse Spark. Press coverage describes Muse Spark as the replacement for Llama 4 Maverick; Meta publishes no tier mapping. Scout stays its own line. Llama before Llama 4 (3.1 and 3.3, Jan to Mar 2025) is not researched, so the Meta lines start in Apr 2025.
 - Kimi is one line: K2, K2.5, K2.6, K2.7 Code (to Jun 2026), K3, K3.1 Pro. K2.7 Code stays listed after K3 as a coding variant and is not charted separately.
 - Not charted: Muse Ember ($0.50, 9 Nov 2026), Gemini 4 Neon ($15), and a GPT-6 Terra (none exists).
 
@@ -31,7 +32,7 @@ Output price per 1M tokens (USD) for 11 providers, Jan 2025 to Nov 2026, tracked
 
 - Gemini 3.7 Flash, 3.8 Flash, Gemini 4 Argon and Gemini 4 Carbon carry "(intro price)": $3.75 (Flash) until Dec 31 2026 then $7.50, and $10 (Argon, Carbon) until Nov 30 2026 then $20.
 - DeepSeek V4 Flash, V4.1 Flash and V4 Pro carry "(peak rate)" from Aug 2026. Peak and off-peak pricing began 16 Aug 2026; the off-peak rate is half. The chart uses the peak rate.
-- Meta's Llama 4 Maverick and Scout carry "(host list)". They are Together's list prices. Meta had no first-party paid API until Muse Spark in Jul 2026.
+- Meta's Llama 4 Maverick and Scout carry "(host list)". They are Together's list prices, not Meta's. Meta had no first-party paid API until Muse Spark in Jul 2026, so the Maverick to Muse Spark step ($0.85 to $4.25) is partly a change from host price to Meta's own price.
 - Dashed segments are prices the research could not confirm from a fetched page: Kimi K2 (first nine months), Qwen Plus and Turbo/Flash (Apr to Jun 2026, inferred from the Jul 2026 snapshot and model IDs), Mistral Small 3.1 (Mar to Apr 2025), xAI Grok Code (Apr 2026), Llama 4 Scout (Apr to May 2026) and MiniMax M3.1 Flash.
 
 ## Other notes
