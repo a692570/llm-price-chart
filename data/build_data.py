@@ -110,37 +110,45 @@ def finish(prov, grp_title, tier_name, d, u, names, **kw):
 L = []  # lineages in display order
 
 # ---------------- Anthropic ----------------
-for t in ['Opus', 'Sonnet', 'Haiku', 'Fable']:
+for t in ['Fable', 'Opus', 'Sonnet', 'Haiku']:
     d, u, n = series(tier('anthropic', t), lab_anthropic)
     L.append(finish('Anthropic', 'Anthropic', t, d, u, n))
 
 # ---------------- OpenAI ----------------
-for t, key in [('Mini', 'Mini'), ('Nano', 'Nano')]:
-    d, u, n = series(tier('openai', key), lab_openai)
-    L.append(finish('OpenAI', 'OpenAI Mini and Nano', t, d, u, n))
-d, u, n = series(tier('openai', 'Frontier'), lab_openai)
-L.append(finish('OpenAI', 'OpenAI Frontier, Sol, Terra and Luna', 'Frontier', d, u, n, hist=1))
+# Frontier is the model OpenAI called most capable up to Jun 26 (GPT-4o to GPT-5.5); from Jul 26 the named tiers take over.
+frontier = tier('openai', 'Frontier')
+d, u, n = series(frontier, lab_openai, hi=17)
+L.append(finish('OpenAI', 'OpenAI Astra, Sol, Terra and Luna', 'Frontier', d, u, n, hist=1))
+d, u, n = series(frontier, lab_openai, lo=20)
+L.append(finish('OpenAI', 'OpenAI Astra, Sol, Terra and Luna', 'Astra', d, u, n))
 for t in ['Sol', 'Terra', 'Luna']:
     d, u, n = series(tier('openai', t), lab_openai)
-    L.append(finish('OpenAI', 'OpenAI Frontier, Sol, Terra and Luna', t, d, u, n))
+    L.append(finish('OpenAI', 'OpenAI Astra, Sol, Terra and Luna', t, d, u, n))
+for t in ['Mini', 'Nano']:
+    d, u, n = series(tier('openai', t), lab_openai)
+    L.append(finish('OpenAI', 'OpenAI Mini and Nano', t, d, u, n))
 
 # ---------------- Google ----------------
+# Pro line: 1.5 Pro > 2.5 Pro > 3 Pro / 3.1 Pro (preview-only, never GA) > Gemini 4 Argon / Carbon.
+# Google dropped the Pro name for Gemini 4; Argon was labelled "our flagship reasoning model" on the Nov 1 2026 pricing snapshot.
+def synth(i, model, price, status='VERIFIED'):
+    return {'index': i, 'output_usd_per_mtok': price, 'model': model, 'status': status}
+def google_label(raw, i):
+    return raw if raw.endswith('(preview)') else re.sub(r'\s*\(.*\)', '', raw)
 gp = tier('google', 'Pro')
-d, u, n = series(gp, lab_google, hi=20)
+pro = [p for p in gp if p['index'] <= 9] \
+    + [synth(i, 'Gemini 3 Pro (preview)', 12.0) for i in (10, 11, 12)] \
+    + [synth(i, 'Gemini 3.1 Pro (preview)', 12.0) for i in range(13, 21)] \
+    + [p for p in gp if p['index'] in (21, 22)]
+d, u, n = series(pro, google_label, suffix=lambda i: ' (intro price)' if i >= 21 else '')
 L.append(finish('Google', 'Google', 'Pro', d, u, n))
-def flash_suffix(i): return ' (intro price)' if i in (19, 20, 21, 22) else ''
-gf = [p for p in tier('google', 'Flash') if not p['model'].startswith('Gemini 4')]
-# Gemini 3.8 Flash intro price ($3.75) stays in force through Dec 31 2026
-last = [p for p in gf if p['index'] == 21][0]
-gf = gf + [dict(last, index=22)]
-d, u, n = series(gf, lab_google, suffix=flash_suffix)
+# Flash line: 2.5 Flash > 3 Flash (preview, from Dec 17 2025) > 3.5 to 3.8 Flash > Gemini 4 Hydrogen
+gf = [p for p in tier('google', 'Flash') if not 11 <= p['index'] <= 15] \
+    + [synth(i, 'Gemini 3 Flash (preview)', 3.0, 'VERIFIED' if i <= 13 else 'UNVERIFIED') for i in range(11, 16)]
+d, u, n = series(gf, google_label, suffix=lambda i: ' (intro price)' if i in (19, 20, 21) else '')
 L.append(finish('Google', 'Google', 'Flash', d, u, n))
-tl = [p for p in tier('google', 'Flash-Lite')]
-d, u, n = series(tl, lab_google)
+d, u, n = series(tier('google', 'Flash-Lite'), google_label)
 L.append(finish('Google', 'Google', 'Flash-Lite', d, u, n))
-g4 = [dict(p, model='Gemini 4 Argon') for p in gp if p['index'] in (21, 22)]
-d, u, n = series(g4, lab_google, suffix=lambda i: ' (intro price)')
-L.append(finish('Google', 'Google', 'Gemini 4', d, u, n))
 
 # ---------------- xAI ----------------
 for t, name in [('Flagship', 'Grok'), ('Fast', 'Grok Fast'), ('Code', 'Grok Code')]:
@@ -178,9 +186,10 @@ for t, name in [('Flagship', 'GLM'), ('Air', 'Air / Flash')]:
     L.append(finish('GLM', 'GLM', name, d, u, n))
 
 # ---------------- Kimi ----------------
-for t, name in [('K2', 'K2'), ('K3', 'K3')]:
-    d, u, n = series(tier('kimi', t), lab_kimi)
-    L.append(finish('Kimi', 'Kimi', name, d, u, n))
+# One line: K2 > K2.5 > K2.6 > K2.7 Code (to Jun 26) > K3 > K3.1 Pro. K2.7 Code stays listed after K3 but is a coding variant.
+kp = [p for p in tier('kimi', 'K2') if p['index'] <= 17] + tier('kimi', 'K3')
+d, u, n = series(kp, lab_kimi)
+L.append(finish('Kimi', 'Kimi', 'K-series', d, u, n))
 
 json.dump(L, open(sys.argv[1] if len(sys.argv) > 1 else 'data.json', 'w'), separators=(',', ':'))
 

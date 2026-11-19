@@ -14,22 +14,22 @@ Output price per 1M tokens (USD) for 11 providers, Jan 2025 to Nov 2026, tracked
 
 ## What is on the page
 
-- A lineage is one named tier followed across model generations (Claude Sonnet 3.5 to Sonnet 5.5). The board and the three headline numbers use lineages with at least 12 months of history.
+- A lineage is one named tier followed across model generations, including renames (Claude Sonnet 3.5 to Sonnet 5.5, Gemini 1.5 Pro to Gemini 4 Carbon, Kimi K2 to K3.1 Pro). The board and the three headline numbers use lineages with at least 3 months of history.
 - Headline numbers use only points confirmed from a dated source. Tiers whose first or last price is UNVERIFIED stay on the board (dashed ring) and are left out of the counts.
-- Lineages under 12 months appear on the history charts only: Claude Fable, OpenAI Sol, Terra and Luna, Gemini 4 Argon, DeepSeek Pro, Meta Muse Spark and Muse Wonder, MiniMax Highspeed and Flash, Kimi K3.
-- OpenAI Frontier (GPT-4o, GPT-4.1, GPT-5 to GPT-6.2 Astra) is the model OpenAI called its most capable at each point, so it crosses tiers. It is drawn on the history chart and left out of the board, the counts and the repricing list.
+- Lineages under 3 months (Muse Wonder, MiniMax Flash) appear on the history charts only.
+- OpenAI Frontier (GPT-4o, GPT-4.1, GPT-5 to GPT-5.5, Jan 2025 to Jun 2026) is the model OpenAI called its most capable at each point, so it crosses tiers. It is drawn on the history chart and left out of the board, the counts and the repricing list. From Jul 2026 OpenAI's named tiers (Astra, Sol, Terra, Luna) take over.
 
 ## Tier decisions
 
 - Tier names are each provider's own. No tier is mapped onto another provider's, and no old tier is joined to a new one.
 - OpenAI Mini and Nano are followed as their own lines (GPT-4o mini to GPT-5.4 mini, GPT-4.1 nano to GPT-5.4 nano). OpenAI publishes no mapping from them to Terra or Luna, so they are not joined.
-- Google Pro is followed through Gemini 2.5 Pro (Sep 2026, the last month it was the Pro line). Gemini 4 Argon, Carbon, Neon and Hydrogen carry no Pro or Flash name, so Argon is its own line and Carbon ($10 intro), Neon ($15) and Hydrogen ($7.50) are not charted (under two months old).
-- Gemini 3.x Pro previews ($12) are not charted. No Gemini 3.x Pro reached GA.
-- Muse Ember ($0.50, launched 9 Nov 2026) and the GPT-6 Terra gap (no GPT-6 Terra exists) are not charted.
+- Google Pro runs 1.5 Pro, 2.5 Pro, then 3 Pro and 3.1 Pro (preview-only at $12 from Nov 2025; no Gemini 3.x Pro reached GA), then Gemini 4 Argon (Oct 2026) and Carbon (Nov 2026). Google dropped the Pro name for Gemini 4 and publishes no mapping; Argon was labelled its flagship reasoning model on the 1 Nov 2026 pricing page. Flash runs 1.5, 2.0, 2.5, 3 Flash (preview, $3.00 from 17 Dec 2025; Mar to Apr 2026 not confirmed), 3.5 to 3.8, then Gemini 4 Hydrogen ($7.50), whose migration guide points from 3.8 Flash. Gemini 4 Neon ($15) is not mapped to any tier.
+- Kimi is one line: K2, K2.5, K2.6, K2.7 Code (to Jun 2026), K3, K3.1 Pro. K2.7 Code stays listed after K3 as a coding variant and is not charted separately.
+- Not charted: Muse Ember ($0.50, 9 Nov 2026), Gemini 4 Neon ($15), and a GPT-6 Terra (none exists).
 
 ## Price caveats, shown on the page as labels
 
-- Gemini 3.7 Flash and 3.8 Flash and Gemini 4 Argon carry "(intro price)": $3.75 (Flash) and $10 (Argon) until Dec 31 and Nov 30 2026, then $7.50 and $20. Gemini 3.8 Flash is carried into Nov 2026 at its intro price.
+- Gemini 3.7 Flash, 3.8 Flash, Gemini 4 Argon and Gemini 4 Carbon carry "(intro price)": $3.75 (Flash) until Dec 31 2026 then $7.50, and $10 (Argon, Carbon) until Nov 30 2026 then $20.
 - DeepSeek V4 Flash, V4.1 Flash and V4 Pro carry "(peak rate)" from Aug 2026. Peak and off-peak pricing began 16 Aug 2026; the off-peak rate is half. The chart uses the peak rate.
 - Meta's Llama 4 Maverick and Scout carry "(host list)". They are Together's list prices. Meta had no first-party paid API until Muse Spark in Jul 2026.
 - Dashed segments are prices the research could not confirm from a fetched page: Kimi K2 (first nine months), Qwen Plus and Turbo/Flash (Apr to Jun 2026, inferred from the Jul 2026 snapshot and model IDs), Mistral Small 3.1 (Mar to Apr 2025), xAI Grok Code (Apr 2026), Llama 4 Scout (Apr to May 2026) and MiniMax M3.1 Flash.
