@@ -15,6 +15,7 @@ Output price per 1M tokens (USD) for 11 providers, Jan 2025 to Nov 2026, tracked
 ## What is on the page
 
 - A lineage is one named tier followed across model generations, including renames (Claude Sonnet 3.5 to Sonnet 5.5, Gemini 1.5 Pro to Gemini 4 Carbon, Kimi K2 to K3.1 Pro). The board and the three headline numbers use lineages with at least 3 months of history.
+- The history cards give each tier its own row on a shared time axis. Every row uses the same 30x log window, centred on that tier's own price range, so a 2x move is the same height in every row; absolute levels are read from the price labels.
 - Headline numbers use only points confirmed from a dated source. Tiers whose first or last price is UNVERIFIED stay on the board (dashed ring) and are left out of the counts.
 - Lineages under 3 months (Muse Wonder, MiniMax Flash) appear on the history charts only.
 - OpenAI Frontier (GPT-4o, GPT-4.1, GPT-5 to GPT-5.5, Jan 2025 to Jun 2026) is the model OpenAI called its most capable at each point, so it crosses tiers. It is drawn on the history chart and left out of the board, the counts and the repricing list. From Jul 2026 OpenAI's named tiers (Astra, Sol, Terra, Luna) take over.
